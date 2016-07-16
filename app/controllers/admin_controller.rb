@@ -6,6 +6,9 @@ class AdminController < ApplicationController
 
   before_filter :authentication_check
 
+  def dashboard
+
+  end
 
 
   private

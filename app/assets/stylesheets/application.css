@@ -13,3 +13,136 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* ################  COMMON STYLING  ######################*/
+
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+img{border:none;}
+a:hover{text-decoration:none;}
+a:focus{text-decoration:none;}
+a{cursor:pointer;}
+
+.keep-left{float:left;}
+.keep-right{float:right;}
+
+.no-padding{padding:0;}
+.no-margin{margin:0;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.white, .white:hover{color:#fff;}
+.black, .black:hover{color:#000;}
+
+h1{font-size: 60px;}
+h2{font-size: 50px;margin: 5% 0;text-align: center;font-weight: 500;font-family: Raleway;}
+h3{font-size: 40px;}
+h4{font-size: 30px;}
+h5{font-size: 25px;}
+h6{font-size: 20px;}
+p{font-size: 14px;}
+h3 a, h2 a, h3 a:hover, h2 a:hover, h3 a:focus, h2 a:focus{ color:#000; }
+
+/* ################  END  ######################*/
+
+
+/* ################  HEADER STYLING  ######################*/
+
+#wrapper{overflow:hidden;}
+.banner {float:left;width: 100%; background: rgba(0, 0, 0, 0) url("/images/core/front_cover.jpg") no-repeat fixed 0 0 / cover ;height: 100px; }
+.header-content{padding-top: 2%;}
+.container{max-width:1160px;margin:0 auto;}
+.header-logo { padding: 3%; }
+.header-logo img{max-width: 75%;}
+.menu nav{margin: 10px 0;}
+.footer-logo img{max-width: 50%;}
+
+/* ################  END  ######################*/
+
+
+
+.border{position:relative;}
+h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color: #30ca71;left: 35%;position:absolute;width:30%;}
+.write-us{background: url('/images/home/footer_bg_image.jpg');float: left;}
+
+
+/* ################  FORM STYLING  ######################*/
+
+.form-black, .form-white {
+    background-color: transparent;
+    border: medium none;
+    display: block;
+    font-size: 14px;
+    height: auto;
+    letter-spacing: 2px;
+    line-height: 1.42587;
+    padding: 6px;
+    transition: border-color 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.form-black{color: gray;border-bottom: 1px solid gray;}
+.form-black:focus{border-bottom: 1px solid #fff; color: #fff;}
+
+.form-white{color: #000;border-bottom: 1px solid lightgray; }
+.form-white:focus{border-bottom: 1px solid #000; color: #000;}
+
+
+.form-white {
+    background: #f6f6f6 none repeat scroll 0 0;
+    border: 1px solid #e3e3e3;
+    color: #666666;
+    font-weight: 300;
+    padding: 0.5em 1em;
+}
+/* ################  END  ######################*/
+
+
+/* ################  FOOTER STYLING  ######################*/
+
+.footer-content{ background-color: lightgray; }
+.footer-top, .footer-bottom { padding-bottom: 2%; margin-top: 2%; }
+.footer-top { border-bottom: 1px solid; }
+.footer-bottom a{ position: relative;}
+.footer-content-block div { padding: 0 20px; }
+.footer-content-block div h5{ border-bottom: 1px solid; padding: 10px 0; margin: 20px 0; text-align: center; }
+.footer-content-block div a { padding: 5px 0; margin: 4px 0; width: 100%; color: #444; }
+.footer-content-block div a:hover { color: #38c2d4; }
+.footer-content-block nav { max-width: 100%; padding-left: 5%; }
+.footer-content-block nav a { display: block;}
+
+/* ################  END  ######################*/
+
+.floater {
+    bottom: 0;
+    padding-bottom: 1%!important;
+    position: fixed;
+    right: 6%;
+    width: 20%;
+    z-index: 1000;
+    transition:all 0.4s linear 0s;
+}
+.floater ul { list-style: outside none none; }
+.floater ul li { display: inline-block;  padding: 0 6%;}
+.floater ul li a{ color: #888; padding: 0 10px; }
+.floater ul li a:hover{ color: #000; }
+
+.override-floater {
+    padding-top: 1.5% !important;
+    position: static;
+}
+
+
+/* ################  MEDIA QUERIES  ######################*/
+
+@media only screen and (max-width:480px){
+    .header-logo img{max-width: 60%;}
+    .header-right{display: none;}
+}
+
+/* ################  END  ######################*/
+
+
+/* ################  HI  ######################*/
+
+/* ################  END  ######################*/

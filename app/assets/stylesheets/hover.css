@@ -1,0 +1,202 @@
+/* ################  FOOTER LINKS  ######################*/
+
+.menu nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1.35em;
+}
+
+.menu nav a:hover,
+.menu nav a:focus { outline: none; color: #38c2d4; }
+
+.cl-effect-9 a {
+    margin: 0 10px!important; /* just to override the menu nav margin */
+    padding: 14px 10px 10px;
+}
+
+.cl-effect-9 a::before,
+.cl-effect-9 a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: opacity 0.3s, height 0.3s;
+    -moz-transition: opacity 0.3s, height 0.3s;
+    transition: opacity 0.3s, height 0.3s;
+}
+
+.cl-effect-9 a::after {
+    top: 100%;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.cl-effect-9 a span:first-child {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cl-effect-9 a span:last-child {
+    padding-top: 8px;
+    color: rgba(0,0,0,0.4);
+    text-transform: none;
+    font-style: italic;
+    font-size: 12px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:focus::before { height: 3px; }
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:hover::after,
+.cl-effect-9 a:focus::before,
+.cl-effect-9 a:focus::after { opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.cl-effect-9 a:hover span:last-child,
+.cl-effect-9 a:focus span:last-child { opacity: 1;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
+}
+/* ################  END  ######################*/
+
+
+/* ################  ANCHOR TITLE STYLING  ######################*/
+
+a.tip span:last-child {
+    display: none;
+}
+a.tip:hover span:last-child {
+    background-color: #eee;
+    border-radius: 5px;
+    display: inline-block;
+    left: -70px;
+    min-width: 160px;
+    padding: 5px 20px;
+    position: absolute;
+    top: -45px;
+    z-index: 100;
+    color: #555;
+}
+a.tip:hover span:last-child::before {
+    background-color: #eee;
+    bottom: -5px;
+    content: "";
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 10px;
+}
+
+/* ################  END  ######################*/
+
+
+/* ################  BUTTON-1  ######################*/
+
+.btn {
+    border: 1px solid #38c2d4;
+    border-radius: 0;
+    min-width: 100px;
+}
+@-webkit-keyframes hvr-back-pulse {
+    50% { background-color: rgba(56,194,212, 0.75); }
+}
+
+@keyframes hvr-back-pulse {
+    50% { background-color: rgba(56,194,212, 0.75); }
+}
+
+.hvr-back-pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+    -webkit-animation-name: hvr-back-pulse;
+    animation-name: hvr-back-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #38c2d4;
+    color: white;
+}
+
+/* ################  END  ######################*/
+
+
+/* ################  FOOTER LINKS  ######################*/
+
+.cl-effect-13 a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+    position: absolute;
+    right: 10%;
+    color: #444;
+    content: '\2022';
+    text-shadow: 0 0 transparent;
+    font-size: 1.6em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before { color: #38c2d4; text-shadow: 10px 0 #38c2d4, -10px 0 #38c2d4; }
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus { color: #ba7700; }
+/* ################  END  ######################*/

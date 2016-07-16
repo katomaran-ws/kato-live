@@ -3,21 +3,30 @@
 <head>
   <title>Katofresh</title>
   <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >-->
+
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <!-- -->
+
+  <link rel="stylesheet" href="/offline_assets/bootstrap.min.css">
+  <link rel="stylesheet" href="/offline_assets/bootstrap.min.js">
+  <link rel="stylesheet" href="/offline_assets/font-awesome.min.css">
+  <link rel="stylesheet" href="/offline_assets/jquery-1.11.1.js">
 
   <%= stylesheet_link_tag  'application', 'data-turbolinks-track' => true %>
-  <%#= stylesheet_link_tag  'admin' %>
-  <%= stylesheet_link_tag "style", media: "all" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+<div id="wrapper">
+  <%= render 'layouts/site_header'%>
 
-<%= render 'layouts/site_header'%>
+  <%= yield %>
 
-<%= yield %>
-
-<%= render 'layouts/site_footer' %>
-
+  <%= render 'layouts/site_footer' %>
+</div>
 </body>
 </html>

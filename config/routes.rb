@@ -5,15 +5,34 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+
+
   # # Admin Routes
+
+
   namespace :admin do
     resources :articles
   end
 
+  resources :admin do
+    get 'dashboard', on: :collection
+  end
+
+
 
 
   # # Site Routes
-  resources :home
+
+  # resources :home
+
+  get '/our-services' => 'home#services', :as => 'services'
+  get '/show-case' => 'home#show_case', :as => 'show_case'
+  get '/history' => 'home#history', :as => 'history'
+  get '/contact-us' => 'home#contact_us', :as => 'contact_us'
+  get '/downloads' => 'home#downloads', :as => 'downloads'
+
+  get '/login' => 'home#login', :as => 'login' #needs to be changed
+
 
 
 
