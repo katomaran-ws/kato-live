@@ -20,6 +20,7 @@ gem 'hirb'
 gem 'tinymce-rails'
 gem 'render_404', '~> 0.0.15'
 gem 'coffee-script-source', '1.8.0'
+gem 'formtastic'
 
 
 

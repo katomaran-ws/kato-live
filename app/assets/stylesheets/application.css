@@ -69,6 +69,10 @@ h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color
 
 /* ################  FORM STYLING  ######################*/
 
+.text-field{
+    position:relative;
+    margin-bottom:25px;
+}
 .form-black, .form-white {
     background-color: transparent;
     border: medium none;
@@ -81,20 +85,66 @@ h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color
     transition: border-color 0.15s ease-in-out 0s;
     width: 100%;
 }
-.form-black{color: gray;border-bottom: 1px solid gray;}
-.form-black:focus{border-bottom: 1px solid #fff; color: #fff;}
-
-.form-white{color: #000;border-bottom: 1px solid lightgray; }
-.form-white:focus{border-bottom: 1px solid #000; color: #000;}
-
-
-.form-white {
+.form-black{
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+.form-black:focus{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.form-white{
     background: #f6f6f6 none repeat scroll 0 0;
     border: 1px solid #e3e3e3;
-    color: #666666;
+    color: #000;
     font-weight: 300;
     padding: 0.5em 1em;
 }
+.form-white:focus{
+    border-bottom: 1px solid #000; color: #000;
+}
+
+.text-field span{
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: absolute;
+    transition:all 0.9s ease 0s;
+}
+.text-field span:first-of-type{
+    font-size: 14px;
+    left: 30px;
+    top: 8px;
+}
+.text-field span:last-of-type{
+    font-size: 12px;
+    right:20px;
+    bottom:-18px;
+    display:none;
+}
+.text-field.has_focus span:first-of-type, .text-field.has_value span:first-of-type{
+    display:none;
+}
+.text-field.has_focus span:last-of-type, .text-field.has_value span:last-of-type{
+    display:block;
+}
+
+.check-box label{
+    padding-top:10px;
+    font-weight:normal;
+}
+.check-box .switch{float:right;}
+
+.tinymce-content {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
+#article_article_content_content_ifr{
+    height:300px!important;
+}
+.submit-button{text-align:center;}
+
 /* ################  END  ######################*/
 
 
@@ -143,6 +193,30 @@ h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color
 /* ################  END  ######################*/
 
 
-/* ################  HI  ######################*/
-
+/* ################  ARTICLE LISTING PAGE  ######################*/
+.article-list-block {
+    margin: 1.5% 0;
+}
+.article-content{
+    min-height: 125px;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+.article-content-true {
+    background: #66cc99 none repeat scroll 0 0;
+    border: 1px solid #00B16A;
+}
+.article-content-false{
+    background: #F1A9A0 none repeat scroll 0 0;
+    border: 1px solid #CF000F;
+}
+.article-content h3 {
+    margin: 0 0 20px;
+    min-height: 63px;
+}
+.article-content p {
+    margin:0;
+    text-align:right;
+}
 /* ################  END  ######################*/

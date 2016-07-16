@@ -5,9 +5,12 @@ class CreateArticles < ActiveRecord::Migration
       t.string :description
       t.string :alias_url
       t.boolean :status
+      t.string :article_type
       t.integer :most_read_count
       t.integer :rating
       t.integer :sequence_number
+      t.integer :updated_by
+      t.integer :created_by
 
       t.timestamps null: false
     end

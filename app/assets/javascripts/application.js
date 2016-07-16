@@ -12,13 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= //require turbolinks
+
 //= require_tree .
+//= require tinymce
 
 
 // Set Home Page banner height and width
 function SetHomePage(){
     $('.banner').css(({height:$(window).height()}));
+}
+
+// Set Home Page banner height and width
+function SetAdminPage(){
+    $('.banner').css(({height:$(window).height()/2}));
 }
 
 $(window).resize(function(){ SetHomePage(); });
@@ -48,8 +54,9 @@ $(window).scroll(function(){
     }
 });
 
-// ANCHOR TITLE CONVERTION INTO SPAN TAG
 $(document).ready(function(){
+
+    // ANCHOR TITLE CONVERTION INTO SPAN TAG
     $("a").each(function(obj) {
         $elem=$(this);
         if ($elem.attr("title") != undefined){
@@ -57,4 +64,47 @@ $(document).ready(function(){
             $elem.addClass('tip');
         }
     });
+
+    // INSERTING 2 SPAN TAG BEFORE TEXT FIELD TAG
+    $('.text-field input[type=text]').each(function(){
+        var val=$(this).attr('placeholder');
+        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
+        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
+        $(this).attr('placeholder', '');
+    });
+
+    // FOCUS CLASS TOGGLE FOR TEXT FIELDS
+    $(".text-field input").focus(function(){
+        $elem=$(this);
+        $elem.parent().addClass("has_focus");
+        check_has_value($elem); // check values are reseted
+    }).blur(function(){
+        $elem=$(this);
+        $elem.parent().removeClass("has_focus");
+        check_has_value($elem); // check values are reseted
+    });
+
+    // HAS VALUE CLASS TOGGLE FOR TEXT FIELDS ON LOAD
+    $(".text-field input[type=text]").each(function(){
+        check_has_value($(this));
+    });
+
+    // FUNCTION TO CHECK HAS VALUE FOR TEXT FIELDS
+    function check_has_value(elem){
+        $elem=elem;
+        if($elem.val()!=''){
+            $elem.parent().addClass("has_value");
+        }
+        else{
+            $elem.parent().removeClass("has_value");
+        };
+    };
+
+    // FUNCTION TO ENABLE CLICK ON THE SPAN TAG
+    $('.text-field').on("click", function(){
+        ($(this).find("input[type=text]").focus());
+    });
+
 });
+
+
