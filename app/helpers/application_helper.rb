@@ -33,9 +33,15 @@ module ApplicationHelper
    # </div>
   end
 
-  def custom_button_1(name="button--wayra", value = "Submit")
+  def custom_button_1(name="wayra", value = "Submit")
     # <button class="button button--wayra" value="Create Article" name="commit"> Submit Article </button>
     content_tag :button, value, :class => "button button--#{name}".strip
+  end
+
+  def custom_link_1(name="Link", link="javascript(void)", style="wayra")
+    content_tag :a, name, href: link, class: "button button--#{style}".strip #do
+      # content_tag :span, name
+    # end
   end
 
 end

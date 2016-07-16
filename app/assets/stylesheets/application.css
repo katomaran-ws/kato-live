@@ -68,7 +68,7 @@ h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color
 
 
 /* ################  FORM STYLING  ######################*/
-
+#new_article{padding:0 3%;}
 .text-field{
     position:relative;
     margin-bottom:25px;
@@ -145,6 +145,9 @@ h2 .border:after{content:" ";border-bottom: 2px solid #38c2d4;bottom:-10px;color
 }
 .submit-button{text-align:center;}
 
+.custom-link a{display: block;}
+.custom-link{display: inline-block;}
+.custom-link a button{margin: 0;}
 /* ################  END  ######################*/
 
 

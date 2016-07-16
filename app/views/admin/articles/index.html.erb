@@ -9,9 +9,13 @@
           <%# @breadcrumb = {:Home => root_url, :List_Articles => "#"} %>
           <%#= render :partial => 'layouts/breadcrumb' %>
 
-          <div class="new_article">
-            <div class="btn btn-5 btn-5b-rev keep_right">
-              <%= link_to "New Article", new_admin_article_path%>
+          <div class="new-article">
+            <div class="custom-link">
+              <a href="<%= new_admin_article_path %>">
+                <%= custom_button_1("wayra", "New Article")%>
+                <%#= custom_link_1("New Article", new_admin_article_path, "wayra")%>
+              </a>
+              <%#= link_to "New Article", new_admin_article_path%>
             </div>
           </div>
 
