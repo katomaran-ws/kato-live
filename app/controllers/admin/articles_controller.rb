@@ -24,6 +24,7 @@ class Admin::ArticlesController < AdminController
 
   def edit
     @article = Article.find(params[:id])
+    @article_content = @article.article_content
     @page_properties = {:header => "Edit Article"}
   end
 
@@ -49,7 +50,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def article_content_params
-    params[:article].require(:article_content).permit(:content)
+    params[:article].require(:article_content).permit(:page_title, :meta_keywords, :meta_description, :content)
   end
 
 end

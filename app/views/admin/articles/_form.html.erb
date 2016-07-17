@@ -12,49 +12,88 @@
 
         <%= form_for ([:admin, @article]), method: :post, :controller => "admin/articles", :action => @article.new_record? ? :create : :update, :method => @article.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
 
-        <%#= semantic_form_for ([:admin, @article]),:controller => "admin/articles", :action => @article.new_record? ? :create : :update, :html => {:name => "article", :method => @article.new_record? ? "post" : "put"} do |f| %>
+            <%#= semantic_form_for ([:admin, @article]),:controller => "admin/articles", :action => @article.new_record? ? :create : :update, :html => {:name => "article", :method => @article.new_record? ? "post" : "put"} do |f| %>
 
-        <%= f.hidden_field 'id', :value => @article.id %>
+            <%= f.hidden_field 'id', :value => @article.id %>
 
-        <p class="col-md-5 col-sm-12 col-xs-12 text-field">
-          <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
-        </p>
-
-        <p class="col-md-4 col-sm-6 col-xs-12 text-field">
-          <%= f.text_field :alias_url, :class => 'form-white', :placeholder => 'Alias URL' %>
-        </p>
-
-        <p class="col-md-3 col-sm-6 col-xs-12 text-field">
-          <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
-        </p>
-
-        <p class="col-md-5 col-sm-12 col-xs-12 text-field">
-          <%= f.text_field :description, :class => 'form-white', :placeholder => 'Description' %>
-        </p>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 check-box">
-          <label>Published</label>
-          <%= custom_check_box_3("article[status]", true, @article.status, "article_status", "Yes", "No") %>
-        </div>
-
-        <p class="col-md-3 col-sm-6 col-xs-12 select-box">
-          <%= select_tag "article[article_type]", options_for_select(["Article", "Blog", "Static-Page"], @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
-        </p>
-
-        <%= f.fields_for :article_content do |e| %>
-
-            <p class="col-md-12 col-sm-12 col-xs-12 tinymce-content">
-              <%#= f.text_area :content, :class => 'form-white', :placeholder => 'Content', :rows => 5 %>
-              <%= e.text_area :content, :class => "tinymce", :placeholder => 'Content', :value => @article.article_content.try(:content) %>
+            <p class="col-md-5 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
             </p>
 
-        <% end %>
+            <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+              <%= f.text_field :alias_url, :class => 'form-white', :placeholder => 'Alias URL' %>
+            </p>
 
-        <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
-          <%#= f.submit "Create Article", :class => "submit_btn" %>
-          <%= custom_button_1("wayra", "Submit Article")%>
-          <!--<button class="button button--wayra" value="Create Article" name="commit"> Submit Article </button>-->
-        </div>
+            <p class="col-md-3 col-sm-6 col-xs-12 text-field">
+              <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
+            </p>
+
+            <p class="col-md-5 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :description, :class => 'form-white', :placeholder => 'Description' %>
+            </p>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 check-box">
+              <label>Published</label>
+              <%= custom_check_box_3("article[status]", true, @article.status, "article_status", "Yes", "No") %>
+            </div>
+
+            <p class="col-md-3 col-sm-6 col-xs-12 select-box article-type">
+              <%= select_tag "article[article_type]", options_for_select(ARTICLE_TYPES, @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
+            </p>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-article-type Article-article-type  no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box">
+                <%= select_tag "article[article_heading]", options_for_select(ARTICLE_TYPES, @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
+              </p>
+              <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+                <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
+              </p>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-article-type Blog-article-type no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box">
+                <%= select_tag "article[author]", options_for_select(AUTHORS, @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
+              </p>
+              <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+                <%= f.text_field :description, :class => 'form-white', :placeholder => 'Description' %>
+              </p>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-article-type Static-Page-article-type  no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box">
+                <%= select_tag "article[article_type]", options_for_select(["Articles", "Blog", "Static-Page"], @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
+              </p>
+
+            </div>
+
+            <%= f.fields_for :article_content do |e| %>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                  <p class="col-md-5 col-sm-12 col-xs-12 text-field">
+                    <%= e.text_field :page_title, :class => 'form-white', :placeholder => 'Page Title', :value => @article_content.try(:page_title) %>
+                  </p>
+
+                  <p class="col-md-7 col-sm-12 col-xs-12 text-field">
+                    <%= e.text_field :meta_keywords, :class => 'form-white', :placeholder => 'Meta Keywords', :value => @article_content.try(:meta_keywords) %>
+                  </p>
+
+                  <p class="col-md-12 col-sm-12 col-xs-12 text-field">
+                    <%= e.text_field :meta_description, :class => 'form-white', :placeholder => 'Meta Description', :value => @article_content.try(:meta_description) %>
+                  </p>
+                </div>
+
+                <p class="col-md-12 col-sm-12 col-xs-12 tinymce-content">
+                  <%#= f.text_area :content, :class => 'form-white', :placeholder => 'Content', :rows => 5 %>
+                  <%= e.text_area :content, :class => "tinymce", :placeholder => 'Content', :value => @article.article_content.try(:content) %>
+                </p>
+
+            <% end %>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
+              <%#= f.submit "Create Article", :class => "submit_btn" %>
+              <%= custom_button_1("wayra", "Submit Article")%>
+              <!--<button class="button button--wayra" value="Create Article" name="commit"> Submit Article </button>-->
+            </div>
 
         <% end %>
 
@@ -63,5 +102,15 @@
   </div><!--SERVICE-BLOCK-->
 </div><!--CONTAINER-BLOCK-->
 
+<script>
+    $(document).ready(function(){
+        $('.article-type .cs-options').find('li').click(function () {
+            $('.all-article-type').hide();
+            $('.'+$(this).attr('data-value')+"-article-type" ).show();
+        });
+        $('.all-article-type').hide();
+        $('.'+$('.article-type').find('span.cs-placeholder').text()+"-article-type").show();
+    });
+</script>
 
 <%= tinymce :plugins => ["wordcount", "paste", "preview", "code", "table"] %>
