@@ -1,0 +1,29 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <div class="form-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row">
+
+        <h2><a class="border"><%= @page_properties[:header] %></a></h2>
+        <%#= form_for @asset, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
+        <%= form_for @asset, url: save_asset_admin_index_path, method: :post, html: { autocomplete: "off" } do |f| %>
+
+      <%= f.hidden_field 'id', :value => @asset.id %>
+
+            <p class="col-md-5 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
+            </p>
+
+            <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+              <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias URL' %>
+            </p>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
+              <%= custom_button_1("wayra", "Submit Asset")%>
+            </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

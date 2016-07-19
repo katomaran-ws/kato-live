@@ -38,10 +38,12 @@ module ApplicationHelper
     content_tag :button, value, :class => "button button--#{name}".strip
   end
 
-  def custom_link_1(name="Link", link="javascript(void)", style="wayra")
-    content_tag :a, name, href: link, class: "button button--#{style}".strip #do
-      # content_tag :span, name
-    # end
+  def custom_link_1(name="Link", link="javascript(void)", style="link-1")
+    content_tag :a, name, href: link, class: style do
+      content_tag :span, name
+    end
+
+  #   <a href="/our-services#r-n-d" class="link-1"><span>Know More</span></a>
   end
 
 end

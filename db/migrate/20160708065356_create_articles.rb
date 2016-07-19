@@ -6,6 +6,8 @@ class CreateArticles < ActiveRecord::Migration
       t.string :alias_url
       t.boolean :status
       t.string :article_type
+      t.string :heading_block
+      t.string :author
       t.integer :most_read_count
       t.integer :rating
       t.integer :sequence_number

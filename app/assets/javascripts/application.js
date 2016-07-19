@@ -27,9 +27,23 @@ function SetAdminPage(){
     $('.banner').css(({height:$(window).height()/2}));
 }
 
-$(window).resize(function(){ SetHomePage(); });
-$(window).load(function(){ SetHomePage(); });
+// Make Text Area Height dynamic based on the content size
+function text_area(elem) {
+    $(elem).css({'height':'auto','overflow-y':'hidden'}).height(elem.scrollHeight-13);
+}
 
+// FUNCTION TO CHECK HAS VALUE FOR TEXT FIELDS
+function check_has_value(elem){
+    $elem=elem;
+    if($elem.val()!=''){
+        $elem.parent().addClass("has_value");
+    }
+    else{
+        $elem.parent().removeClass("has_value");
+    }
+}
+
+// Check if a elem block is in the viewport
 function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
@@ -40,7 +54,6 @@ function isScrolledIntoView(elem)
 
     return (elemTop < docViewBottom);
 }
-
 
 $(window).scroll(function(){
     $elem=$('.footer-content');
@@ -62,19 +75,12 @@ $(document).ready(function(){
         if ($elem.attr("title") != undefined){
             $elem.append("<span>"+$elem.attr("title")+"</span>");
             $elem.addClass('tip');
+            $elem.attr('title','');
         }
     });
 
-    // INSERTING 2 SPAN TAG BEFORE TEXT FIELD TAG
-    $('.text-field input[type=text]').each(function(){
-        var val=$(this).attr('placeholder');
-        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
-        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
-        $(this).attr('placeholder', '');
-    });
-
     // FOCUS CLASS TOGGLE FOR TEXT FIELDS
-    $(".text-field input").focus(function(){
+    $(".text-field input, .text-field textarea").focus(function(){
         $elem=$(this);
         $elem.parent().addClass("has_focus");
         check_has_value($elem); // check values are reseted
@@ -84,27 +90,43 @@ $(document).ready(function(){
         check_has_value($elem); // check values are reseted
     });
 
-    // HAS VALUE CLASS TOGGLE FOR TEXT FIELDS ON LOAD
-    $(".text-field input[type=text]").each(function(){
+    $(".text-field input[type=text], .text-field textarea").each(function(){
+
+        //INSERTING 2 SPAN TAG BEFORE TEXT FIELD TAG AND TEXT AREA TAG
+        var val=$(this).attr('placeholder');
+        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
+        $( "<span>"+val+"</span>" ).insertBefore( $(this) );
+        $(this).attr('placeholder', '');
+
+        // HAS VALUE CLASS TOGGLE FOR TEXT FIELDS ON LOAD
         check_has_value($(this));
     });
 
-    // FUNCTION TO CHECK HAS VALUE FOR TEXT FIELDS
-    function check_has_value(elem){
-        $elem=elem;
-        if($elem.val()!=''){
-            $elem.parent().addClass("has_value");
-        }
-        else{
-            $elem.parent().removeClass("has_value");
-        };
-    };
 
     // FUNCTION TO ENABLE CLICK ON THE SPAN TAG
     $('.text-field').on("click", function(){
-        ($(this).find("input[type=text]").focus());
+        ($(this).find("input[type=text], textarea").focus());
     });
 
+
+    // CHANGE TEXT AREA BLOCK HEIGHT BASED ON THE CONTENT SIZE
+    $('textarea').each(function () {
+        text_area(this);
+    }).on('input', function () {
+        text_area(this);
+    });
+
+
+    // TOGGLE VISIBLE CONTENT BASED ON ARTICLE TYPE CHANGE
+    $('.article-type .cs-options').find('li').click(function () {
+        $('.all-article-type').hide();
+        $('.'+$(this).attr('data-value')+"-article-type" ).show();
+    });
+
+
+    // LOADD VISIBLE CONTENT BASED ON ARTICLE TYPE
+    $('.all-article-type').hide();
+    $('.'+$('.article-type').find('span.cs-placeholder').text()+"-article-type").show();
+
+
 });
-
-

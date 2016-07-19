@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160716101817) do
+ActiveRecord::Schema.define(version: 20160717164414) do
 
   create_table "article_contents", force: :cascade do |t|
     t.integer  "article_id"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20160716101817) do
     t.string   "alias_url"
     t.boolean  "status"
     t.string   "article_type"
+    t.string   "heading_block"
+    t.string   "author"
     t.integer  "most_read_count"
     t.integer  "rating"
     t.integer  "sequence_number"
@@ -39,6 +41,18 @@ ActiveRecord::Schema.define(version: 20160716101817) do
     t.integer  "created_by"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "assets", force: :cascade do |t|
+    t.string   "title"
+    t.string   "alias_name"
+    t.boolean  "status",          default: true
+    t.string   "access"
+    t.integer  "access_code"
+    t.string   "location"
+    t.integer  "sequence_number"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end

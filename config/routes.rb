@@ -5,10 +5,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-
-
   # # Admin Routes
 
+  get '/admin/upload/assets(/:id)/:action_name', :to => 'admin#asset_form', :action_name => /edit|new/, :as => 'asset_form'
 
   namespace :admin do
     resources :articles
@@ -16,6 +15,9 @@ Rails.application.routes.draw do
 
   resources :admin do
     get 'dashboard', on: :collection
+    get 'reports', on: :collection
+    get 'upload', on: :collection
+    post 'save_asset', on: :collection
   end
 
 
@@ -30,6 +32,8 @@ Rails.application.routes.draw do
   get '/history' => 'home#history', :as => 'history'
   get '/contact-us' => 'home#contact_us', :as => 'contact_us'
   get '/downloads' => 'home#downloads', :as => 'downloads'
+
+  get '/download/:alias_name(/:access_code)' => "home#get_file"
 
   get '/login' => 'home#login', :as => 'login' #needs to be changed
 

@@ -46,7 +46,7 @@ class Admin::ArticlesController < AdminController
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :status, :alias_url, :article_type, :status, :sequence_number)
+    params.require(:article).permit(:id, :title, :description, :status, :alias_url, :article_type, :status, :sequence_number, :heading_block, :author)
   end
 
   def article_content_params
