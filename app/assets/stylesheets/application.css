@@ -199,6 +199,13 @@ a.tip:hover span:last-child::before {
     padding: 0 15px;
     width: 100%;
 }
+.file-select{text-align: center;}
+.file-select img{max-width: 50px;}
+.file-select input{
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    width: 100%;
+}
 #article_article_content_content_ifr{ height:300px!important; }
 .submit-button{text-align:center;}
 
@@ -299,6 +306,8 @@ a.tip:hover span:last-child::before {
 /* ################  END  ######################*/
 
 
+
+
 /* ################  MEDIA QUERIES  ######################*/
 
 @media only screen and (max-width:480px){
@@ -307,3 +316,4 @@ a.tip:hover span:last-child::before {
 }
 
 /* ################  END  ######################*/
+

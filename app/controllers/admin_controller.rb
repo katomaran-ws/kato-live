@@ -16,6 +16,7 @@ class AdminController < ApplicationController
 
   def upload
     @page_properties.merge!(:header => "Asset Upload")
+    @assets=Asset.all
   end
 
   def asset_form
@@ -34,6 +35,8 @@ class AdminController < ApplicationController
       flag=asset.update_attributes(asset_params)
     else
       asset=Asset.new(asset_params)
+      Asset.save_file(params[:asset][:location])
+      asset.location="private/downloads/#{params[:asset][:location].original_filename}"
       flag=asset.save
     end
     if flag

@@ -2,6 +2,10 @@ module ApplicationHelper
 
   delegate :url_helpers, to: 'Rails.application.routes'
 
+  def get_file_img(ext)
+    FILE_EXTENSION_MAPPING[ext.to_sym] ||= "ico-txt.png"
+  end
+
   # custom_check_box_1("category[status]", true, @category.status, "category_status")
   def custom_check_box_1(name, true_val, value, label)
     custom_check_box_main(name, true_val, value, label, "toggle-round")

@@ -11,20 +11,15 @@
 
           <div class="new-button">
             <%= custom_link_1("New Asset", asset_form_path(:action_name => "new"), "link-1") %>
-            <%#= custom_link_1("New Image", "/our-services#boot-camp", "link-1") %>
           </div>
 
-          <% Array(@articles).each do |article| %>
-
-              <div class="article-list-block col-md-4 col-sm-6 col-xs-12">
-                <a href="/admin/articles/<%= article.id %>/edit">
-                  <div class="article-content article-content-<%= article.status %>">
-                    <h3><%= article.title %></h3>
-                    <p><%= article.article_type %></p>
-                  </div>
+          <% @assets.each do |asset| %>
+              <div class="download-block col-md-3 col-sm-4 col-xs-6 no-padding">
+                <a href="<%= asset_form_path(:action_name => "edit", :id => asset.id)%>">
+                  <img src="/images/core/<%= get_file_img(asset.title.split('.').last) %>"/>
+                  <p><%= asset.title.upcase %></p>
                 </a>
               </div>
-
           <% end %>
 
         </div><!--INFO-COMMON-BLOCK-->
