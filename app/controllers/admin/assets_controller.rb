@@ -1,6 +1,11 @@
 class Admin::AssetsController < AdminController
   require "fileutils"
 
+  def index
+    @page_properties.merge!(:header => "Asset Upload")
+    @assets=Asset.all
+  end
+
   def new
     @page_properties.merge!(:header => "New Asset")
     @asset=Asset.new
@@ -38,10 +43,7 @@ class Admin::AssetsController < AdminController
     end
   end
 
-  def index
-    @page_properties.merge!(:header => "Asset Upload")
-    @assets=Asset.all
-  end
+  private
 
   def asset_params
     params.require(:asset).permit(:id, :title, :alias_name, :status, :access, :location, :sequence_number)
