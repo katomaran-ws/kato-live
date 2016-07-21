@@ -1,14 +1,11 @@
 class Asset < ActiveRecord::Base
 
-  def self.save_file(upload)
-    # name = upload.original_filename
-    # directory = 'private'
-    # create the file path
-    # path = File.join(directory,name)
-    # write the file
-    # File.open(path, "w+") { |f| f.write(upload.read)}
+  ACCESS_CODE_MAPPING={"User" => 0, "Admin" => 1}
 
-    # FileUtils.move upload.path, path
+  before_save :access_code_mapping
+
+  def access_code_mapping
+    self.access_code=ACCESS_CODE_MAPPING[self.access]
   end
 
 end
