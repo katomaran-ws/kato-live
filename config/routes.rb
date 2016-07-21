@@ -7,10 +7,11 @@ Rails.application.routes.draw do
 
   # # Admin Routes
 
-  get '/admin/upload/assets(/:id)/:action_name', :to => 'admin#asset_form', :action_name => /edit|new/, :as => 'asset_form'
+  # get '/admin/upload/assets(/:id)/:action_name', :to => 'admin/assets#asset_form', :action_name => /edit|new/, :as => 'asset_form'
 
   namespace :admin do
     resources :articles
+    resources :assets
   end
 
   resources :admin do
