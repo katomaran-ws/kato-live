@@ -17,4 +17,18 @@ class HomeController < ApplicationController
     end
   end
 
+  def list_blog
+
+  end
+
+  def show_blog
+    @article=Article.published.where(alias_url: params[:article_title]).first
+    if @article.blank?
+      render_404
+    else
+      @article_content=@article.article_content
+      # just to render the same template
+    end
+  end
+
 end

@@ -39,6 +39,9 @@ Rails.application.routes.draw do
   get '/login' => 'home#login', :as => 'login' #needs to be changed
 
 
+  get 'blog/articles' => 'home#list_blog'
+  get 'blog/articles/:article_title' => 'home#show_blog'
+
 
 
 

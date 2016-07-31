@@ -1,0 +1,31 @@
+<div class="blogs col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a><%= @article.title %></a></h2>
+  <div class="blogs col-md-12 col-sm-12 col-xs-12 no-padding white-back">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <div class="services-content col-md-12 col-sm-12 col-xs-12">
+          <%= raw @article_content.content %>
+        </div>
+
+        <div class="pagination col-md-12 col-sm-12 col-xs-12 no-padding">
+          <div class="left-pagination col-md-6 col-sm-6 col-xs-12">
+            <span>Prev Article</span>
+            <h6><a><%= @article.title %></a></h6>
+          </div>
+
+          <div class="right-pagination col-md-6 col-sm-6 col-xs-12">
+            <span>Next Article</span>
+            <h6><a><%= @article.title %></a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+
+</style>
