@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 
@@ -20,7 +19,6 @@ gem 'hirb'
 gem 'tinymce-rails'
 gem 'render_404', '~> 0.0.15'
 gem 'coffee-script-source', '1.8.0'
-
 
 
 # Use sqlite3 as the database for Active Record
@@ -60,7 +58,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+#  gem 'web-console', '~> 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
