@@ -3,8 +3,7 @@
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
-    width: 48%;
+    margin: 10px 0.5%;
     background: #3085a3;
     text-align: center;
     cursor: pointer;
@@ -50,17 +49,18 @@
     opacity: 0;
 }
 
-.grid figure h3 {
+.grid figure h5 {
     word-spacing: -0.15em;
     font-weight: 300;
 }
 
-.grid figure h3 span {
-    font-weight: 800;
+.grid figure h5 span {
+    font-weight: 600;
     border-bottom: 2px solid;
+    margin-right: 2%;
 }
 
-.grid figure h3,
+.grid figure h5,
 .grid figure p {
     margin: 0;
 }
@@ -89,7 +89,7 @@ figure.effect-sadie figcaption::before {
     transform: translate3d(0,50%,0);
 }
 
-figure.effect-sadie h3 {
+figure.effect-sadie h5 {
     position: absolute;
     top: 50%;
     left: 0;
@@ -118,7 +118,7 @@ figure.effect-sadie p {
     transform: translate3d(0,10px,0);
 }
 
-figure.effect-sadie:hover h3 {
+figure.effect-sadie:hover h5 {
     color: #fff;
     -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
     transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
@@ -130,8 +130,6 @@ figure.effect-sadie:hover p {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
-
-
 
 
 /*---------------*/
@@ -161,11 +159,12 @@ figure.effect-milo:hover img {
     transform: translate3d(0,0,0) scale(1);
 }
 
-figure.effect-milo h3 {
+figure.effect-milo h5 {
     position: absolute;
     right: 0;
     bottom: 0;
     padding: 1em 1.2em;
+    width: 100%;
 }
 
 figure.effect-milo p {
