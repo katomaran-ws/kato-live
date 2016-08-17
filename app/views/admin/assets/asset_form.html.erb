@@ -8,10 +8,16 @@
         <%#= form_for @asset, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
         <%= form_for ['admin', @asset], :controller => "admin/assets", :action => @asset.new_record? ? :create : :update, :method => @asset.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
 
-      <%= f.hidden_field 'id', :value => @asset.id %>
+            <%= f.hidden_field 'id', :value => @asset.id %>
+
+            <%= f.hidden_field 'type', :value => params[:type] %>
 
             <p class="col-md-4 col-sm-12 col-xs-12 text-field">
-              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
+              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title' %>
+            </p>
+
+            <p class="col-md-4 col-sm-6 col-xs-12 select-box asset-type" data-content="Asset Type">
+              <%= select_tag "asset[asset_type]", options_for_select(ASSET_TYPES, @asset.asset_type), :class => "cs-select cs-skin-elastic", prompt: "--Asset Type--" %>
             </p>
 
             <p class="col-md-4 col-sm-6 col-xs-12 text-field">

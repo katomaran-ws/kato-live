@@ -55,6 +55,24 @@ function isScrolledIntoView(elem)
     return (elemTop < docViewBottom);
 }
 
+
+function toggle_fields_on_select(control_field) {
+
+    // TOGGLE VISIBLE CONTENT BASED ON ARTICLE TYPE CHANGE
+    $('.' + (control_field) + ' .cs-options').find('li').click(function () {
+        $('.all-article-type').hide();
+        console.log(this);
+        $('.' + $(this).attr('data-value') + "-article-type").show();
+    });
+}
+
+function select_defaults_toggle_fields(control_field) {
+
+    // LOAD VISIBLE CONTENT BASED ON CONTROL FIELD
+    $('.all-'+control_field).hide();
+    $('.'+$('.'+control_field).find('span.cs-placeholder').text()+"-"+control_field).show();
+}
+
 $(window).scroll(function(){
     $elem=$('.footer-content');
     if ($elem){
@@ -117,16 +135,6 @@ $(document).ready(function(){
     });
 
 
-    // TOGGLE VISIBLE CONTENT BASED ON ARTICLE TYPE CHANGE
-    $('.article-type .cs-options').find('li').click(function () {
-        $('.all-article-type').hide();
-        $('.'+$(this).attr('data-value')+"-article-type" ).show();
-    });
-
-
-    // LOADD VISIBLE CONTENT BASED ON ARTICLE TYPE
-    $('.all-article-type').hide();
-    $('.'+$('.article-type').find('span.cs-placeholder').text()+"-article-type").show();
-
+    toggle_fields_on_select('article_type');
 
 });

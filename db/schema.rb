@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717164414) do
+ActiveRecord::Schema.define(version: 20160815122114) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "article_contents", force: :cascade do |t|
     t.integer  "article_id"
@@ -46,13 +49,27 @@ ActiveRecord::Schema.define(version: 20160717164414) do
   create_table "assets", force: :cascade do |t|
     t.string   "title"
     t.string   "alias_name"
+    t.string   "caption"
     t.boolean  "status",          default: true
     t.string   "access"
     t.integer  "access_code"
     t.string   "location"
     t.integer  "sequence_number"
+    t.string   "asset_type"
+    t.boolean  "is_cloudinary"
+    t.integer  "gallery_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+  end
+
+  create_table "galleries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "caption"
+    t.string   "description"
+    t.boolean  "status"
+    t.integer  "title_image_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

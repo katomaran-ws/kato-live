@@ -4,16 +4,38 @@ class Admin::AssetsController < AdminController
   def index
     @page_properties.merge!(:header => "Asset Upload")
     @assets=Asset.all
+    @image=Image.all
+    @gallery=Gallery.all
   end
 
   def new
-    @page_properties.merge!(:header => "New Asset")
-    @asset=Asset.new
+    if params[:type]=="gallery"
+      @page_properties.merge!(:header => "New Gallery")
+      @image=Image.new
+      render 'gallery_form'
+    else
+      @page_properties.merge!(:header => "New Asset")
+      @asset=Asset.new
+      render 'asset_form'
+    end
   end
 
   def edit
     @page_properties.merge!(:header => "Edit Asset")
     @asset=Asset.find_by_id(params[:id])
+    if params[:type]=="asset"
+      @page_properties.merge!(:header => "New Asset")
+      @asset=Asset.new
+      render 'asset_form'
+    elsif params[:type]=="image"
+      @page_properties.merge!(:header => "New Image")
+      @image=Image.new
+      render 'image_form'
+    elsif params[:type]=="gallery"
+      @page_properties.merge!(:header => "New Gallery")
+      @image=Image.new
+      render 'gallery_form'
+    end
   end
 
   def create
