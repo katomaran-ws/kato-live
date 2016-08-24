@@ -8,4 +8,7 @@ class Asset < ActiveRecord::Base
     self.access_code=ACCESS_CODE_MAPPING[self.access]
   end
 
+  def location_path
+    self[:is_cloudinary] ? self[:cloudinary_url] : self[:location]
+  end
 end

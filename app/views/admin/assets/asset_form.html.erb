@@ -16,21 +16,46 @@
               <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title' %>
             </p>
 
-            <p class="col-md-4 col-sm-6 col-xs-12 select-box asset-type" data-content="Asset Type">
-              <%= select_tag "asset[asset_type]", options_for_select(ASSET_TYPES, @asset.asset_type), :class => "cs-select cs-skin-elastic", prompt: "--Asset Type--" %>
-            </p>
-
-            <p class="col-md-4 col-sm-6 col-xs-12 text-field">
-              <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias URL' %>
-            </p>
-
             <div class="col-md-4 col-sm-6 col-xs-12 check-box">
               <label>Status</label>
               <%= custom_check_box_3("asset[status]", true, @asset.status, "asset_status", "Yes", "No") %>
             </div>
 
-            <p class="col-md-6 col-sm-6 col-xs-12 select-box access" data-content="Access">
-              <%= select_tag "asset[access]", options_for_select(["User", "Admin"], @asset.access), :class => "cs-select cs-skin-elastic", prompt: "--Access--" %>
+            <p class="col-md-4 col-sm-6 col-xs-12 select-box asset-type" data-content="Asset Type">
+              <%= select_tag "asset[asset_type]", options_for_select(ASSET_TYPES, @asset.asset_type), :class => "cs-select cs-skin-elastic", prompt: "--Asset Type--" %>
+            </p>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-asset-type Document-asset-type no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box access" data-content="Access">
+                <%= select_tag "asset[access]", options_for_select(["User", "Admin"], @asset.access), :class => "cs-select cs-skin-elastic", prompt: "--Access--" %>
+              </p>
+              <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+                <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias URL' %>
+              </p>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-asset-type Image-asset-type no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+                <%= f.text_field :caption, :class => 'form-white', :placeholder => 'Caption' %>
+              </p>
+
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box image"  data-content="Cloudinary">
+                <%= select_tag "asset[is_cloudinary]", options_for_select(["Yes", "No"], @asset.is_cloudinary), :class => "cs-select cs-skin-elastic", prompt: "--Cloudinary--" %>
+              </p>
+
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="Gallery Block">
+                <%= select_tag "asset[gallery_id]", options_for_select(["NEW", "EDIT"], @asset.gallery_id), :class => "cs-select cs-skin-elastic", prompt: "--Gallery Name--" %>
+              </p>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 all-asset-type all-image Yes-image no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 text-field">
+                <%= f.text_field :cloudinary_url, :class => 'form-white', :placeholder => 'Cloudinary URL' %>
+              </p>
+            </div>
+
+            <p class="col-md-2 col-sm-6 col-xs-12 text-field">
+              <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
             </p>
 
             <% if @asset.new_record? %>
@@ -40,7 +65,7 @@
             <% else %>
                 <p class="col-md-6 col-sm-6 col-xs-12 file-select">
                   <img src="/images/core/<%= get_file_img(@asset.title.split('.').last) %>"/>
-                  <%= @asset.title%>
+                  <%= @asset.location_path %>
                 </p>
             <% end %>
 

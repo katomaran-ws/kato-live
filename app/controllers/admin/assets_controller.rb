@@ -11,7 +11,7 @@ class Admin::AssetsController < AdminController
   def new
     if params[:type]=="gallery"
       @page_properties.merge!(:header => "New Gallery")
-      @image=Image.new
+      @gallery=Gallery.new
       render 'gallery_form'
     else
       @page_properties.merge!(:header => "New Asset")
@@ -21,20 +21,14 @@ class Admin::AssetsController < AdminController
   end
 
   def edit
-    @page_properties.merge!(:header => "Edit Asset")
-    @asset=Asset.find_by_id(params[:id])
-    if params[:type]=="asset"
-      @page_properties.merge!(:header => "New Asset")
-      @asset=Asset.new
-      render 'asset_form'
-    elsif params[:type]=="image"
-      @page_properties.merge!(:header => "New Image")
-      @image=Image.new
-      render 'image_form'
-    elsif params[:type]=="gallery"
-      @page_properties.merge!(:header => "New Gallery")
-      @image=Image.new
+    if params[:type]=="gallery"
+      @page_properties.merge!(:header => "Edit Gallery")
+      @gallery=Gallery.find_by_id(params[:id]) || Gallery.first   ## rescue in case of invalid id
       render 'gallery_form'
+    else
+      @page_properties.merge!(:header => "Edit Asset")
+      @asset=Asset.find_by_id(params[:id]) || Asset.first   ## rescue in case of invalid id
+      render 'asset_form'
     end
   end
 

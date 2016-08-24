@@ -12,6 +12,7 @@ class CreateAssets < ActiveRecord::Migration
       t.string :asset_type
       t.boolean :is_cloudinary
       t.integer :gallery_id
+      t.string :cloudinary_url
 
       t.timestamps null: false
     end

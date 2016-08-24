@@ -18,11 +18,12 @@ class HomeController < ApplicationController
   end
 
   def list_blog
-
+    @article=Article.published.first
+    @article_content=@article.article_content
   end
 
   def show_blog
-    @article=Article.published.where(alias_url: params[:article_title]).first
+    @article=Article.published.find_by_alias_url(params[:article_title])
     if @article.blank?
       render_404
     else

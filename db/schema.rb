@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160815122114) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "article_contents", force: :cascade do |t|
     t.integer  "article_id"
     t.text     "content"
@@ -58,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160815122114) do
     t.string   "asset_type"
     t.boolean  "is_cloudinary"
     t.integer  "gallery_id"
+    t.string   "cloudinary_url"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
