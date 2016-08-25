@@ -10,7 +10,7 @@
 
             <%= f.hidden_field 'id', :value => @asset.id %>
 
-            <%= f.hidden_field 'type', :value => params[:type] %>
+            <%= f.hidden_field 'type', :value => 'asset' %>
 
             <p class="col-md-4 col-sm-12 col-xs-12 text-field">
               <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title' %>
@@ -20,7 +20,6 @@
               <label>Status</label>
               <%= custom_check_box_3("asset[status]", true, @asset.status, "asset_status", "Yes", "No") %>
             </div>
-
             <p class="col-md-4 col-sm-6 col-xs-12 select-box asset-type" data-content="Asset Type">
               <%= select_tag "asset[asset_type]", options_for_select(ASSET_TYPES, @asset.asset_type), :class => "cs-select cs-skin-elastic", prompt: "--Asset Type--" %>
             </p>

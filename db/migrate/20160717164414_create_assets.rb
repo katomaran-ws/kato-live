@@ -10,7 +10,7 @@ class CreateAssets < ActiveRecord::Migration
       t.string :location
       t.integer :sequence_number
       t.string :asset_type
-      t.boolean :is_cloudinary
+      t.string :is_cloudinary
       t.integer :gallery_id
       t.string :cloudinary_url
 

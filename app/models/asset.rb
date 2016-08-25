@@ -9,6 +9,7 @@ class Asset < ActiveRecord::Base
   end
 
   def location_path
-    self[:is_cloudinary] ? self[:cloudinary_url] : self[:location]
+    self[:is_cloudinary]=="Yes" ? self[:cloudinary_url] : self[:location].gsub("public", '')
   end
+
 end
