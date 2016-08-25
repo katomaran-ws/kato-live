@@ -1,0 +1,29 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+  <div class="info-block col-md-12 col-sm-12 col-xs-12 no-padding" id="our-modules">
+    <div class="container no-padding">
+      <div class="row">
+
+        <div class="info-common-block col-md-12 col-sm-12 col-xs-12 no-padding">
+          <h2 id="contact"><a class="border"><%= @page_properties[:header] %></a></h2>
+
+          <%# @breadcrumb = {:Home => root_url, :List_Articles => "#"} %>
+          <%#= render :partial => 'layouts/breadcrumb' %>
+          <
+          <% @reports.each do |report| %>
+
+              <div class="article-list-block col-md-4 col-sm-6 col-xs-12">
+                <a href="/admin/reports/<%= report.id %>/edit">
+                  <div class="article-content article-content-<%= report.status %>">
+                    <h3><%= report.name_of_model %></h3>
+                    <p><%= report.status %></p>
+                  </div>
+                </a>
+              </div>
+
+          <% end %>
+
+        </div><!--INFO-COMMON-BLOCK-->
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--INFO-BLOCK-->
+</div><!--CONTAINER-BLOCK-->

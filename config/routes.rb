@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :articles
     resources :assets
+    resources :reports
   end
 
   resources :admin do
