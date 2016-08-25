@@ -75,10 +75,10 @@ ActiveRecord::Schema.define(version: 20160825175052) do
 
   create_table "reports", force: :cascade do |t|
     t.string   "name_of_model"
-    t.string   "downloadable_fields"
-    t.boolean  "status"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "downloadable_fields", default: ""
+    t.boolean  "status",              default: true
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
 end
