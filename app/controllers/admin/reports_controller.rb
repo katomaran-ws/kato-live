@@ -2,7 +2,7 @@ class Admin::ReportsController < AdminController
 
   def index
     @reports = Report.all
-    @page_properties = {:header => "Download Report Listing"}
+    @page_properties = {:header => "Report Listing"}
   end
 
   def edit
@@ -20,16 +20,21 @@ class Admin::ReportsController < AdminController
   end
 
   def download
-    @report=Report.find_by_id(params[:report_id])
-    if !@report.blank?
-
-    else
-      render_404
-    end
+    @report=Report.find(params[:report_id]) rescue render_404
+    @page_properties = {:header => "Download #{@report.try(:name_of_model)} Report"}
   end
 
   def download_file
-    @report.download_csv
+    if params[:report] and params[:report][:from_date] and params[:report][:to_date]
+      report=Report.find(params[:report_id]) rescue (redirect_to action: :download)
+      values=eval(report.name_of_model).where("created_at > ? and created_at < ?", params[:report][:from_date].to_date, params[:report][:to_date].to_date)
+      if values.blank?
+        redirect_to action: :download and return
+      end
+      send_data report.to_csv(values), :filename => "#{report.name_of_model}.csv",  :type => 'text/csv'
+    else
+      redirect_to action: :download
+    end
   end
 
   private

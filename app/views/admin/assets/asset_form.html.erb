@@ -42,8 +42,9 @@
                 <%= select_tag "asset[is_cloudinary]", options_for_select(["Yes", "No"], @asset.is_cloudinary), :class => "cs-select cs-skin-elastic", prompt: "--Cloudinary--" %>
               </p>
 
-              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="Gallery Block">
-                <%= select_tag "asset[gallery_id]", options_for_select(["NEW", "EDIT"], @asset.gallery_id), :class => "cs-select cs-skin-elastic", prompt: "--Gallery Name--" %>
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="Gallery Name">
+                <%#= select_tag "asset[gallery_id]", options_for_select(["NEW", "EDIT"], @asset.gallery_id), :class => "cs-select cs-skin-elastic", prompt: "--Gallery Name--" %>
+                <%= collection_select(:asset, :gallery_id, Gallery.all, :id, :name, {:prompt => "--Gallery Name--"}, {:class => "cs-select cs-skin-elastic"}) %>
               </p>
             </div>
 

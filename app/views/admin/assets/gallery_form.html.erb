@@ -5,43 +5,49 @@
       <div class="row">
 
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
-        <%#= form_for @image, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
-        <%= form_for ['admin', @image], :controller => "admin/assets", :action => @image.new_record? ? :create : :update, :method => @image.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
+        <%#= form_for @gallery, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
+        <%= form_for ([:admin, @gallery]), url: admin_assets_path(@gallery), :method => @gallery.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
 
-            <%= f.hidden_field 'id', :value => @image.id %>
+            <%= f.hidden_field 'id', :value => @gallery.id %>
 
             <%= f.hidden_field 'type', :value => params[:type] %>
 
-            <p class="col-md-4 col-sm-12 col-xs-12 text-field">
-              <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
+            <p class="col-md-6 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :name, :class => 'form-white' ,:placeholder => 'Name' %>
             </p>
 
-            <p class="col-md-4 col-sm-6 col-xs-12 text-field">
-              <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias URL' %>
+            <p class="col-md-6 col-sm-6 col-xs-12 text-field">
+              <%= f.text_field :caption, :class => 'form-white', :placeholder => 'Caption' %>
             </p>
 
             <div class="col-md-4 col-sm-6 col-xs-12 check-box">
               <label>Status</label>
-              <%= custom_check_box_3("asset[status]", true, @image.status, "asset_status", "Yes", "No") %>
+              <%= custom_check_box_3("gallery[status]", true, @gallery.status, "gallery_status", "Yes", "No") %>
             </div>
 
-            <p class="col-md-6 col-sm-6 col-xs-12 select-box access" data-content="Access">
-              <%= select_tag "asset[access]", options_for_select(["User", "Admin"], @image.access), :class => "cs-select cs-skin-elastic", prompt: "--Access--" %>
+            <p class="col-md-8 col-sm-12 col-xs-12 text-field">
+              <%= f.text_area :description, :class => 'form-white', :placeholder => 'Description', :rows => 1 %>
             </p>
 
-            <% if @image.new_record? %>
-                <p class="col-md-6 col-sm-6 col-xs-12 file-select">
-                  <%= f.file_field :location %>
-                </p>
-            <% else %>
-                <p class="col-md-6 col-sm-6 col-xs-12 file-select">
-                  <img src="/images/core/<%= get_file_img(@image.title.split('.').last) %>"/>
-                  <%= @image.title%>
-                </p>
-            <% end %>
+
+            <div class="col-md-6 col-sm-6 col-xs-12 no-padding gallery-image-select">
+              <p class="col-md-12 col-sm-12 col-xs-12 select-box" data-content="Title Image">
+                <%#= select_tag "article[heading_block]", options_for_select(BLOCK_SELECTOR, @gallery.title_image_id), , prompt: "--Title Image--" %>
+                <%= collection_select(:gallery, :title_image_id, @gallery.images, :id, :title, {:prompt => "--Title Image--"}, {:class => "cs-select cs-skin-elastic"}) %>
+              </p>
+              <div class="preload-image" style="display: none">
+                <% @gallery.images.each do |img| %>
+                    <span id="<%= img.id %>"><%= img.location_path %></span>
+                <% end %>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12 no-padding preview-image">
+              <img src="#"/>
+            </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
-              <%= custom_button_1("wayra", "Submit Asset")%>
+              <%= custom_button_1("wayra", "Submit Gallery")%>
             </div>
 
         <% end %>
@@ -49,3 +55,7 @@
     </div>
   </div>
 </div>
+
+<style>
+
+</style>

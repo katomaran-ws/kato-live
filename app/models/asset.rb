@@ -2,6 +2,8 @@ class Asset < ActiveRecord::Base
 
   ACCESS_CODE_MAPPING={"User" => 0, "Admin" => 1}
 
+  belongs_to :gallery
+
   before_save :access_code_mapping
 
   def access_code_mapping

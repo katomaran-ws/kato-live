@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :assets
     resources :reports do
       get 'download'
+      post 'download_file'
     end
   end
 

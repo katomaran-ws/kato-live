@@ -55,6 +55,24 @@ function isScrolledIntoView(elem)
     return (elemTop < docViewBottom);
 }
 
+// function to toggle preview image on title image select
+function preview_toggle_for_title_image(){
+    $('.gallery-image-select .cs-options').find('li').click(function () {
+        var aa=$('.gallery-image-select').find('span.cs-placeholder').text();
+        var x=aa.search('--');
+        if(x<0){
+            console.log("if");
+            var id=$('.gallery-image-select select').val();
+            var src=$('.preload-image span#'+id).html();
+            $('.preview-image img').attr('src', src).css("visibility","visible");
+        }
+        else {
+            console.log("else");
+            $('.preview-image img').css("visibility", "hidden");
+        }
+    });
+}
+
 function toggle_fields_on_select(field) {
 
     var control_field='.'+field;
@@ -142,5 +160,7 @@ $(document).ready(function() {
     toggle_fields_on_select('article-type');
     toggle_fields_on_select('asset-type');
     toggle_fields_on_select('image');
+
+    preview_toggle_for_title_image();
 
 });

@@ -4,7 +4,6 @@ class Admin::AssetsController < AdminController
   def index
     @page_properties.merge!(:header => "Asset Upload")
     @assets=Asset.all
-    @image=Image.all
     @gallery=Gallery.all
   end
 
