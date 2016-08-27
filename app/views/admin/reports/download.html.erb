@@ -1,0 +1,88 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <div class="form-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row">
+
+        <style type="text/css">
+            html {
+                font: 500 14px 'roboto';
+            }
+            ul, ol, li {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #demo {
+                width: 300px;
+                margin: 150px auto;
+            }
+            p { margin: 0; }
+            #download_form input[type="text"] {
+                border: 1px solid #ccc;
+                height: 28px;
+                outline: medium none;
+                padding: 0 6px;
+                width: 200px;
+            }
+            #to-date-field, #from-date-field {
+                left: 15px !important;
+                top: 30px !important;
+            }
+
+        </style>
+
+        <h2><a class="border"><%= @page_properties[:header] %></a></h2>
+
+        <%= form_for ([:admin, @report]), method: :post, :controller => "admin/reports", :action => @report.new_record? ? :create : :update, :method => @report.new_record? ? "post" : "put", html: { autocomplete: "off", :id => 'download_form' } do |f| %>
+
+            <div class="col-md-6 col-sm-6 col-xs-12 from-date">
+              <input type="text" id="from-date" placeholder="From Date">
+              <div id="from-date-field"></div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12 from-date">
+              <input type="text" id="to-date" placeholder="To Date">
+              <div id="to-date-field"></div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
+              <%= custom_button_1("wayra", "Next Step") %>
+            </div>
+
+        <% end %>
+
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+    <script>
+        $('#to-date-field').calendar({
+            trigger: '#to-date',
+            zIndex: 999,
+            onSelected: function (view, date, data) {
+                console.log('event: onSelected')
+            },
+            onClose: function (view, date, data) {
+                console.log('event: onClose');
+                console.log('view:' + view);
+                console.log('date:' + date);
+                console.log('data:' + (data || 'None'));
+            }
+        });
+
+        $('#from-date-field').calendar({
+            trigger: '#from-date',
+            zIndex: 999,
+            onSelected: function (view, date, data) {
+                console.log('event: onSelected')
+            },
+            onClose: function (view, date, data) {
+                console.log('event: onClose');
+                console.log('view:' + view);
+                console.log('date:' + date);
+                console.log('data:' + (data || 'None'));
+            }
+        });
+
+    </script>
+  </div><!--SERVICE-BLOCK-->
+</div><!--CONTAINER-BLOCK-->

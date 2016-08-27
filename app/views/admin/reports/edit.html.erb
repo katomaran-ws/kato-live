@@ -6,22 +6,21 @@
 
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
 
-        <%= form_for ([:admin, @report]), method: :post, :controller => "admin/reports", :action => @report.new_record? ? :create : :update, :method => @report.new_record? ? "post" : "put", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
+        <%= form_for ([:admin, @report]), :controller => "admin/reports", :action => @report.new_record? ? :create : :update, :method => @report.new_record? ? "post" : "put", html: { autocomplete: "off", :id => 'report_form' } do |f| %>
 
             <% eval(@report.name_of_model).column_names.sort.each do |field| %>
                 <div class="col-md-4 col-sm-6 col-xs-12 check-box">
                   <label><%= field.camelize %></label>
                   <%= custom_check_box_3("report[#{field}]", true, eval(@report.downloadable_fields).try(:include?, field), "report_#{field}", "Yes", "No") %>
                 </div>
-            <%end%>
+            <% end %>
             <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
-              <%= custom_button_1("wayra", "Save Changes") %>
-            </div>
+              <%= custom_button_1("wayra", "Next Step") %>
             </div>
 
         <% end %>
 
-        </div><!--ROW-->
-  </div><!--CONTAINER-->
-</div><!--SERVICE-BLOCK-->
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--SERVICE-BLOCK-->
 </div><!--CONTAINER-BLOCK-->

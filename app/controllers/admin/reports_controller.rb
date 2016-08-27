@@ -10,17 +10,26 @@ class Admin::ReportsController < AdminController
     @page_properties = {:header => "Configure #{@report.try(:name_of_model)} Report"}
   end
 
-  def create
-    @report = Report.new(report_params)
-  end
-
   def update
     report=Report.find_by_id(params[:id])
     if report.update_attributes(downloadable_fields: change_report_params)
-      redirect_to admin_reports_url
+      redirect_to admin_report_download_url(report)
     else
       render :edit
     end
+  end
+
+  def download
+    @report=Report.find_by_id(params[:report_id])
+    if !@report.blank?
+
+    else
+      render_404
+    end
+  end
+
+  def download_file
+    @report.download_csv
   end
 
   private

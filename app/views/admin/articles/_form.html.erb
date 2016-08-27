@@ -10,7 +10,7 @@
         <%# @breadcrumb = {:Home => root_url, :List_Articles => list_articles_path, value => "#"} %>
         <%#= render :partial => 'layouts/breadcrumb' %>
 
-        <%= form_for ([:admin, @article]), method: :post, :controller => "admin/articles", :action => @article.new_record? ? :create : :update, :method => @article.new_record? ? "post" : "put", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
+        <%= form_for ([:admin, @article]), :controller => "admin/articles", :action => @article.new_record? ? :create : :update, :method => @article.new_record? ? "post" : "put", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
 
             <%#= semantic_form_for ([:admin, @article]),:controller => "admin/articles", :action => @article.new_record? ? :create : :update, :html => {:name => "article", :method => @article.new_record? ? "post" : "put"} do |f| %>
 

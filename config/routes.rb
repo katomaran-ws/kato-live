@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :articles
     resources :assets
-    resources :reports
+    resources :reports do
+      get 'download'
+    end
   end
 
   resources :admin do
