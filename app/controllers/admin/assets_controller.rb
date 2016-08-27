@@ -43,7 +43,7 @@ class Admin::AssetsController < AdminController
       @asset=Asset.new(asset_params)
       status=save_asset(path)
     else
-      gallery_params=params.require(:gallery).permit(:name, :caption, :description, :status, :title_image_id)
+      gallery_params=params.require(:gallery).permit(:name, :caption, :description, :status)
       gallery=Gallery.new(gallery_params)
       status=gallery.save
     end
@@ -56,16 +56,26 @@ class Admin::AssetsController < AdminController
   end
 
   def update
-    asset=Asset.find_by_id(params[:asset][:id])
-    if asset.asset_type == "Document"
-      asset_params=params.require(:asset).permit(:id, :title, :alias_name, :status, :access, :location, :sequence_number)
-    elsif asset.asset_type == "Image"
-      asset_params=params.require(:asset).permit(:id, :title, :caption, :status, :sequence_number, :is_cloudinary, :gallery_id, :cloudinary_url)
-    end
-    if asset.update_attributes(asset_params)
-      redirect_to admin_assets_path
+    if params[:asset] and params[:asset][:type] == "asset"
+      asset=Asset.find_by_id(params[:asset][:id])
+      if asset.asset_type == "Document"
+        asset_params=params.require(:asset).permit(:title, :alias_name, :status, :access, :location, :sequence_number)
+      else
+        asset_params=params.require(:asset).permit(:title, :caption, :status, :sequence_number, :is_cloudinary, :gallery_id, :cloudinary_url)
+      end
+      if asset.update_attributes(asset_params)
+        redirect_to admin_assets_path
+      else
+        render 'asset_form'
+      end
     else
-      render 'asset_form'
+      gallery=Gallery.find_by_id(params[:gallery][:id])
+      gallery_params=params.require(:gallery).permit(:name, :caption, :status, :description, :title_image_id)
+      if gallery.update_attributes(gallery_params)
+        redirect_to admin_assets_path
+      else
+        render 'gallery_form'
+      end
     end
   end
 

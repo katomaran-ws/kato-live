@@ -6,7 +6,7 @@
 
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
         <%#= form_for @gallery, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
-        <%= form_for ([:admin, @gallery]), url: admin_assets_path(@gallery), :method => @gallery.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
+        <%= form_for ([:admin, @gallery]), url: {:controller => "admin/assets", :action => @gallery.new_record? ? :create : :update}, :method => @gallery.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
 
             <%= f.hidden_field 'id', :value => @gallery.id %>
 
@@ -33,7 +33,7 @@
             <div class="col-md-6 col-sm-6 col-xs-12 no-padding gallery-image-select">
               <p class="col-md-12 col-sm-12 col-xs-12 select-box" data-content="Title Image">
                 <%#= select_tag "article[heading_block]", options_for_select(BLOCK_SELECTOR, @gallery.title_image_id), , prompt: "--Title Image--" %>
-                <%= collection_select(:gallery, :title_image_id, @gallery.images, :id, :title, {:prompt => "--Title Image--"}, {:class => "cs-select cs-skin-elastic"}) %>
+                <%= collection_select(:gallery, :title_image_id, @gallery.images, :id, :title, {:prompt => "--Title Image--", :include_blank => "--Title Image--"}, {:class => "cs-select cs-skin-elastic"}) %>
               </p>
               <div class="preload-image" style="display: none">
                 <% @gallery.images.each do |img| %>
