@@ -29,18 +29,18 @@
               <%= f.text_area :description, :class => 'form-white', :placeholder => 'Description', :rows => 1 %>
             </p>
 
-
-            <div class="col-md-6 col-sm-6 col-xs-12 no-padding gallery-image-select">
-              <p class="col-md-12 col-sm-12 col-xs-12 select-box" data-content="Title Image">
-                <%#= select_tag "article[heading_block]", options_for_select(BLOCK_SELECTOR, @gallery.title_image_id), , prompt: "--Title Image--" %>
-                <%= collection_select(:gallery, :title_image_id, @gallery.images, :id, :title, {:prompt => "--Title Image--", :include_blank => "--Title Image--"}, {:class => "cs-select cs-skin-elastic"}) %>
-              </p>
-              <div class="preload-image" style="display: none">
-                <% @gallery.images.each do |img| %>
-                    <span id="<%= img.id %>"><%= img.location_path %></span>
-                <% end %>
-              </div>
-            </div>
+            <% unless @gallery.new_record? %>
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding gallery-image-select">
+                  <p class="col-md-12 col-sm-12 col-xs-12 select-box" data-content="Title Image">
+                    <%= collection_select(:gallery, :title_image_id, @gallery.images, :id, :title, {:include_blank => "--Title Image--"}, {:class => "cs-select cs-skin-elastic"}) %>
+                  </p>
+                  <div class="preload-image" style="display: none">
+                    <% @gallery.images.each do |img| %>
+                        <span id="<%= img.id %>"><%= img.location_path %></span>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
 
             <div class="col-md-6 col-sm-6 col-xs-12 no-padding preview-image">
               <img src="#"/>
