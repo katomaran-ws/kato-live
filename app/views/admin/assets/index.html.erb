@@ -14,10 +14,22 @@
             <%= custom_link_1("New Gallery", new_admin_asset_path(:type => 'gallery'), "link-1") %>
           </div>
 
+          <style>
+            .preview_img {
+                height: 150px;
+                background-position: center center;
+                object-fit: cover;
+                width: 120px;
+            }
+          </style>
           <% @assets.each do |asset| %>
               <div class="download-block col-md-3 col-sm-4 col-xs-6 no-padding">
                 <a href="<%= edit_admin_asset_path(asset, :type => 'asset') %>">
-                  <img src="/images/core/<%= get_file_img(asset.title.split('.').last) %>"/>
+                  <% if asset.asset_type == "Image" %>
+                      <img src="<%= asset.location_path %>" class="preview_img"/>
+                  <% else %>
+                      <img src="/images/core/<%= get_file_img(asset.title.split('.').last) %>"/>
+                  <% end %>
                   <p><%= asset.title.upcase %></p>
                 </a>
               </div>
@@ -31,8 +43,6 @@
                 </a>
               </div>
           <% end %>
-
-
 
         </div><!--INFO-COMMON-BLOCK-->
       </div><!--ROW-->
