@@ -32,7 +32,7 @@ class Admin::AssetsController < AdminController
   end
 
   def create
-    if params[:asset][:type] == "asset"
+    if params[:asset] and params[:asset][:type] == "asset"
       if params[:asset][:asset_type]=="Document"
         asset_params=params.require(:asset).permit(:id, :title, :alias_name, :status, :access, :location, :sequence_number, :asset_type)
         path="private/downloads"
