@@ -1,0 +1,97 @@
+
+/* ################  COMMON STYLING  ######################*/
+
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+img{border:none;}
+a:hover{text-decoration:none;}
+a:focus{text-decoration:none;}
+a{cursor:pointer;}
+
+.keep-left{float:left;}
+.keep-right{float:right;}
+
+.no-padding{padding:0;}
+.no-margin{margin:0;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.white, .white:hover{color:#fff;}
+.black, .black:hover{color:#000;}
+
+h1{font-size: 60px;}
+h2{font-size: 50px;margin: 5% 0;text-align: center;font-weight: 500;font-family: Raleway;}
+h3{font-size: 40px;margin: 5% 0;text-align: center;font-weight: 500;font-family: Raleway;}
+h4{font-size: 30px;}
+h5{font-size: 25px;}
+h6{font-size: 20px;}
+p{font-size: 14px;}
+h3 a, h2 a, h3 a:hover, h2 a:hover, h3 a:focus, h2 a:focus{ color:#000; }
+
+/* ################  END  ######################*/
+
+
+/* ################  HTML TAG SPECIAL STYLING  ######################*/
+
+h2.white a{color:#000}
+h2.black a{color:#fff}
+h2.border{position: relative;}
+h2.border::before {
+    content: "";
+    left: 30%;
+    position: absolute;
+    top: -10px;
+    width: 40%;
+}
+h2.border::after {
+    content: "";
+    left: 30%;
+    position: absolute;
+    bottom: -10px;
+    width: 40%;
+}
+h2.white.border::after{ border-bottom: 1px solid #d3d3d3; }
+h2.white.border::before{ border-top: 1px solid #d3d3d3; }
+h2.black.border::after{ border-bottom: 1px solid #333; }
+h2.black.border::before{ border-top: 1px solid #333; }
+h6.underline{position: relative; }
+h6.underline::after {
+    border-top: 1px solid lightgray;
+    bottom: -5px;
+    content: "";
+    font-weight: 300;
+    left: 0;
+    position: absolute;
+    width: 20%;
+}
+a.tip{ position: relative; }
+a.tip span:last-child { display: none; }
+a.tip:hover span:last-child {
+    background-color: #eee;
+    border-radius: 5px;
+    display: inline-block;
+    left: -90px;
+    min-width: 200px;
+    padding: 5px 20px;
+    position: absolute;
+    top: -45px;
+    z-index: 100;
+    color: #555;
+    text-align: center;
+}
+a.tip:hover span:last-child::before {
+    background-color: #eee;
+    bottom: -5px;
+    content: "";
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 10px;
+}
+
+.gray-back{background-color: #f5f5f5;}
+.white-back{background-color: #fff;}
+
+/* ################  END  ######################*/
+

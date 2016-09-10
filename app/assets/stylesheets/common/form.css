@@ -1,0 +1,87 @@
+/* ################  FORM STYLING  ######################*/
+
+#article_form{padding:0 3%;}
+.text-field{
+    position:relative;
+    margin-bottom:25px;
+}
+.form-black, .form-white {
+    background-color: transparent;
+    border: medium none;
+    display: block;
+    font-size: 14px;
+    height: auto;
+    letter-spacing: 2px;
+    line-height: 1.42587;
+    padding: 6px;
+    transition: border-color 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.form-black{
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+.form-black:focus{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.form-white{
+    background: #f6f6f6 none repeat scroll 0 0;
+    border: 1px solid #e3e3e3;
+    color: #000;
+    font-weight: 300;
+    padding: 0.5em 1em;
+}
+.form-white:focus{
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+.text-field span, .select-box::after{
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: absolute;
+    transition:all 0.9s ease 0s;
+}
+.text-field span:first-of-type{
+    font-size: 14px;
+    left: 30px;
+    top: 8px;
+}
+.text-field span:last-of-type, .select-box::after{
+    font-size: 12px;
+    right:20px;
+    bottom:-18px;
+    display:none;
+}
+.text-field.has_focus span:first-of-type, .text-field.has_value span:first-of-type{ display:none; }
+.text-field.has_focus span:last-of-type, .text-field.has_value span:last-of-type{ display:block; }
+.select-box{
+    position: relative;
+    margin-bottom: 25px;
+}
+.select-box::after {
+    content: attr(data-content);
+    display: block;
+}
+.check-box label{
+    padding-top:10px;
+    font-weight:normal;
+}
+.check-box .switch{float:right;}
+.tinymce-content {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
+.file-select{text-align: center;}
+.file-select img{max-width: 50px;}
+.file-select input{
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    width: 100%;
+}
+#article_article_content_content_ifr{ height:300px!important; }
+.submit-button{text-align:center;}
+
+/* ################  END  ######################*/

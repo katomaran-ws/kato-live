@@ -1,0 +1,38 @@
+/* ################  FOOTER STYLING  ######################*/
+
+.footer-content{ background-color: lightgray; }
+.footer-top, .footer-bottom { padding-bottom: 2%; margin-top: 2%; }
+.footer-top { border-bottom: 1px solid; }
+
+.footer-content-block div { padding: 0 20px; }
+.footer-content-block div h5{ border-bottom: 1px solid; padding: 10px 0; margin: 20px 0; text-align: center; }
+.footer-content-block div a { padding: 5px 0; margin: 4px 0; width: 100%; color: #444; }
+.footer-content-block div a:hover { color: #38c2d4; }
+.footer-content-block nav { max-width: 100%; padding-left: 5%; }
+.footer-content-block nav a { display: block;}
+
+/* ################  END  ######################*/
+
+
+/* ################  FLOATING SOCIAL ICONS  ######################*/
+
+.floater {
+    bottom: 0;
+    padding-bottom: 1%!important;
+    position: fixed;
+    right: 6%;
+    width: 20%;
+    z-index: 1000;
+    transition:all 0.4s linear 0s;
+}
+.floater ul { list-style: outside none none; }
+.floater ul li { display: inline-block;  padding: 0 6%;}
+.floater ul li a{ color: #888; padding: 0 10px; }
+.floater ul li a:hover{ color: #000; }
+
+.override-floater {
+    padding-top: 1.5% !important;
+    position: static;
+}
+
+/* ################  END  ######################*/

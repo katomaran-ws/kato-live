@@ -1,102 +1,3 @@
-/* ################  FOOTER LINKS  ######################*/
-
-.menu nav a {
-    position: relative;
-    display: inline-block;
-    margin: 15px 25px;
-    outline: none;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    text-shadow: 0 0 1px rgba(255,255,255,0.3);
-    font-size: 1.35em;
-}
-
-.menu nav a:hover,
-.menu nav a:focus { outline: none; color: #38c2d4; }
-
-.cl-effect-9 a {
-    margin: 0 10px!important; /* just to override the menu nav margin */
-    padding: 14px 10px 10px;
-}
-
-.cl-effect-9 a::before,
-.cl-effect-9 a::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: #fff;
-    content: '';
-    opacity: 0.2;
-    -webkit-transition: opacity 0.3s, height 0.3s;
-    -moz-transition: opacity 0.3s, height 0.3s;
-    transition: opacity 0.3s, height 0.3s;
-}
-
-.cl-effect-9 a::after {
-    top: 100%;
-    opacity: 0;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    transform: translateY(-10px);
-}
-
-.cl-effect-9 a span:first-child {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-}
-
-.cl-effect-9 a span:last-child {
-    padding-top: 8px;
-    color: rgba(0,0,0,0.4);
-    text-transform: none;
-    font-style: italic;
-    font-size: 12px;
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    opacity: 0;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-
-.cl-effect-9 a:hover::before,
-.cl-effect-9 a:focus::before { height: 3px; }
-
-.cl-effect-9 a:hover::before,
-.cl-effect-9 a:hover::after,
-.cl-effect-9 a:focus::before,
-.cl-effect-9 a:focus::after { opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    transform: translateY(0px);
-}
-
-.cl-effect-9 a:hover span:last-child,
-.cl-effect-9 a:focus span:last-child { opacity: 1;
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    transform: translateY(0%);
-}
-/* ################  END  ######################*/
-
-
-/* ################  ANCHOR TITLE STYLING  ######################*/
-
-
-
-/* ################  END  ######################*/
-
 
 /* ################  BUTTON-1  ######################*/
 
@@ -285,7 +186,7 @@
 .cl-effect-13 a:focus { color: #ba7700; }
 /* ################  END  ######################*/
 
-.link-1, .link-2 {
+.link-1 {
     border: 1px solid #2071ee;
     display: block;
     font-size: 14px;
