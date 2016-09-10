@@ -1,0 +1,57 @@
+/* ################  SERVICES BLOCK STYLING  ######################*/
+
+.servies-query{
+    text-align: center;
+}
+.servies-query h4{
+    margin-bottom: 10px;
+}
+.service-block-left, .service-block-right {
+    padding: 5% 0;
+}
+.servies-query{
+    padding: 3% 0;
+}
+.service-block-right .img-block{
+    float: right;
+    text-align: center;
+    font-size: 150px;
+}
+.service-block-left .img-block{
+    float: left;
+    text-align: center;
+    font-size: 150px;
+}
+.services .text-block{
+    position: relative;
+}
+.services .know-more-button{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
+.services > div:first-of-type {
+    padding-top: 0;
+}
+.services  p {
+    font-family: open sans;
+    line-height: 1.8;
+    word-spacing: 1.6px;
+}
+.services li {
+    padding-left: 15px;
+    list-style:none;
+}
+.services li::before {
+    content:"\2022";
+    margin-right:15px;
+    font-size:18px;
+}
+.services h4{
+    margin: 10px 0 20px;
+}
+.services h6, .services h5{
+    margin: 30px 0 20px;
+}
+
+/* ################  END  ######################*/
