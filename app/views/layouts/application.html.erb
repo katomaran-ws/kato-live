@@ -16,10 +16,63 @@
   <link rel="stylesheet" href="/offline_assets/font-awesome.min.css">
   <link rel="stylesheet" href="/offline_assets/jquery-1.11.1.js">
 
+  <link rel="script" href="/offline_assets/jquery-1.11.1.js">
+  <link rel="stylesheet" href="/lightbox/css/lightbox.css">
+
+
   <%= stylesheet_link_tag  'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+  <style>
+      .link-3 > span::before {
+          border-bottom: 1.5px solid #fff;
+          content: "";
+          position: absolute;
+      }
+      .link-3 > span:nth-child(1)::before {
+          right: 16px;
+          top: 24.5px;
+          width: 15px;
+      }
+      .link-3 > span:nth-child(2)::before {
+          right: 15px;
+          bottom: 20px;
+          transform: rotate(-45deg);
+          width: 8px;
+      }
+      .link-3 > span:nth-child(3)::before {
+          right: 15px;
+          top: 22px;
+          transform: rotate(45deg);
+          width: 8px;
+      }
+      .link-3 > span:nth-child(4)::before {
+          border: none;
+          content: attr(data-val);
+          color: #fff;
+          right: 25px;
+          top: 14px;
+          width: 100px;
+      }
+      .link-3 {
+          background-color: #38c2d4;
+          border-radius: 50px;
+          display: block;
+          height: 50px;
+          position: relative;
+          width: 50px;
+          border: 1px solid #38c2d4;
+          transition:all 0.4s ease 0s;
+          overflow: hidden;
+      }
+      .link-3:hover{
+          width: 150px;
+          background-color: #d3d3d3;
+          border: 1px solid #d3d3d3;
+      }
+  </style>
+  
 </head>
 <body>
 <div id="wrapper">

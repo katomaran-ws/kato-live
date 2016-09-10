@@ -50,4 +50,19 @@ module ApplicationHelper
   #   <a href="/our-services#r-n-d" class="link-1"><span>Know More</span></a>
   end
 
+  def custom_link_2(link="javascript(void)", style="link-2")
+    content_tag :a, nil, href: link, class: style do
+      (content_tag :span)+(content_tag :span)
+    end
+
+    #   <a href="/our-services#r-n-d" class="link-1"><span>Know More</span></a>
+  end
+
+  def custom_link_3(name="Link", link="javascript(void)", style="link-3")
+    content_tag :a, name, href: link, class: style do
+      (content_tag :span)+(content_tag :span)+(content_tag :span)+(content_tag :span, nil, "data-val" => name)
+    end
+
+    #   <a href="/our-services#r-n-d" class="link-3"><span></span><span></span><span></span></a>
+  end
 end

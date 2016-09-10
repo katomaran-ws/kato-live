@@ -1,6 +1,9 @@
+<script src="/lightbox/js/lightbox.js"></script>
+
 <div class="services col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a>What we offer</a></h2>
+
   <div class="service-block-right col-md-12 col-sm-12 col-xs-12 no-padding white-back">
     <div class="container no-padding">
       <div class="row no-margin">
@@ -15,7 +18,7 @@
             <h4>BootCamps</h4>
             <p>Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape. Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape.</p>
             <div class="know-more-button">
-              <%= custom_link_1("Know More", "/our-services#boot-camp", "link-1") %>
+              <%= custom_link_3("Know More", "/our-services#boot-camp", "link-3") %>
             </div>
           </div>
 
@@ -39,7 +42,7 @@
             <h4>Foundations</h4>
             <p>Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape. Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape.</p>
             <div class="know-more-button">
-              <%= custom_link_1("Know More", "/our-services#foundation", "link-1") %>
+              <%= custom_link_3("Know More", "/our-services#foundation", "link-3") %>
             </div>
           </div>
 
@@ -63,7 +66,7 @@
             <h4>R & D</h4>
             <p>Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape. Bootcamp/Workshop is a short term class over a span of 1-3 days. Here Students are split into groups and they are provided with a Robotic theory and the hardware to achieve that. Our Engineers will maneuver your students to give the theory a shape.</p>
             <div class="know-more-button">
-              <%= custom_link_1("Know More", "/our-services#r&d", "link-1") %>
+              <%= custom_link_3("Know More", "/our-services#r&d", "link-3") %>
             </div>
           </div>
 
@@ -86,6 +89,15 @@
 
 </div>
 
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'alwaysShowNavOnTouchDevices': true,
+        'fitImagesInViewport': true
+    })
+</script>
+
 <div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a>Our Show-Case</a></h2>
@@ -102,7 +114,7 @@
                 <figcaption>
                   <h4><span>KCT</span> Embedded Basics</h4>
                   <p>Insipiring the Young Minds</p>
-                  <a href="#">View more</a>
+                  <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-1" data-title="test"></a>
                 </figcaption>
               </figure>
             </div>
@@ -116,7 +128,16 @@
                   <img src="images/11.jpg" alt="img02"/>
                   <figcaption>
                     <p>Insipiring the Young Minds</p>
-                    <a href="#">View more</a>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-1" data-title="test"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
+                <figure class="effect-sadie">
+                    <img class="example-image" src="/images/11.jpg" alt="image-1" />
+                  <figcaption>
+                    <p>Insipiring the Yossung Minds</p>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-1" data-title="test"></a>
                   </figcaption>
                 </figure>
               </div>
@@ -125,31 +146,22 @@
                   <img src="images/11.jpg" alt="img02"/>
                   <figcaption>
                     <p>Insipiring the Young Minds</p>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
-                <figure class="effect-sadie">
-                  <img src="images/11.jpg" alt="img02"/>
-                  <figcaption>
-                    <p>Insipiring the Young Minds</p>
-                    <a href="#">View more</a>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-1" data-title="test"></a>
                   </figcaption>
                 </figure>
               </div>
             </div>
           </div>
 
-          <div class="showcase-content col-md-12 col-sm-12 col-xs-12" id="second">
 
+          <div class="showcase-content col-md-12 col-sm-12 col-xs-12" id="first">
             <div class="figure col-md-5 col-sm-5 col-xs-12 img-block no-padding">
               <figure class="effect-sadie">
-                <img src="images/12.jpg" alt="img14"/>
+                <img src="images/11.jpg" alt="img02"/>
                 <figcaption>
-                  <h4><span>KCT</span> Embedded Advanced</h4>
-                  <p>Passion is what made them come back to us</p>
-                  <a href="#">View more</a>
+                  <h4><span>KCT</span> Embedded Basics</h4>
+                  <p>Insipiring the Young Minds</p>
+                  <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-2" data-title="test"></a>
                 </figcaption>
               </figure>
             </div>
@@ -160,34 +172,33 @@
             <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
               <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
                 <figure class="effect-sadie">
-                  <img src="images/12.jpg" alt="img14"/>
+                  <img src="images/11.jpg" alt="img02"/>
                   <figcaption>
-                    <p>Passion is what made them come back to us</p>
-                    <a href="#">View more</a>
+                    <p>Insipiring the Young Minds</p>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-2" data-title="test"></a>
                   </figcaption>
                 </figure>
               </div>
               <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
                 <figure class="effect-sadie">
-                  <img src="images/12.jpg" alt="img14"/>
+                  <img class="example-image" src="/images/11.jpg" alt="image-1" />
                   <figcaption>
-                    <p>Passion is what made them come back to us</p>
-                    <a href="#">View more</a>
+                    <p>Insipiring the Yossung Minds</p>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-2" data-title="test"></a>
                   </figcaption>
                 </figure>
               </div>
               <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
                 <figure class="effect-sadie">
-                  <img src="images/12.jpg" alt="img14"/>
+                  <img src="images/11.jpg" alt="img02"/>
                   <figcaption>
-                    <p>Passion is what made them come back to us</p>
-                    <a href="#">View more</a>
+                    <p>Insipiring the Young Minds</p>
+                    <a class="example-image-link" href="/images/11.jpg" data-lightbox="example-2" data-title="test"></a>
                   </figcaption>
                 </figure>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
