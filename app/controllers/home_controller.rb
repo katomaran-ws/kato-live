@@ -24,12 +24,8 @@ class HomeController < ApplicationController
 
   def show_blog
     @article=Article.published.find_by_alias_url(params[:article_title])
-    if @article.blank?
-      render_404
-    else
-      @article_content=@article.article_content
-      # just to render the same template
-    end
+    render_404 and return if @article.blank?
+    @article_content=@article.article_content
   end
 
 end
