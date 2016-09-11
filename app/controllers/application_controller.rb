@@ -13,4 +13,16 @@ class ApplicationController < ActionController::Base
     @page_properties={:title => "Katomaran Robotics"}
   end
 
+  def render_404
+    render :file => "public/404", :layout => 'error_layout', :status => 404
+  end
+
+  def render_construction
+
+  end
+
+  def render_502
+
+  end
+
 end

@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'site/blog' %>
 <div class="blogs col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a><%= @article.title %></a></h2>
@@ -5,7 +6,7 @@
     <div class="container no-padding">
       <div class="row no-margin">
 
-        <div class="services-content col-md-12 col-sm-12 col-xs-12">
+        <div class="blog-content col-md-12 col-sm-12 col-xs-12">
           <%= raw @article_content.content %>
         </div>
 

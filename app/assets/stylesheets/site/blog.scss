@@ -53,3 +53,27 @@
 }
 
 /* ################  END  ######################*/
+
+
+/* ################  RESET TINYMCE CSS  ######################*/
+
+.blog-content span, .blog-content p {
+  font-family: open-sans;
+  font-size: 14px !important;
+  line-height: 1.8;
+  word-spacing: 1.6px;
+}
+
+.img_align_left{
+float: left;
+margin: 10px 10px 10px 0;
+max-width: 50%;
+}
+
+.img_align_right{
+  float: right;
+  margin: 10px 0 10px 10px;
+  max-width: 50%;
+}
+
+/* ################  END  ######################*/
