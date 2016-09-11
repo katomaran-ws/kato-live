@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :articles do
       get 'new_category', on: :collection
+      get 'new_tag', on: :collection
       post 'create_category', on: :collection
+      post 'create_tag', on: :collection
     end
     resources :assets
     resources :reports do

@@ -1,0 +1,34 @@
+<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <div class="form-block col-md-12 col-sm-12 col-xs-12 no-padding">
+    <div class="container no-padding">
+      <div class="row">
+
+        <h2><a class="border"><%= @page_properties[:header] %></a></h2>
+
+        <%= form_for ([:admin, @tag]), url: create_tag_admin_articles_path, html: { autocomplete: "off", :id => 'tag_form' } do |f| %>
+
+            <p class="col-md-4 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :name, :class => 'form-white' ,:placeholder => 'Name'%>
+            </p>
+
+            <p class="col-md-4 col-sm-12 col-xs-12 text-field">
+              <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias Name' %>
+            </p>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 check-box">
+              <label>Published</label>
+              <%= custom_check_box_3("tag[status]", true, @tag.status, "tag_status", "Yes", "No") %>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
+              <%= custom_button_1("wayra", "Submit Tag")%>
+            </div>
+
+        <% end %>
+
+      </div><!--ROW-->
+    </div><!--CONTAINER-->
+  </div><!--SERVICE-BLOCK-->
+</div><!--CONTAINER-BLOCK-->
+

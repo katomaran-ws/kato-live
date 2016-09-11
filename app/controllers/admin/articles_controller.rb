@@ -1,21 +1,23 @@
 class Admin::ArticlesController < AdminController
 
   def new_category
-    @category=Category.new
     @page_properties = {:header => "Create New Category"}
+    @category=Category.new
   end
 
   def create_category
-
+    category=Category.new(category_params)
+    category.save ? (redirect_to admin_articles_path) : (render 'new_category')
   end
 
   def new_tag
-    @category=Category.new
     @page_properties = {:header => "Create New Tag"}
+    @tag=Tag.new
   end
 
   def create_tag
-
+    tag=Tag.new(tag_params)
+    tag.save ? (redirect_to admin_articles_path) : (render 'new_tag')
   end
 
   def new
@@ -24,26 +26,17 @@ class Admin::ArticlesController < AdminController
   end
 
   def create
-    @article = Article.new(article_params)
-    @article_content = ArticleContent.new(article_content_params)
+    article = Article.new(article_params)
     Article.transaction do
-      if @article.save!
-        @article_content.article_id=@article.id
-        if @article_content.save!
-          redirect_to admin_articles_url
-        else
-          render 'new'
-        end
-      else
-        render 'new'
-      end
+      render 'new' and return unless article.save! or article.create_article_content!(article_content_params)
+      redirect_to admin_articles_url
     end
   end
 
   def edit
+    @page_properties = {:header => "Edit Article"}
     @article = Article.find(params[:id])
     @article_content = @article.article_content
-    @page_properties = {:header => "Edit Article"}
   end
 
   def update
@@ -57,8 +50,8 @@ class Admin::ArticlesController < AdminController
   end
 
   def index
-    @articles = Article.all.by_updated
     @page_properties = {:header => "Article Listing"}
+    @articles = Article.all.by_updated
   end
 
   private
@@ -69,6 +62,14 @@ class Admin::ArticlesController < AdminController
 
   def article_content_params
     params[:article].require(:article_content).permit(:page_title, :meta_keywords, :meta_description, :content)
+  end
+
+  def category_params
+    params.require(:category).permit(:name, :full_name, :alias_name, :sequence_number, :status)
+  end
+
+  def tag_params
+    params.require(:tag).permit(:name, :alias_name, :status)
   end
 
 end
