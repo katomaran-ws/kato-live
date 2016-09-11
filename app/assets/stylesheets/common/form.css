@@ -48,7 +48,7 @@
     left: 30px;
     top: 8px;
 }
-.text-field span:last-of-type, .select-box::after{
+.text-field span:last-of-type, .select-box::after, .auto-complete::after{
     font-size: 12px;
     right:20px;
     bottom:-18px;
@@ -60,7 +60,7 @@
     position: relative;
     margin-bottom: 25px;
 }
-.select-box::after {
+.select-box::after, .auto-complete::after {
     content: attr(data-content);
     display: block;
 }
@@ -83,5 +83,4 @@
 }
 #article_article_content_content_ifr{ height:300px!important; }
 .submit-button{text-align:center;}
-
 /* ################  END  ######################*/

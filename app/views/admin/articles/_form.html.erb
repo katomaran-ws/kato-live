@@ -53,6 +53,21 @@
               </p>
             </div>
 
+            <div class="col-md-12 col-sm-12 col-xs-12 all-article-type Blog-article-type no-padding">
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="category">
+                <%= collection_select(:article, :category_id, Category.all, :id, :name, options={:selected => @article.category.try(:id), :include_blank => '--Select Category--'}, {class: "cs-select cs-skin-elastic"} ) %>
+              </p>
+
+              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="Tags">
+                <%= raw custom_autocomplete("article[tag_ids]", Tag.all, "name", @article.tags) %>
+              </p>
+
+              <div class="col-md-4 col-sm-6 col-xs-12 from-date">
+                <%= f.text_field :display_date, {:class => 'form-white' ,:placeholder => 'Display Date', id: 'display-date'} %>
+                <div id="display-date-field"></div>
+              </div>
+            </div>
+
             <div class="col-md-4 col-sm-6 col-xs-12 all-article-type Static-Page-article-type  no-padding">
               <p class="col-md-12 col-sm-12 col-xs-12 select-box">
                 <%#= select_tag "article[article_type]", options_for_select(["Articles", "Blog", "Static-Page"], @article.article_type), :class => "cs-select cs-skin-elastic", prompt: "--Article Type--" %>
@@ -97,3 +112,19 @@
 
 
 <%= tinymce :plugins => ["wordcount", "paste", "preview", "code", "table", "searchreplace", "image"], :toolbar => ["formatselect | searchreplace undo redo | bullist numlist | code image"] %>
+
+<script>
+  $('#display-date-field').calendar({
+    trigger: '#display-date',
+    zIndex: 999,
+    onSelected: function (view, date, data) {
+      console.log('event: onSelected')
+    },
+    onClose: function (view, date, data) {
+      console.log('event: onClose');
+      console.log('view:' + view);
+      console.log('date:' + date);
+      console.log('data:' + (data || 'None'));
+    }
+  });
+</script>

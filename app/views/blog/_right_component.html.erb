@@ -1,0 +1,30 @@
+<div class="blog-right col-md-3 col-sm-3 col-xs-12">
+  <div class="blog-categories col-md-12 col-sm-12 col-xs-12">
+    <h5>Categories</h5>
+    <ul>
+      <% @categories.each do |category|%>
+          <li>
+            <a href="<%= category_articles_path(category_alias_name: category.alias_name)%>"><%= category.name %></a>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <!--<div class="blog-recent col-md-12 col-sm-12 col-xs-12">
+    <h5>Recent Posts</h5>
+    <ul>
+      <li><a href="#">testing</a></li>
+      <li><a href="#">testing</a></li>
+      <li><a href="#">testing</a></li>
+    </ul>
+  </div>-->
+
+  <div class="blog-related col-md-12 col-sm-12 col-xs-12">
+    <h5>Editor's Pick</h5>
+    <ul>
+      <% Article.published_blog.each do |article| %>
+      <li><a href="<%= blog_article_path(article_alias_name: article.alias_url) %>"><%= article.title %></a></li>
+          <% end %>
+    </ul>
+  </div>
+</div>

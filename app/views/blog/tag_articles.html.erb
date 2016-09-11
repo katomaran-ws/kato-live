@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'site/blog' %>
+
+<div class="blogs col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a>Tag - <%= @tag.name %></a></h2>
+  <div class="container no-padding">
+    <div class="row no-margin">
+
+      <div class="blog col-md-12 col-sm-12 col-xs-12">
+
+        <%= render 'right_component' %>
+        
+        <%= render 'right_component' %>
+
+      </div>
+
+    </div>
+  </div>
+</div>

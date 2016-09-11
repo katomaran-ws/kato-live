@@ -12,13 +12,15 @@
 
         <div class="pagination col-md-12 col-sm-12 col-xs-12 no-padding">
           <div class="left-pagination col-md-6 col-sm-6 col-xs-12">
+            <% prev_article = get_prev_article(@article.id) %>
             <span>Prev Article</span>
-            <h6><a><%= @article.title %></a></h6>
+            <h6><a href="<%= blog_article_path(article_alias_name: prev_article.alias_url) %>"><%= prev_article.title %></a></h6>
           </div>
 
           <div class="right-pagination col-md-6 col-sm-6 col-xs-12">
+            <% next_article = get_next_article(@article.id) %>
             <span>Next Article</span>
-            <h6><a><%= @article.title %></a></h6>
+            <h6><a href="<%= blog_article_path(article_alias_name: next_article.alias_url) %>"><%= next_article.title %></a></h6>
           </div>
         </div>
       </div>

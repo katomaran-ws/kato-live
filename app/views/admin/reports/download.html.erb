@@ -4,36 +4,6 @@
     <div class="container no-padding">
       <div class="row">
 
-        <style type="text/css">
-            #download_form {
-                font: 500 14px 'roboto';
-            }
-            ul, ol, li {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            #demo {
-                width: 300px;
-                margin: 150px auto;
-            }
-            #download_form input[type="text"] {
-                border: 1px solid #ccc;
-                outline: medium none;
-                text-align: center;
-            }
-            #to-date-field, #from-date-field {
-                left: 15px !important;
-                top: 34px !important;
-            }
-            .days > li {
-                border-bottom: 1px solid #66be8c;
-                border-top: 1px solid #66be8c;
-                color: black;
-            }
-
-        </style>
-
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
 
         <%= form_for ([:admin, @report]), url: admin_report_download_file_path, :method => "post", html: { autocomplete: "off", :id => 'download_form' } do |f| %>

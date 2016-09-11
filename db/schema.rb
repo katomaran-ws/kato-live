@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825175052) do
+ActiveRecord::Schema.define(version: 20160911091324) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "article_contents", force: :cascade do |t|
     t.integer  "article_id"
@@ -41,6 +44,13 @@ ActiveRecord::Schema.define(version: 20160825175052) do
     t.integer  "created_by"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "category_id"
+    t.datetime "display_date"
+  end
+
+  create_table "articles_tags", id: false, force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "tag_id"
   end
 
   create_table "assets", force: :cascade do |t|
@@ -56,6 +66,16 @@ ActiveRecord::Schema.define(version: 20160825175052) do
     t.string   "is_cloudinary"
     t.integer  "gallery_id"
     t.string   "cloudinary_url"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "full_name"
+    t.string   "alias_name"
+    t.integer  "sequence_number"
+    t.boolean  "status",          default: true
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
@@ -76,6 +96,14 @@ ActiveRecord::Schema.define(version: 20160825175052) do
     t.boolean  "status",              default: true
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.string   "alias_name"
+    t.boolean  "status",     default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

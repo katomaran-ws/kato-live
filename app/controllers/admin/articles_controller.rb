@@ -1,5 +1,23 @@
 class Admin::ArticlesController < AdminController
 
+  def new_category
+    @category=Category.new
+    @page_properties = {:header => "Create New Category"}
+  end
+
+  def create_category
+
+  end
+
+  def new_tag
+    @category=Category.new
+    @page_properties = {:header => "Create New Tag"}
+  end
+
+  def create_tag
+
+  end
+
   def new
     @article = Article.new
     @page_properties = {:header => "Create New Article"}
@@ -46,7 +64,7 @@ class Admin::ArticlesController < AdminController
   private
 
   def article_params
-    params.require(:article).permit(:id, :title, :description, :status, :alias_url, :article_type, :status, :sequence_number, :heading_block, :author)
+    params.require(:article).permit(:id, :title, :description, :status, :alias_url, :article_type, :status, :sequence_number, :heading_block, :author, :category_id, :display_date, :tag_ids=>[])
   end
 
   def article_content_params

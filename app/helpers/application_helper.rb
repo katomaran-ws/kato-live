@@ -65,4 +65,38 @@ module ApplicationHelper
 
     #   <a href="/our-services#r-n-d" class="link-3"><span></span><span></span><span></span></a>
   end
+
+  def custom_autocomplete(name, search_obj, field, populate_obj)
+    search_data=search_obj.collect{|x| {:name=>eval("x."+field), :id=>x.id}}.to_json
+    prepopulate=populate_obj.collect{|x| {:name=>eval("x."+field), :id=>x.id}}.to_json
+    id=name.gsub('[', '_').chop.gsub(']', '_').chop
+
+    auto_complete="<input type='text' id='#{id}'/>
+    <script type='text/javascript'>
+        $(document).ready(function() {
+             $('##{id}').tokenInput(#{search_data}, {
+             prePopulate: #{prepopulate},
+             preventDuplicates: true,
+             tokenName:'#{name}[]',
+            });
+        });
+    </script>"
+
+    return auto_complete
+  end
+
+  def get_next_article(article_id)
+    ids=Article.published_blog.by_sequence.map(&:id)
+    id=ids.index(article_id).to_i+1
+    id = id>=ids.length ? id-ids.length : id
+    Article.find(ids[id])
+  end
+
+  def get_prev_article(article_id)
+    ids=Article.published_blog.by_sequence.map(&:id)
+    id=ids.index(article_id).to_i-1
+    id = id>=ids.length ? id-ids.length : id
+    Article.find(ids[id])
+  end
+
 end

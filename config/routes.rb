@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   # get '/admin/upload/assets(/:id)/:action_name', :to => 'admin/assets#asset_form', :action_name => /edit|new/, :as => 'asset_form'
 
   namespace :admin do
-    resources :articles
+    resources :articles do
+      get 'new_category', on: :collection
+      post 'create_category', on: :collection
+    end
     resources :assets
     resources :reports do
       get 'download'
@@ -43,9 +46,11 @@ Rails.application.routes.draw do
   get '/login' => 'home#login', :as => 'login' #needs to be changed
 
 
-  get 'blog/articles' => 'home#list_blog'
-  get 'blog/articles/:article_title' => 'home#show_blog'
 
+  get 'blog/articles' => 'blog#list_blog', as: "list_blog_articles"
+  get 'blog/articles/:article_alias_name' => 'blog#show_blog', as: "blog_article"
+  get 'blog/categories/:category_alias_name' => 'blog#category_articles', as: "category_articles"
+  get 'blog/tag/:tag_alias_name' => 'blog#tag_articles', as: "tag_articles"
 
 
   # Example of regular route:

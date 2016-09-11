@@ -1,4 +1,3 @@
-
 /* ################  BUTTON-1  ######################*/
 
 .button {
@@ -153,61 +152,3 @@
 }*/
 
 /* ################  END  ######################*/
-
-
-/* ################  FOOTER LINKS  ######################*/
-
-.cl-effect-13 a {
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
-}
-
-.cl-effect-13 a::before {
-    position: absolute;
-    right: 10%;
-    color: #444;
-    content: '\2022';
-    text-shadow: 0 0 transparent;
-    font-size: 1.6em;
-    -webkit-transition: text-shadow 0.3s, color 0.3s;
-    -moz-transition: text-shadow 0.3s, color 0.3s;
-    transition: text-shadow 0.3s, color 0.3s;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-
-.cl-effect-13 a:hover::before,
-.cl-effect-13 a:focus::before { color: #38c2d4; text-shadow: 10px 0 #38c2d4, -10px 0 #38c2d4; }
-
-.cl-effect-13 a:hover,
-.cl-effect-13 a:focus { color: #ba7700; }
-/* ################  END  ######################*/
-
-.link-1 {
-    border: 1px solid #2071ee;
-    display: block;
-    font-size: 14px;
-    line-height: 1;
-    margin: 10px;
-    max-width: 150px;
-    min-width: 125px;
-    padding: 15px;
-    position: relative;
-    text-align: center;
-    text-transform: capitalize;
-    border-radius: 3px;
-    transition: background-color 300ms linear 0s, color 500ms ease 0s;
-}
-.link-1 {
-    background-color: transparent;
-    color: #000;
-}
-.link-1:hover {
-    background-color: #2071ee;
-    color: #fff;
-}
-
-
