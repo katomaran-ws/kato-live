@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 .idea/*
+.byebug_history
 
 .ruby-version
 .ruby-gemset
