@@ -1,0 +1,173 @@
+/* ################  Pagination for Blog Page  ######################*/
+/* line 5, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination {
+  border-bottom: 1px solid lightgray;
+  border-radius: 0;
+  border-top: 1px solid lightgray;
+  display: table;
+  margin: 3% 0;
+}
+
+/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.left-pagination, .right-pagination {
+  margin: 0.5% 0;
+  padding: 1.5%;
+}
+
+/* line 16, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination div:first-of-type {
+  border-right: 1px solid lightgray;
+}
+
+/* line 19, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.left-pagination {
+  padding-left: 5%;
+  text-align: left;
+}
+
+/* line 23, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.right-pagination {
+  padding-right: 5%;
+  text-align: right;
+}
+
+/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination h6 {
+  margin-bottom: 0;
+}
+
+/* line 30, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination h6 a {
+  display: block;
+  color: gray;
+}
+
+/* line 34, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination h6 a:hover {
+  color: #000;
+}
+
+/* line 37, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.pagination span {
+  font-size: 12px;
+  color: #38c2d4;
+}
+
+/* line 41, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.left-pagination::before {
+  content: "\2039";
+  font-size: 50px;
+  left: 4%;
+  position: absolute;
+  top: 8%;
+}
+
+/* line 48, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.right-pagination::before {
+  content: "\203A";
+  font-size: 50px;
+  right: 4%;
+  position: absolute;
+  top: 8%;
+}
+
+/* ################  END  ######################*/
+/* ################  RESET TINYMCE CSS  ######################*/
+/* line 61, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-content span, .blog-content p {
+  font-family: open-sans;
+  font-size: 14px;
+  line-height: 1.8;
+  word-spacing: 1.6px;
+}
+
+/* line 68, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.img_align_left {
+  float: left;
+  margin: 10px 10px 10px 0;
+  max-width: 50%;
+}
+
+/* line 74, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.img_align_right {
+  float: right;
+  margin: 10px 0 10px 10px;
+  max-width: 50%;
+}
+
+/* ################  END  ######################*/
+/* ################  BLOG PAGE CSS  ######################*/
+/* line 85, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog {
+  margin: 1% 0;
+}
+
+/* line 88, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-content {
+  border-bottom: 1px solid lightgray;
+  margin: 2% 0;
+  padding-bottom: 2%;
+}
+
+/* line 93, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-content h4 a {
+  color: #000;
+}
+
+/* line 96, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-details {
+  font-size: 12px !important;
+  display: block;
+  text-align: right;
+}
+
+/* line 101, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-details span {
+  font-size: 12px !important;
+  color: #38c2d4;
+}
+
+/* line 105, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-details span.category {
+  float: left;
+  text-transform: uppercase;
+  color: #38c2d4;
+}
+
+/* line 110, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-details span.category a {
+  color: #38c2d4;
+}
+
+/* line 113, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right {
+  border-left: 1px solid lightgrey;
+}
+
+/* line 116, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right > div {
+  margin-bottom: 5%;
+}
+
+/* line 119, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right > div h5 {
+  margin: 5% 0;
+}
+
+/* line 122, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right > div ul {
+  list-style: none;
+}
+
+/* line 125, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right > div li {
+  margin-bottom: 5%;
+  color: #000;
+}
+
+/* line 129, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/blog.scss */
+.blog-right > div li a {
+  color: #000;
+}
+
+/* ################  END  ######################*/
