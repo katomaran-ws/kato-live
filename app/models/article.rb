@@ -17,7 +17,7 @@ class Article < ActiveRecord::Base
 
 
   def display_date
-    self["display_date"].strftime("%F %T")
+    self["display_date"].strftime("%F %T") rescue nil
   end
 
 end
