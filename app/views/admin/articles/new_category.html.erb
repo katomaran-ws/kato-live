@@ -20,11 +20,11 @@
               <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias Name' %>
             </p>
 
-            <p class="col-md-2 col-sm-6 col-xs-12 text-field">
+            <p class="col-md-3 col-sm-6 col-xs-12 text-field">
               <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
             </p>
 
-            <div class="col-md-5 col-sm-6 col-xs-12 check-box">
+            <div class="col-md-4 col-sm-6 col-xs-12 check-box">
               <label>Published</label>
               <%= custom_check_box_3("category[status]", true, @category.status, "article_status", "Yes", "No") %>
             </div>
