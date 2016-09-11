@@ -1,0 +1,21 @@
+.link-1, .link-3{
+    display: block;
+    position: relative;
+    font-size: 14px;
+}
+
+.button-1 {
+    min-width: 150px;
+    max-width: 250px;
+    display: block;
+    background: none;
+    margin: 1em;
+    padding: 1em 2em;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    border: 1px solid;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}

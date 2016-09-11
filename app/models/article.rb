@@ -20,4 +20,8 @@ class Article < ActiveRecord::Base
     self["display_date"].strftime("%F %T") rescue nil
   end
 
+  def status
+    self["status"] ? true : false
+  end
+
 end

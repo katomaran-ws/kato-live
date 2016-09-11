@@ -39,9 +39,28 @@ module ApplicationHelper
 
   def custom_button_1(name="wayra", value = "Submit")
     # <button class="button button--wayra" value="Create Article" name="commit"> Submit Article </button>
-    content_tag :button, value, :class => "button button--#{name}".strip
+    content_tag :button, value, :class => "button-1 button-#{name}".strip
   end
 
+  def custom_button_2(value_1, value_2, name="rayen")
+    content_tag :button, nil, class: "button-1 button-#{name}", 'data-text' => value_1 do
+      content_tag :span, value_2
+    end
+    # <button data-text="Request a Quote" class="button-1 button-rayen">
+    # <span>Request a Quote</span>
+    # </button>
+  end
+
+  def custom_button_3(value="Submit", icon="fa-plus", name="antiman")
+    content_tag :button, nil, class: "button-1 button-#{name}" do
+      (content_tag :i, nil, class:"fa #{icon}")+(content_tag :span, value)
+    end
+
+    # <button class="button-1 button-antiman">
+    # <i class="fa fa-plus" aria-hidden="true"></i>
+    # <span>Add New</span>
+    # </button>
+  end
   def custom_link_1(name="Link", link="javascript(void)", style="link-1")
     content_tag :a, name, href: link, class: style do
       content_tag :span, name

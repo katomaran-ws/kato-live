@@ -82,5 +82,8 @@
     width: 100%;
 }
 #article_article_content_content_ifr{ height:300px!important; }
-.submit-button{text-align:center;}
+.submit-button{
+    margin: 3% 0;
+}
+.submit-button button{float:right;}
 /* ################  END  ######################*/
