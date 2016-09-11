@@ -99,7 +99,7 @@
 
             <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
               <%#= f.submit "Create Article", :class => "submit_btn" %>
-              <%= custom_button_3("Add Article") %>
+              <%= custom_button_3((@article.new_record? ? "Add" : "Update") + " Article") %>
             </div>
 
         <% end %>

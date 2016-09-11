@@ -70,7 +70,7 @@
             <% end %>
 
             <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
-              <%= custom_button_3("Add Asset") %>
+              <%= custom_button_3((@asset.new_record? ? "Add" : "Update") + " Asset") %>
             </div>
 
         <% end %>
