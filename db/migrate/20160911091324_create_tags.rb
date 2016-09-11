@@ -1,0 +1,11 @@
+class CreateTags < ActiveRecord::Migration
+  def change
+    create_table :tags do |t|
+      t.string :name
+      t.string :alias_name
+      t.boolean :status, :default => true
+
+      t.timestamps null: false
+    end
+  end
+end
