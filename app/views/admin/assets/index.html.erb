@@ -14,35 +14,33 @@
             <%= custom_link_1("New Gallery", new_admin_asset_path(:type => 'gallery'), "link-1") %>
           </div>
 
-          <style>
-            .preview_img {
-                height: 150px;
-                background-position: center center;
-                object-fit: cover;
-                width: 120px;
-            }
-          </style>
+          <div class="download-main-block col-md-12 col-sm-12 col-xs-12">
+          <h6 class="underline">Assets</h6>
           <% @assets.each do |asset| %>
-              <div class="download-block col-md-3 col-sm-4 col-xs-6 no-padding">
+              <div class="download-block col-md-2 col-sm-3 col-xs-6 no-padding">
                 <a href="<%= edit_admin_asset_path(asset, :type => 'asset') %>">
                   <% if asset.asset_type == "Image" %>
                       <img src="<%= asset.location_path %>" class="preview_img"/>
                   <% else %>
-                      <img src="/images/core/<%= get_file_img(asset.title.split('.').last) %>"/>
+                      <img src="/images/core/<%= get_file_img(asset.title.split('.').last) %>" class="preview_icon"/>
                   <% end %>
                   <p><%= asset.title.upcase %></p>
                 </a>
               </div>
           <% end %>
+          </div>
 
+          <div class="download-main-block col-md-12 col-sm-12 col-xs-12">
+          <h6 class="underline">Gallery</h6>
           <% @gallery.each do |gallery| %>
-              <div class="download-block col-md-3 col-sm-4 col-xs-6 no-padding">
-                <a href="<%= edit_admin_asset_path(gallery, :type => 'gallery') %>">aa
-                  <!--<img src="/images/core/<%#= get_file_img(asset.title.split('.').last) %>"/>-->
-                  <!--<p><%#= asset.title.upcase %></p>-->
+              <div class="download-block col-md-2 col-sm-3 col-xs-6 no-padding">
+                <a href="<%= edit_admin_asset_path(gallery, :type => 'gallery') %>">
+                  <img src="/images/core/ico-gallery.png" class="preview_gallery"/>
+                  <p><%= gallery.name.upcase %></p>
                 </a>
               </div>
           <% end %>
+          </div>
 
         </div><!--INFO-COMMON-BLOCK-->
       </div><!--ROW-->

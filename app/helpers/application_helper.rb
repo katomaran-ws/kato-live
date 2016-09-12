@@ -3,7 +3,7 @@ module ApplicationHelper
   delegate :url_helpers, to: 'Rails.application.routes'
 
   def get_file_img(ext)
-    FILE_EXTENSION_MAPPING[ext.to_sym] ||= "ico-txt.png"
+    FILE_EXTENSION_MAPPING[ext.to_sym] ||= "ico-file.png"
   end
 
   # custom_check_box_1("category[status]", true, @category.status, "category_status")

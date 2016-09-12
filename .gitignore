@@ -17,7 +17,7 @@
 /db/*.sqlite3-journal
 config/database.yml
 
-private/downloads/*
+#private/downloads/*
 public/downloads/*
 # Ignore all logfiles and tempfiles.
 /log/*

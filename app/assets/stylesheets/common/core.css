@@ -7,7 +7,7 @@ img{border:none;}
 a:hover{text-decoration:none;}
 a:focus{text-decoration:none;}
 a{cursor:pointer;}
-
+.row{margin: 0;}
 .keep-left{float:left;}
 .keep-right{float:right;}
 
@@ -54,7 +54,7 @@ h2.white.border::after{ border-bottom: 1px solid #d3d3d3; }
 h2.white.border::before{ border-top: 1px solid #d3d3d3; }
 h2.black.border::after{ border-bottom: 1px solid #333; }
 h2.black.border::before{ border-top: 1px solid #333; }
-h6.underline{position: relative; }
+h6.underline{position: relative; margin: 30px 0 20px; }
 h6.underline::after {
     border-top: 1px solid lightgray;
     bottom: -5px;
@@ -90,8 +90,8 @@ a.tip:hover span:last-child::before {
     width: 10px;
 }
 
-.gray-back{background-color: #f5f5f5;}
-.white-back{background-color: #fff;}
+.gray-back {background-color: #f5f5f5;}
+.white-back {background-color: #fff;}
 
 /* ################  END  ######################*/
 
