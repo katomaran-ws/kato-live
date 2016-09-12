@@ -52,7 +52,7 @@ class Admin::ArticlesController < AdminController
 
   def index
     @page_properties = {:header => "Article Listing"}
-    @articles = Article.all.by_updated
+    @articles = Article.order_by_type
   end
 
   private
