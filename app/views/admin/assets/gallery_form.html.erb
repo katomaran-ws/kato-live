@@ -6,7 +6,7 @@
 
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
         <%#= form_for @gallery, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
-        <%= form_for ([:admin, @gallery]), url: {:controller => "admin/assets", :action => @gallery.new_record? ? :create : :update}, :method => @gallery.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
+        <%= form_for ([:admin, @gallery]), url: {:controller => "admin/assets", :action => @gallery.new_record? ? :create : :update}, :method => @gallery.new_record? ? "post" : "put", html: { autocomplete: "off", id: "gallery_form" } do |f| %>
 
             <%= f.hidden_field 'id', :value => @gallery.id %>
 

@@ -20,11 +20,11 @@
               <%= f.text_field :title, :class => 'form-white' ,:placeholder => 'Title'%>
             </p>
 
-            <p class="col-md-5 col-sm-6 col-xs-12 text-field">
+            <p class="col-md-5 col-sm-8 col-xs-12 text-field">
               <%= f.text_field :alias_url, :class => 'form-white', :placeholder => 'Alias URL' %>
             </p>
 
-            <p class="col-md-2 col-sm-6 col-xs-12 text-field">
+            <p class="col-md-2 col-sm-4 col-xs-12 text-field">
               <%= f.text_field :sequence_number, :class => 'form-white', :placeholder => 'Sequence Number' %>
             </p>
 
@@ -58,11 +58,11 @@
                 <%= collection_select(:article, :category_id, Category.all, :id, :name, options={:selected => @article.category.try(:id), :include_blank => '--Select Category--'}, {class: "cs-select cs-skin-elastic"} ) %>
               </p>
 
-              <p class="col-md-4 col-sm-6 col-xs-12 select-box" data-content="Tags">
+              <p class="col-md-4 col-sm-6 col-xs-12 auto-complete" data-content="Tags">
                 <%= raw custom_autocomplete("article[tag_ids]", Tag.all, "name", @article.tags) %>
               </p>
 
-              <div class="col-md-4 col-sm-6 col-xs-12 from-date">
+              <div class="col-md-4 col-sm-6 col-xs-12 date-picker from-date" data-content="Display Date">
                 <%= f.text_field :display_date, {:class => 'form-white' ,:placeholder => 'Display Date', id: 'display-date'} %>
                 <div id="display-date-field"></div>
               </div>

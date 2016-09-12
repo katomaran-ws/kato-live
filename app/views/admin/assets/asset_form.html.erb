@@ -5,8 +5,7 @@
       <div class="row">
 
         <h2><a class="border"><%= @page_properties[:header] %></a></h2>
-        <%#= form_for @asset, :method => :post, :action => "save_asset", :controller => "admin", html: { autocomplete: "off", :id => 'article_form' } do |f| %>
-        <%= form_for ['admin', @asset], :controller => "admin/assets", :action => @asset.new_record? ? :create : :update, :method => @asset.new_record? ? "post" : "put", html: { autocomplete: "off" } do |f| %>
+        <%= form_for ['admin', @asset], :controller => "admin/assets", :action => @asset.new_record? ? :create : :update, :method => @asset.new_record? ? "post" : "put", html: { autocomplete: "off", id: "asset_form"} do |f| %>
 
             <%= f.hidden_field 'id', :value => @asset.id %>
 
@@ -20,6 +19,7 @@
               <label>Status</label>
               <%= custom_check_box_3("asset[status]", true, @asset.status, "asset_status", "Yes", "No") %>
             </div>
+
             <p class="col-md-4 col-sm-6 col-xs-12 select-box asset-type" data-content="Asset Type">
               <%= select_tag "asset[asset_type]", options_for_select(ASSET_TYPES, @asset.asset_type), :class => "cs-select cs-skin-elastic", prompt: "--Asset Type--" %>
             </p>
@@ -28,6 +28,7 @@
               <p class="col-md-4 col-sm-6 col-xs-12 select-box access" data-content="Access">
                 <%= select_tag "asset[access]", options_for_select(["User", "Admin"], @asset.access), :class => "cs-select cs-skin-elastic", prompt: "--Access--" %>
               </p>
+
               <p class="col-md-4 col-sm-6 col-xs-12 text-field">
                 <%= f.text_field :alias_name, :class => 'form-white', :placeholder => 'Alias URL' %>
               </p>

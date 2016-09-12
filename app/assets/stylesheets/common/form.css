@@ -1,11 +1,18 @@
 /* ################  FORM STYLING  ######################*/
 
-#article_form{padding:0 3%;}
+form#article_form,
+form#tag_form,
+form#category_form,
+form#asset_form,
+form#gallery_form {
+    padding:0 3%;
+}
 .text-field{
     position:relative;
     margin-bottom:25px;
 }
-.form-black, .form-white {
+.form-black,
+.form-white {
     background-color: transparent;
     border: medium none;
     display: block;
@@ -36,31 +43,52 @@
     border-bottom: 1px solid #000;
     color: #000;
 }
-.text-field span, .select-box::after{
+.text-field span,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after{
     color: #666;
     font-weight: 300;
     letter-spacing: 1px;
     position: absolute;
     transition:all 0.9s ease 0s;
 }
+
 .text-field span:first-of-type{
     font-size: 14px;
     left: 30px;
     top: 8px;
 }
-.text-field span:last-of-type, .select-box::after, .auto-complete::after{
+.text-field span:last-of-type,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after{
     font-size: 12px;
     right:20px;
     bottom:-18px;
     display:none;
 }
-.text-field.has_focus span:first-of-type, .text-field.has_value span:first-of-type{ display:none; }
-.text-field.has_focus span:last-of-type, .text-field.has_value span:last-of-type{ display:block; }
-.select-box{
+
+.text-field.has_focus span:first-of-type,
+.text-field.has_value span:first-of-type{
+    display:none;
+}
+
+.text-field.has_focus span:last-of-type,
+.text-field.has_value span:last-of-type{
+    display:block;
+}
+
+.select-box,
+.auto-complete,
+.date-picker{
     position: relative;
     margin-bottom: 25px;
 }
-.select-box::after, .auto-complete::after {
+
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
     content: attr(data-content);
     display: block;
 }
@@ -68,7 +96,10 @@
     padding-top:10px;
     font-weight:normal;
 }
-.check-box .switch{float:right;}
+.check-box .switch{
+    float:right;
+}
+
 .tinymce-content {
     float: left;
     padding: 0 15px;
