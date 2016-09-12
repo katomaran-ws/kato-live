@@ -28,7 +28,8 @@ class Admin::ArticlesController < AdminController
   def create
     article = Article.new(article_params)
     Article.transaction do
-      render 'new' and return unless article.save! or article.create_article_content!(article_content_params)
+      render 'new' and return unless article.save!
+      render 'new' and return unless article.create_article_content!(article_content_params)
       redirect_to admin_articles_url
     end
   end
