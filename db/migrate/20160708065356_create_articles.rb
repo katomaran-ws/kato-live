@@ -13,6 +13,8 @@ class CreateArticles < ActiveRecord::Migration
       t.integer :sequence_number
       t.integer :updated_by
       t.integer :created_by
+      t.datetime :display_date
+      t.integer :category_id
 
       t.timestamps null: false
     end
