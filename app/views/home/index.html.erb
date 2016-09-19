@@ -63,11 +63,11 @@
               <div class="showcase-content col-md-12 col-sm-12 col-xs-12" id="first">
                 <div class="figure col-md-5 col-sm-5 col-xs-12 img-block no-padding">
                   <figure class="effect-sadie">
-                    <img src="<%= gallery.title_image.location.gsub('public', '') %>" alt="img02"/>
+                    <img src="<%= gallery.title_image.location %>" alt="img02"/>
                     <figcaption>
                       <h4><%= gallery.name %></h4>
                       <p><%= gallery.title_image.caption %></p>
-                      <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= gallery.title_image.location.gsub('public', '') %>"></a>
+                      <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= gallery.title_image.location %>"></a>
                     </figcaption>
                   </figure>
                 </div>
@@ -77,13 +77,13 @@
                 </div>
                 <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
 
-                  <% gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
+                  <% gallery.images.by_sequence.limit(3).each do |image| %>
                       <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
                         <figure class="effect-sadie">
-                          <img src="<%= image.location.gsub('public', '') %>" alt="img02"/>
+                          <img src="<%= image.location %>" alt="img02"/>
                           <figcaption>
                             <p><%= image.caption %></p>
-                            <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= image.location.gsub('public', '') %>"></a>
+                            <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= image.location %>"></a>
                           </figcaption>
                         </figure>
                       </div>

@@ -86,7 +86,7 @@ class Admin::AssetsController < AdminController
     file_name = params[:asset][:location].original_filename
     file = File.join(path, file_name.gsub(' ', '_'))
     FileUtils.cp tmp.path, file
-    @asset.location=file
+    @asset.location=file.gsub('public/', '/').gsub('private/', '/')
     @asset.save
   end
 
