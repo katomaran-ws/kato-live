@@ -62,7 +62,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def article_content_params
-    params[:article].require(:article_content).permit(:page_title, :meta_keywords, :meta_description, :content)
+    params[:article].require(:article_content).permit(:banner_image_url, :page_title, :meta_keywords, :meta_description, :content)
   end
 
   def category_params

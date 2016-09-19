@@ -15,6 +15,7 @@ class Article < ActiveRecord::Base
   scope :published, -> { where('status =?', true) }
   scope :by_type, -> (type) { where('article_type =?', type) }
   scope :published_blog, -> { where('article_type = ? and status = ?', 'Blog', true) }
+  scope :published_services, -> { where('article_type = ? and status = ? and heading_block = ?', 'Article', true, 'Services') }
   scope :by_category, -> (id) { where('category_id = ?', id) }
   scope :by_tag, -> (id) { where('articles_tags.tag_id = (?)', id) }
 
@@ -26,4 +27,7 @@ class Article < ActiveRecord::Base
     self["status"] ? true : false
   end
 
+  def image_url
+    self.article_content.banner_image_url
+  end
 end

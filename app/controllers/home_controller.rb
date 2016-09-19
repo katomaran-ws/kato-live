@@ -18,11 +18,12 @@ class HomeController < ApplicationController
   end
 
   def index
-
+    @services=Article.published_services.by_sequence
+    @gallery=Gallery.all
   end
 
   def services
-    @articles=Article.published.by_type("Article").where(heading_block: "Services")
+    @articles=Article.published_services.by_sequence
   end
 
   def show_case

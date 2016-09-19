@@ -32,6 +32,8 @@
               <%= f.text_area :description, :class => 'form-white', :placeholder => 'Description', :rows => 1 %>
             </p>
 
+
+
             <div class="col-md-4 col-sm-6 col-xs-12 check-box">
               <label>Published</label>
               <%= custom_check_box_3("article[status]", true, @article.status, "article_status", "Yes", "No") %>
@@ -77,11 +79,15 @@
             <%= f.fields_for :article_content do |e| %>
 
                 <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
-                  <p class="col-md-5 col-sm-12 col-xs-12 text-field">
+                  <p class="col-md-6 col-sm-6 col-xs-12 text-field">
+                    <%= e.text_field :banner_image_url, :class => 'form-white', :placeholder => 'Banner Image URL', :value => @article_content.try(:banner_image_url) %>
+                  </p>
+
+                  <p class="col-md-6 col-sm-6 col-xs-12 text-field">
                     <%= e.text_field :page_title, :class => 'form-white', :placeholder => 'Page Title', :value => @article_content.try(:page_title) %>
                   </p>
 
-                  <p class="col-md-7 col-sm-12 col-xs-12 text-field">
+                  <p class="col-md-12 col-sm-12 col-xs-12 text-field">
                     <%= e.text_field :meta_keywords, :class => 'form-white', :placeholder => 'Meta Keywords', :value => @article_content.try(:meta_keywords) %>
                   </p>
 

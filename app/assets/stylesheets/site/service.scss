@@ -1,5 +1,11 @@
 /* ################  SERVICES BLOCK STYLING  ######################*/
 
+.services > div:nth-child(2n) {
+  background-color: #fff;
+}
+.services > div:nth-child(2n+1) {
+  background-color: #f5f5f5;
+}
 .servies-query{
   text-align: center;
 }

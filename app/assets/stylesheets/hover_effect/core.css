@@ -69,3 +69,8 @@
     letter-spacing: 1px;
     font-size: 68.5%;
 }
+
+.all-images img {
+    height: 175px;
+    object-fit: cover;
+}
