@@ -1,0 +1,583 @@
+/* ################  SERVICES BLOCK STYLING  ######################*/
+/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services > div:nth-child(2n) {
+  background-color: #fff;
+}
+
+/* line 6, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services > div:nth-child(2n+1) {
+  background-color: #f5f5f5;
+}
+
+/* line 9, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.servies-query {
+  text-align: center;
+}
+
+/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.servies-query h4 {
+  margin-bottom: 10px;
+}
+
+/* line 15, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.service-block-left, .service-block-right {
+  padding: 5% 0;
+}
+
+/* line 18, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.servies-query {
+  padding: 3% 0;
+}
+
+/* line 21, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.service-block-right .img-block {
+  float: right;
+  text-align: center;
+  font-size: 150px;
+}
+
+/* line 26, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.service-block-left .img-block {
+  float: left;
+  text-align: center;
+  font-size: 150px;
+}
+
+/* line 31, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services .text-block {
+  position: relative;
+}
+
+/* line 34, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services .know-more-button {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services > div:first-of-type {
+  padding-top: 0;
+}
+
+/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services li {
+  padding-left: 15px;
+  list-style: none;
+}
+
+/* line 46, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services li::before {
+  content: "\2022";
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* line 51, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services h4 {
+  margin: 10px 0 20px;
+}
+
+/* line 54, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/service.scss */
+.services h6, .services h5 {
+  margin: 30px 0 20px;
+}
+
+/* ################  END  ######################*/
+/* ################  FORM STYLING  ######################*/
+/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+form#article_form,
+form#tag_form,
+form#category_form,
+form#asset_form,
+form#gallery_form {
+  padding: 0 3%;
+}
+
+/* line 10, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* line 14, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.form-black,
+.form-white {
+  background-color: transparent;
+  border: medium none;
+  display: block;
+  font-size: 14px;
+  height: auto;
+  letter-spacing: 2px;
+  line-height: 1.42587;
+  padding: 6px;
+  transition: border-color 0.15s ease-in-out 0s;
+  width: 100%;
+}
+
+/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.form-black {
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+
+/* line 31, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.form-black:focus {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+/* line 35, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.form-white {
+  background: #f6f6f6 none repeat scroll 0 0;
+  border: 1px solid #e3e3e3;
+  color: #000;
+  font-weight: 300;
+  padding: 0.5em 1em;
+}
+
+/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.form-white:focus {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+/* line 46, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field span,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: absolute;
+  transition: all 0.9s ease 0s;
+}
+
+/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field span:first-of-type {
+  font-size: 14px;
+  left: 30px;
+  top: 8px;
+}
+
+/* line 62, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field span:last-of-type,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
+  font-size: 12px;
+  right: 20px;
+  bottom: -18px;
+  display: none;
+}
+
+/* line 72, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field.has_focus span:first-of-type,
+.text-field.has_value span:first-of-type {
+  display: none;
+}
+
+/* line 77, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.text-field.has_focus span:last-of-type,
+.text-field.has_value span:last-of-type {
+  display: block;
+}
+
+/* line 82, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.select-box,
+.auto-complete,
+.date-picker {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* line 89, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
+  content: attr(data-content);
+  display: block;
+}
+
+/* line 95, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.check-box label {
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+/* line 99, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.check-box .switch {
+  float: right;
+}
+
+/* line 103, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.tinymce-content {
+  float: left;
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* line 108, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.file-select {
+  text-align: center;
+}
+
+/* line 109, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.file-select img {
+  max-width: 50px;
+}
+
+/* line 110, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.file-select input {
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  width: 100%;
+}
+
+/* line 115, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+#article_article_content_content_ifr {
+  height: 300px !important;
+}
+
+/* line 116, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.submit-button {
+  margin: 3% 0;
+}
+
+/* line 119, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+.submit-button button {
+  float: right;
+}
+
+/* ################  END  ######################*/
+/* Common style */
+/* line 2, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 15px 0.5% 0;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* line 20, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 29, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+/* line 34, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* line 44, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+/* line 52, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5 span {
+  font-weight: 600;
+  border-bottom: 2px solid;
+  margin-right: 2%;
+}
+
+/* line 63, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5,
+.grid figure p {
+  margin: 0;
+}
+
+/* line 68, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* line 73, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.all-images img {
+  height: 175px;
+  object-fit: cover;
+}
+
+/* Common style */
+/* line 2, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 15px 0.5% 0;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* line 20, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 29, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+/* line 34, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* line 44, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+/* line 52, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5 span {
+  font-weight: 600;
+  border-bottom: 2px solid;
+  margin-right: 2%;
+}
+
+/* line 63, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure h5,
+.grid figure p {
+  margin: 0;
+}
+
+/* line 68, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* line 73, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/core.css */
+.all-images img {
+  height: 175px;
+  object-fit: cover;
+}
+
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  content: '';
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+}
+
+/* line 21, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie h5 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #eee;
+  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+  transition: transform 0.35s, color 0.35s;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+/* line 33, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+/* line 50, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie:hover h5 {
+  color: #fff;
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+
+/* line 56, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/hover_effect/sadie.css */
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/core.css */
+.link-1, .link-3 {
+  display: block;
+  position: relative;
+  font-size: 14px;
+}
+
+/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/core.css */
+.button-1 {
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  background: none;
+  margin: 1em;
+  padding: 1em 2em;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  border: 1px solid;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*  LINK 3  */
+/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 {
+  background-color: #d3d3d3;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #d3d3d3;
+  transition: all 0.4s ease 0s;
+  overflow: hidden;
+}
+
+/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3:hover {
+  width: 150px;
+  background-color: #38c2d4;
+  border: 1px solid #38c2d4;
+}
+
+/* line 17, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 > span::before {
+  border-bottom: 1.5px solid #fff;
+  content: "";
+  position: absolute;
+}
+
+/* line 22, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 > span:nth-child(1)::before {
+  right: 16px;
+  top: 24.5px;
+  width: 15px;
+}
+
+/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 > span:nth-child(2)::before {
+  right: 15px;
+  bottom: 20px;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+
+/* line 33, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 > span:nth-child(3)::before {
+  right: 15px;
+  top: 22px;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_3.css */
+.link-3 > span:nth-child(4)::before {
+  border: none;
+  content: attr(data-val);
+  color: #fff;
+  right: 25px;
+  top: 14px;
+  width: 100px;
+}
+
+/* ################  END  ######################*/
+/* line 8, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/site/home.scss */
+.write-us {
+  background: url("/images/home/footer_bg_image.jpg");
+  float: left;
+}
