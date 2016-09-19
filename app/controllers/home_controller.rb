@@ -21,4 +21,11 @@ class HomeController < ApplicationController
 
   end
 
+  def services
+    @articles=Article.published.by_type("Article").where(heading_block: "Services")
+  end
+
+  def show_case
+    @gallery=Gallery.all
+  end
 end

@@ -1,3 +1,65 @@
 /*
   *=require hover_effect/milo
 */
+
+#content {
+  width: auto;
+  margin: 0 auto;
+  padding: 0!important;
+}
+
+.item {
+  display: block;
+  float: left;
+  width: 270px;
+  margin: 0 10px 10px 0;
+  opacity: 0.8;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s, -webkit-box-shadow 0.5s ease-out, opacity 0.5s ease-out;
+  -moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s, -moz-box-shadow 0.5s ease-out, opacity 0.5s ease-out;
+  -ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s, -ms-box-shadow 0.5s ease-out, opacity 0.5s ease-out;
+  -o-transition: left .4s ease-in-out, top .4s ease-in-out .4s, -o-box-shadow 0.5s ease-out, opacity 0.5s ease-out;
+  transition: left .4s ease-in-out, top .4s ease-in-out .4s, box-shadow 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.item:hover {
+  opacity: 1;
+  -webkit-box-shadow: 2px 5px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 5px 5px  rgba(0,0,0,0.3);
+  box-shadow: 2px 5px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.item span {
+  background: lightgray;
+  text-align: center;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 10%;
+  left: -100%;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.item:hover span {
+  left: 0;
+}
+.featured {
+  width: 550px;
+}
+
+.item img {
+  width: 270px;
+  height: auto;
+}
+
+.featured img {
+  width: 550px;
+  height: auto;
+}

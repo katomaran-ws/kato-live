@@ -6,6 +6,8 @@ class Asset < ActiveRecord::Base
 
   before_save :access_code_mapping
 
+  scope :by_sequence, -> { order('sequence_number asc') }
+
   def access_code_mapping
     self.access_code=ACCESS_CODE_MAPPING[self.access]
   end
