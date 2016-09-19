@@ -11,7 +11,7 @@ class Gallery < ActiveRecord::Base
   end
 
   def images_without_title_image
-    self.images-[self.title_image] rescue self.images
+    Asset.where(id: self.image_ids-[self.title_image_id]) rescue self.images
   end
 
   def status

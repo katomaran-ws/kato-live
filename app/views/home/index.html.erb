@@ -77,8 +77,8 @@
                 </div>
                 <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
 
-                  <% gallery.images.by_sequence.limit(3).each do |image| %>
-                      <div class="figure col-md-4 col-sm-4 col-xs-12 img-block no-padding">
+                  <% gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
+                      <div class="figure img-block no-padding">
                         <figure class="effect-sadie">
                           <img src="<%= image.location %>" alt="img02"/>
                           <figcaption>
