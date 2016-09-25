@@ -51,8 +51,8 @@ module ApplicationHelper
     # </button>
   end
 
-  def custom_button_3(value="Submit", icon="fa-plus", name="antiman")
-    content_tag :button, nil, class: "button-1 button-#{name}" do
+  def custom_button_3(value:"Submit", icon:"fa-plus", name:"antiman", class_name:"")
+    content_tag :button, nil, class: "button-1 button-#{name} #{class_name}".strip do
       (content_tag :i, nil, class:"fa #{icon}")+(content_tag :span, value)
     end
 

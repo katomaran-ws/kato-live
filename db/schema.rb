@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 20160911091324) do
     t.integer  "sequence_number"
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "display_date"
+    t.integer  "category_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "category_id"
-    t.datetime "display_date"
   end
 
   create_table "articles_tags", id: false, force: :cascade do |t|

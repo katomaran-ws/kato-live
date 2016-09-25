@@ -11,3 +11,8 @@ FILE_EXTENSION_MAPPING={
     :rar => "ico-zip.png",
     :txt => "ico-txt.png"
 }
+SOCIAL_LINKS={
+    :facebook => "https://www.facebook.com/katomaran-robotics",
+    :twitter => "https://twitter.com/KatomaranIndia",
+    :google => "https://plus.google.com/+KatomaranIndia"
+}

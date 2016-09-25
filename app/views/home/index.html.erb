@@ -100,47 +100,60 @@
   </div>
 </div>
 
-<div class="write-us col-md-12 col-sm-12 col-xs-12 no-padding">
+<div class="newsletter col-md-12 col-sm-12 col-xs-12 no-padding">
   <div class="container no-padding">
     <div class="row">
 
-      <div class="write-us-block col-md-12 col-sm-12 col-xs-12 no-padding">
-        <h2 class="border black"><a>Get in Touch</a></h2>
+      <div class="newsletter-block col-md-12 col-sm-12 col-xs-12 no-padding">
+        <h2 class="border white"><a>Pop-in to our Mailing List</a></h2>
+        <p>We'll send occassional email with updates and many more interesting stuffs. You can unsubscribe at any time.</p>
 
-        <div class="form-left col-md-6 col-sm-6 col-xs-12">
-          <form role="form" name="myForm">
-            <div class="form-group">
-              <p><input type="text" class="form-black" id="write_us_name" placeholder="NAME" /></p>
+        <div class="col-md-12 col-sm-12 col-xs-12 no-padding testt">
+        <form>
+            <p class="text-fiel col-md-8 col-sm-8 col-xs-12 no-padding">
+              <input type="text" class="form-white" placeholder="Email"/>
+            </p>
+            <div class="submit col-md-4 col-sm-4 col-xs-12 no-padding">
+              <%= custom_button_3(value:"Get into the Queue") %>
             </div>
-
-            <div class="form-group">
-              <p><input type="text" class="form-black" id="write_us_email" placeholder="EMAIL-ID"/></p>
-            </div>
-
-            <div class="form-group">
-              <p><input type="text" class="form-black" id="write_us_subject" placeholder="SUBJECT"/></p>
-            </div>
-          </form>
-        </div>
-
-        <div class="form-right col-md-6 col-sm-6 col-xs-12">
-          <form role="form" name="myForm">
-            <div class="form-group">
-              <p><textarea class="form-black" id="write_us_content" placeholder="CONTENT" rows="6"></textarea></p>
-            </div>
-            <div id="btn-click">
-              <!--<span class="btn btn-5 btn-5c icon-arrow-right btn-small keep_right" id="mail_submit"><span>SEND</span></span>-->
-              <button class="btn btn-5 btn-5c btn-small keep_right icon-send" id="mail_submit"><span>SEND</span></button>
-            </div>
-          </form>
+        </form>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 
 <style>
+  .newsletter{
+      /*background-color: #59abe3;*/
+      background-image: url('http://www.oneboardpc.com/wp-content/uploads/2016/03/Background.jpg');
+      background-size: 100% auto ;
+  }
+  .submit button{
+      margin: 0;
+      display: inline;
+      float: left;
+  }
+  .newsletter-block form p{
+      text-align: center;
+      padding-right: 3%;
+      margin: 0.5% 0;
+  }
+  .newsletter-block p input{
+      width: 75%;
+      display: inline;
+      float: right;
+      height: 50px;
+      background-color: transparent;
+  }
+  .newsletter-block{
+      margin: 1% 0 5%;
+      text-align: center;
+  }
+  .newsletter-block .text-field input{
+      width: 75%;
+  }
     .showcase-content{
         position: relative;
         overflow: hidden;

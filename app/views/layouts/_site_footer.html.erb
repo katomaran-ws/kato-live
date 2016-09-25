@@ -4,69 +4,36 @@
       <div class="row no-margin">
 
         <div class="footer-top col-md-12 col-sm-12 col-xs-12 no-padding">
-
-          <section class="footer-content-block">
-            <div class="navigation col-md-3 col-sm-6 col-xs-12 no-padding">
-              <h5>Navigate</h5>
-              <nav class="cl-effect-13">
-                <a href="<%= root_path %>">Home</a>
-                <a href="<%= services_path %>">Services</a>
-                <a href="<%= show_case_path %>">Showcase</a>
-                <a href="<%= history_path %>">History</a>
-                <a href="<%= contact_us_path %>">Contact Us</a>
-              </nav>
-            </div>
-
-            <div class="resources col-md-3 col-sm-6 col-xs-12 no-padding">
-              <h5>Resources</h5>
-              <nav class="cl-effect-13">
-                <a href="<%= login_path %>">Login</a>
-                <a href="<%= downloads_path %>">Downloads</a>
-                <a href="/faq">FAQ</a>
-                <a href="/quote">Request Quote</a>
-              </nav>
-            </div>
-
-            <div class="research col-md-3 col-sm-6 col-xs-12 no-padding">
-              <h5>R & D</h5>
-              <nav class="cl-effect-13">
-                <a href="/blog/articles">Our Blog</a>
-                <a href="/projects">Projects</a>
-              </nav>
-            </div>
-
-            <div class="newsletter col-md-3 col-sm-6 col-xs-12 no-padding">
-              <h5>Sign-up to our Mailing List</h5>
-              <p>We'll send occassional email with updates and offers.  You can unsubscribe at any time.</p>
-              <input type="text" class="form-black" id="write_us_name" placeholder="Email" />
-              <button class="btn hvr-back-pulse" id="newsletter_submit"><span>I'M IN</span></button>
-            </div>
-          </section>
-
+          <ul>
+            <li><a href="<%= login_path %>">Login</a></li>
+            <li><a href="<%= downloads_path %>">Downloads</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/quote">Request Quote</a></li>
+            <li><a href="/blog/articles">Our Blog</a></li>
+            <li><a href="/projects">Projects</a></li>
+          </ul>
         </div>
 
         <div class="footer-bottom col-md-12 col-sm-12 col-xs-12 no-padding">
-          <section class="footer-content-block">
-            <div class="copy-right col-md-5 col-sm-5 col-xs-12 no-padding keep-left">
-              <p>&#169; 2016. Katomaran Techno Solutions  </p>
-              <p>Powered by - <a href="http://www.webservices.katomaran.com" title="www.webservices.katomaran.com">Katomaran WebServices</a></p>
-            </div>
-
-            <div class="footer-logo col-md-4 col-sm-4 col-xs-12 no-padding">
-              <a href="/"><img src="/images/core/menu_logo.png"/></a>
-            </div>
-
-            <div class="floater col-md-3 col-sm-3 col-xs-12 no-padding text-center">
-              <ul>
-                <li><a href="https://www.facebook.com/katomaran-robotics" title="katomaran-robotics" target="_blank"><span class="fa fa-facebook fa-lg hover"></span></a></li>
-                <li><a class="tip" href="https://twitter.com/KatomaranIndia" target="_blank"><span class="fa fa-twitter fa-lg hover"></span><span>@KatomaranIndia</span></a></li>
-                <li><a href="https://plus.google.com/+KatomaranIndia" title="+KatomaranIndia" target="_blank"><span class="fa fa-google-plus fa-lg hover"></span></a></li>
-              </ul>
-            </div>
-          </section>
+          <div class="copy-right">
+            <p>&copy; <%= Date.today.strftime("%Y") %>. Katomaran Techno Solutions. </p>
+            <p>Powered by - <a href="http://www.webservices.katomaran.com" class="tip">Katomaran WebServices</a></p>
+          </div>
+          <div class="social-icon">
+            <a href="<%= SOCIAL_LINKS[:facebook] %>">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="<%= SOCIAL_LINKS[:twitter] %>">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="<%= SOCIAL_LINKS[:google] %>">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
 
       </div>
+
     </div>
   </div>
 </footer>

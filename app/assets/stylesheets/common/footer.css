@@ -1,7 +1,7 @@
 /* ################  FOOTER STYLING  ######################*/
 
-.footer-content{ background-color: lightgray; }
-.footer-top, .footer-bottom { padding-bottom: 2%; margin-top: 2%; }
+.footer-content{ background-color: #ededed; }
+.footer-top, .footer-bottom { padding-bottom: 3%; margin-top: 3%; }
 .footer-top { border-bottom: 1px solid; }
 
 .footer-content-block div { padding: 0 20px; }
@@ -10,35 +10,66 @@
 .footer-content-block div a:hover { color: #38c2d4; }
 .footer-content-block nav { max-width: 100%; padding-left: 5%; }
 .footer-content-block nav a { display: block;}
-
-/* ################  END  ######################*/
-
-
-/* ################  FLOATING SOCIAL ICONS  ######################*/
-
-.floater {
-    bottom: 0;
-    padding-bottom: 1%!important;
-    position: fixed;
-    right: 6%;
-    width: 20%;
-    z-index: 1000;
-    transition:all 0.4s linear 0s;
+.copy-right {
+    padding: 2% 0 4%;
 }
-.floater ul { list-style: outside none none; }
-.floater ul li { display: inline-block;  padding: 0 6%;}
-.floater ul li a{ color: #888; padding: 0 10px; }
-.floater ul li a:hover{ color: #000; }
+.footer-top > ul {
+    display: block;
+    list-style: outside none none;
+    text-align: center;
+}
+.footer-top > ul li {
+    display: inline-block;
+    padding: 0.5% 3%;
+}
+.footer-top > ul li a{
+    color: #888;
+    display: block;
+    padding: 5px 15px;
+}
+.footer-top > ul li a:hover{
+    color: #000;
+}
+.footer-bottom p{display: inline; padding-right: 2%;}
+.footer-bottom {text-align: center;}
 
-.override-floater {
-    padding-top: 1.5% !important;
-    position: static;
+.copy-right p {
+    display: inline;
+    padding-right: 1%;
+    font-size: 14px;
+}
+.social-icon {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.social-icon > a {
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+    margin-right: 1%;
+}
+.social-icon a i{
+    padding-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+.social-icon > a:nth-child(1) {
+    background-color: #3b5998;
+}
+.social-icon > a:nth-child(2) {
+    background-color: #55ACEE;
+}
+.social-icon > a:nth-child(3) {
+    background-color: #DD4B38;
 }
 
 /* ################  END  ######################*/
 
 /* ################  FOOTER LINKS  ######################*/
-
+/*
 .cl-effect-13 a {
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
@@ -67,4 +98,5 @@
 .cl-effect-13 a:hover,
 .cl-effect-13 a:focus { color: #ba7700; }
 
+*/
 /* ################  END  ######################*/
