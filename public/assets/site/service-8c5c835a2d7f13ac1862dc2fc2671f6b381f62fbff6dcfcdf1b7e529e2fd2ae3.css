@@ -1,0 +1,86 @@
+/* ################  SERVICES BLOCK STYLING  ######################*/
+/* line 4, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services > div:nth-child(2n) {
+  background-color: #fff;
+}
+
+/* line 7, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services > div:nth-child(2n+1) {
+  background-color: #f5f5f5;
+}
+
+/* line 10, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.servies-query {
+  text-align: center;
+}
+
+/* line 13, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.servies-query h4 {
+  margin-bottom: 10px;
+}
+
+/* line 16, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.service-block-left, .service-block-right {
+  padding: 5% 0;
+}
+
+/* line 19, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.servies-query {
+  padding: 3% 0;
+}
+
+/* line 22, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.service-block-right .img-block {
+  float: right;
+  text-align: center;
+  font-size: 150px;
+}
+
+/* line 27, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.service-block-left .img-block {
+  float: left;
+  text-align: center;
+  font-size: 150px;
+}
+
+/* line 32, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services .text-block {
+  position: relative;
+}
+
+/* line 35, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services .know-more-button {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+/* line 40, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services > div:first-of-type {
+  padding-top: 0;
+}
+
+/* line 43, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services li {
+  padding-left: 15px;
+  list-style: none;
+}
+
+/* line 47, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services li::before {
+  content: "\2022";
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* line 52, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services h4 {
+  margin: 10px 0 20px;
+}
+
+/* line 55, /Users/lokesh/Desktop/application/kato-fresh/app/assets/stylesheets/site/service.scss */
+.services h6, .services h5 {
+  margin: 30px 0 20px;
+}
+
+/* ################  END  ######################*/
