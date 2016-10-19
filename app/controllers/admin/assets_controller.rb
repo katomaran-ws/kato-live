@@ -41,7 +41,8 @@ class Admin::AssetsController < AdminController
         path="public/downloads/images"
       end
       @asset=Asset.new(asset_params)
-      status=save_asset(path)
+      status=save_asset(path) if params[:asset][:location].present?
+      status=true if params[:asset][:cloudinary_url].present?
     else
       gallery_params=params.require(:gallery).permit(:name, :caption, :description, :status)
       gallery=Gallery.new(gallery_params)
@@ -51,7 +52,7 @@ class Admin::AssetsController < AdminController
     if status
       redirect_to admin_assets_path
     else
-      render :new
+      redirect_to :action => 'new'
     end
   end
 
