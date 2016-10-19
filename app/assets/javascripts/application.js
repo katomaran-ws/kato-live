@@ -15,33 +15,7 @@
 
 //= require_tree .
 //= require tinymce
-
-
-// Set Home Page banner height and width
-function SetHomePage() {
-    $('.banner').css(({height:$(window).height()}));
-}
-
-// Set Home Page banner height and width
-function SetAdminPage() {
-    $('.banner').css(({height:$(window).height()/2}));
-}
-
-// Make Text Area Height dynamic based on the content size
-function text_area(elem) {
-    $(elem).css({'height':'auto','overflow-y':'hidden'}).height(elem.scrollHeight-13);
-}
-
-// FUNCTION TO CHECK HAS VALUE FOR TEXT FIELDS
-function check_has_value(elem) {
-    $elem=elem;
-    if($elem.val()!=''){
-        $elem.parent().addClass("has_value");
-    }
-    else{
-        $elem.parent().removeClass("has_value");
-    }
-}
+//= require calendar
 
 // Check if a elem block is in the viewport
 function isScrolledIntoView(elem)
@@ -60,13 +34,11 @@ function preview_toggle_for_title_image(){
         var aa=$('.gallery-image-select').find('span.cs-placeholder').text();
         var x=aa.search('--');
         if(x<0){
-            console.log("if");
             var id=$('.gallery-image-select select').val();
             var src=$('.preload-image span#'+id).html();
             $('.preview-image img').attr('src', src).css("visibility","visible");
         }
         else {
-            console.log("else");
             $('.preview-image img').css("visibility", "hidden");
         }
     });
@@ -84,28 +56,12 @@ function toggle_fields_on_select(field) {
     // TOGGLE VISIBLE CONTENT BASED ON ARTICLE TYPE CHANGE
     $(control_field + ' .cs-options').find('li').click(function () {
         var aa=$('.all'+classname);
-        console.log(aa);
         aa.hide();
-        console.log("---");
         var cc= $(this).attr('data-value');
-        console.log(cc);
         var bb=$('.' + cc + classname);
-        console.log(bb);
         bb.show();
     });
 }
-
-$(window).scroll(function(){
-    $elem=$('.footer-content');
-    if ($elem){
-        if (isScrolledIntoView($elem)) {
-            $('.floater').addClass('override-floater');
-        }
-        else{
-            $('.floater').removeClass('override-floater');
-        }
-    }
-});
 
 $(document).ready(function() {
 
@@ -161,7 +117,5 @@ $(document).ready(function() {
     toggle_fields_on_select('image');
 
     preview_toggle_for_title_image();
-
-
 
 });

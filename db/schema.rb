@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911091324) do
+ActiveRecord::Schema.define(version: 20161011080217) do
 
   create_table "article_contents", force: :cascade do |t|
     t.integer  "article_id"
@@ -87,12 +87,44 @@ ActiveRecord::Schema.define(version: 20160911091324) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "newsletters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "subject"
+    t.string   "from_email"
+    t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletters_subscribers", id: false, force: :cascade do |t|
+    t.integer "newsletter_id"
+    t.integer "subscriber_id"
+  end
+
   create_table "reports", force: :cascade do |t|
     t.string   "name_of_model"
     t.string   "downloadable_fields", default: ""
     t.boolean  "status",              default: true
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "subscribers", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "username"
+    t.string   "phone"
+    t.boolean  "active"
+    t.string   "status"
+    t.string   "reset_password_code"
+    t.datetime "reset_code_until"
+    t.datetime "last_login"
+    t.string   "remember_me_key"
+    t.string   "remember_me_until"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "tags", force: :cascade do |t|

@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Katofresh Admin Panel</title>
+  <title>Katomaran Robotics Admin Panel</title>
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
   <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >-->
 
   <!-- Google fonts -->
-  <!--<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>-->
-  <!-- -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> -->
 
   <link rel="stylesheet" href="/offline_assets/bootstrap.min.css">
-  <link rel="stylesheet" href="/offline_assets/bootstrap.min.js">
+  <link rel="script" href="/offline_assets/bootstrap.min.js">
   <link rel="stylesheet" href="/offline_assets/font-awesome.min.css">
-  <link rel="stylesheet" href="/offline_assets/jquery-1.11.1.js">
-
+  <link rel="script" href="/offline_assets/jquery-1.11.1.js">
 
   <%= stylesheet_link_tag 'admin', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+
 
 </head>
 <body>
-
 <%= render 'layouts/admin_header' %>
 
 <%= yield %>
@@ -30,8 +29,8 @@
 
 </body>
 <script>
-    $(window).resize(function(){ SetAdminPage(); });
-    $(window).load(function(){ SetAdminPage(); });
+    $(window).resize(function(){ SetHalfPageBanner(); });
+    $(window).load(function(){ SetHalfPageBanner(); });
 
     // select box script
     (function () {

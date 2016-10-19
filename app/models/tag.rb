@@ -10,4 +10,5 @@ class Tag < ActiveRecord::Base
   def status
     self["status"] ? true : false
   end
+
 end

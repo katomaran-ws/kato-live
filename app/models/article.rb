@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   validates :title, presence: true
   validates :alias_url, uniqueness: true, allow_blank: true
 
-  delegate :content, to: :article_content
+  delegate :content, :page_title, :banner_image_url, :meta_keywords, :meta_description, to: :article_content
 
   scope :by_sequence, -> { order('sequence_number asc') }
   scope :by_updated, -> { order('updated_at desc') }

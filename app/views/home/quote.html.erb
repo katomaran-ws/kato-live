@@ -1,0 +1,22 @@
+<%#= stylesheet_link_tag 'site/service' %>
+
+<% page_title "Request Quote" %>
+
+<div class="quote col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a>Request A Quote</a></h2>
+  <div class="quote-block-right col-md-12 col-sm-12 col-xs-12 no-padding white-back">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <%= form_tag submit_quote_path do %>
+
+            <p class="col-md-2 col-sm-4 col-xs-12 text-field">
+              <%= text_field_tag 'quote[name]', nil, {:class => 'form-white', :placeholder => 'Sequence Number'} %>
+            </p>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

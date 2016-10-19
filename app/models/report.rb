@@ -1,6 +1,8 @@
 require 'csv'
 class Report < ActiveRecord::Base
 
+  validates :name_of_model, :uniqueness => true, :presence => true
+
   def self.download_csv(values)
     csv = self.downloadable_fields.join(",")+"\n"
     fields=self.downloadable_fields

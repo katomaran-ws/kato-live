@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  include ArticlesHelper
+
   def downloads
     @assets=Asset.active
   end
@@ -29,4 +31,23 @@ class HomeController < ApplicationController
   def show_case
     @gallery=Gallery.all
   end
+
+  def add_to_newsletter
+    sleep(3)
+    render json: {status: false, message: "Email-id can't be empty"} and return if params[:email].blank?
+    subscriber=Subscriber.find_by_email(params[:email]) || Subscriber.create(email: params[:email], status: "Newslettered")
+    newsletter=Newsletter.find(params[:newsletter_id])
+
+    render json: {status: true, message: "Already in the list"} and return if subscriber.newsletter_ids.include?(newsletter.id)
+
+    subscriber.newsletter_ids=newsletter.id
+    render json: {status: true, message: "Added to the Queue"}
+  end
+
+  def submit_quote
+
+  end
+
 end
+
+

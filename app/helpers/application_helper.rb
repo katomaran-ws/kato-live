@@ -2,87 +2,49 @@ module ApplicationHelper
 
   delegate :url_helpers, to: 'Rails.application.routes'
 
+  def meta_tag(tag, text)
+    content_for :"meta_#{tag}", text
+  end
+
+  def page_title(text)
+    content_for :title, text
+  end
+
+  def yield_page_title
+    title=(content_for?(:title) ? content_for(:title) + " | " : @page_properties[:page_title]).to_s + "Katomaran Robotics"
+    content_tag :title, title
+  end
+
+  def yield_meta_tag(tag)
+    if @page_properties[:"meta_#{tag}"].present? || content_for?(:"meta_#{tag}")
+      value = @page_properties[:"meta_#{tag}"] || content_for(:"meta_#{tag}")
+      tag "meta", name: tag, content: value
+    else
+      nil
+    end
+  end
+
   def get_file_img(ext)
-    FILE_EXTENSION_MAPPING[ext.to_sym] ||= "ico-file.png"
+    file_extension_mapping={
+        :doc => "ico-doc.png",
+        :docx => "ico-doc.png",
+        :pdf => "ico-pdf.png",
+        :zip => "ico-zip.png",
+        :tar => "ico-zip.png",
+        :rar => "ico-zip.png",
+        :txt => "ico-txt.png"
+    }
+
+    file_extension_mapping[ext.to_sym] ||= "ico-file.png"
   end
 
-  # custom_check_box_1("category[status]", true, @category.status, "category_status")
-  def custom_check_box_1(name, true_val, value, label)
-    custom_check_box_main(name, true_val, value, label, "toggle-round")
-  end
-
-  # custom_check_box_2("category[status]", true, @category.status, "category_status")
-  def custom_check_box_2(name, true_val, value, label)
-    custom_check_box_main(name, true_val, value, label, "toggle-round-flat")
-  end
-
-  # custom_check_box_3("category[status]", true, @category.status, "category_status", "YES", "NO")
-  def custom_check_box_3(name, true_val, value, label, on_val=nil, off_val=nil)
-    custom_check_box_main(name, true_val, value, label, "toggle-yes-no", on_val, off_val)
-  end
-
-  def custom_check_box_main(name, true_val, value, label, class_name, data_on=nil, data_off=nil)
-    check=check_box_tag name, true_val, value, :class => "toggle #{class_name}".strip
-    content=content_tag :label, nil, :for => label, "data-off" => data_off, "data-on" => data_on
-    false_selector=hidden_field_tag(name, !true_val, id: nil)
-    true_selector=content_tag :div, nil, :class => "switch" do
-      check + content
-    end
-    false_selector + true_selector
-
-   # <input type="hidden" value="false" name="category[status]">
-   # <div class="switch">
-   #      <input id="status" class="toggle toggle-round" type="checkbox" name="category[status]" value="true" checked="false">
-   #      <label for="status"></label>
-   # </div>
-  end
-
-  def custom_button_1(name="wayra", value = "Submit")
-    # <button class="button button--wayra" value="Create Article" name="commit"> Submit Article </button>
-    content_tag :button, value, :class => "button-1 button-#{name}".strip
-  end
-
-  def custom_button_2(value_1, value_2, name="rayen")
-    content_tag :button, nil, class: "button-1 button-#{name}", 'data-text' => value_1 do
-      content_tag :span, value_2
-    end
-    # <button data-text="Request a Quote" class="button-1 button-rayen">
-    # <span>Request a Quote</span>
-    # </button>
-  end
-
-  def custom_button_3(value:"Submit", icon:"fa-plus", name:"antiman", class_name:"")
-    content_tag :button, nil, class: "button-1 button-#{name} #{class_name}".strip do
-      (content_tag :i, nil, class:"fa #{icon}")+(content_tag :span, value)
-    end
-
-    # <button class="button-1 button-antiman">
-    # <i class="fa fa-plus" aria-hidden="true"></i>
-    # <span>Add New</span>
-    # </button>
-  end
-  def custom_link_1(name="Link", link="javascript(void)", style="link-1")
-    content_tag :a, name, href: link, class: style do
-      content_tag :span, name
-    end
-
-  #   <a href="/our-services#r-n-d" class="link-1"><span>Know More</span></a>
-  end
-
-  def custom_link_2(link="javascript(void)", style="link-2")
-    content_tag :a, nil, href: link, class: style do
-      (content_tag :span)+(content_tag :span)
-    end
-
-    #   <a href="/our-services#r-n-d" class="link-1"><span>Know More</span></a>
-  end
-
-  def custom_link_3(name="Link", link="javascript(void)", style="link-3")
-    content_tag :a, name, href: link, class: style do
-      (content_tag :span)+(content_tag :span)+(content_tag :span)+(content_tag :span, nil, "data-val" => name)
-    end
-
-    #   <a href="/our-services#r-n-d" class="link-3"><span></span><span></span><span></span></a>
+  def get_social_link(val)
+    links={
+        :facebook => "https://www.facebook.com/katomaran-robotics",
+        :twitter => "https://twitter.com/KatomaranIndia",
+        :google => "https://plus.google.com/+KatomaranIndia"
+    }
+    links[val]
   end
 
   def custom_autocomplete(name, search_obj, field, populate_obj)
@@ -101,21 +63,6 @@ module ApplicationHelper
         });
     </script>"
 
-    return auto_complete
+    auto_complete
   end
-
-  def get_next_article(article_id)
-    ids=Article.published_blog.by_sequence.map(&:id)
-    id=ids.index(article_id).to_i+1
-    id = id>=ids.length ? id-ids.length : id
-    Article.find(ids[id])
-  end
-
-  def get_prev_article(article_id)
-    ids=Article.published_blog.by_sequence.map(&:id)
-    id=ids.index(article_id).to_i-1
-    id = id>=ids.length ? id-ids.length : id
-    Article.find(ids[id])
-  end
-
 end

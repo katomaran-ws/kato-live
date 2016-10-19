@@ -43,11 +43,14 @@ Rails.application.routes.draw do
   get '/contact-us' => 'home#contact_us', :as => 'contact_us'
   get '/downloads' => 'home#downloads', :as => 'downloads'
 
+  get '/quote' => 'home#quote', :as => 'quote_form'
+  post 'submit_quote' => 'home#submit_quote', :as => 'submit_quote'
+
   get '/download/:alias_name(/:access_code)' => "home#get_file"
 
   get '/login' => 'home#login', :as => 'login' #needs to be changed
 
-
+  post '/home/add_to_newsletter', :as => 'add_to_newsletter'
 
   get 'blog/articles' => 'blog#list_blog', as: "list_blog_articles"
   get 'blog/articles/:article_alias_name' => 'blog#show_blog', as: "blog_article"

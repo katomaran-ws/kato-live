@@ -22,9 +22,13 @@
   <div class="blog-related col-md-12 col-sm-12 col-xs-12">
     <h5>Editor's Pick</h5>
     <ul>
-      <% Article.published_blog.each do |article| %>
-      <li><a href="<%= blog_article_path(article_alias_name: article.alias_url) %>"><%= article.title %></a></li>
-          <% end %>
+      <% @right_articles.each do |article| %>
+          <li>
+            <a href="<%= blog_article_path(article_alias_name: article.alias_url) %>">
+              <%= article.title %>
+            </a>
+          </li>
+      <% end %>
     </ul>
   </div>
 </div>

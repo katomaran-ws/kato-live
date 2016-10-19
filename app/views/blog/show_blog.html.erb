@@ -1,4 +1,9 @@
 <%= stylesheet_link_tag 'site/blog' %>
+
+<% page_title(@article.page_title) %>
+<% meta_tag :description, @article.meta_description %>
+<% meta_tag :keywords, @article.meta_keywords %>
+
 <div class="blogs col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a><%= @article.title %></a></h2>

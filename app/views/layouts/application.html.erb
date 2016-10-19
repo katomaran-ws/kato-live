@@ -2,15 +2,21 @@
 <html>
 <head>
 
-  <title>Katofresh</title>
+  <%= yield_page_title %>
+
   <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
   <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >-->
- 
+
+  <%= yield_meta_tag(:title) %>
+  <%= yield_meta_tag(:keywords) %>
+  <%= yield_meta_tag(:description) %>
+
   <!-- Google fonts -->
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One|Josefin+Sans:400,600|Questrial|Catamaran:400,500' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <!-- -->
 
   <link rel="stylesheet" href="/offline_assets/bootstrap.min.css">
   <link rel="stylesheet" href="/offline_assets/bootstrap.min.js">
@@ -21,7 +27,8 @@
 
   <%= stylesheet_link_tag 'site', 'data-turbolinks-track' => true %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'site', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 
 </head>
@@ -35,13 +42,13 @@
 </div>
 
 <script>
-  <% if @page_properties[:half_banner] %>
-  $(window).resize(function(){ SetAdminPage(); });
-  $(window).load(function(){ SetAdminPage(); });
-  <% else %>
-  $(window).resize(function(){ SetHomePage(); });
-  $(window).load(function(){ SetHomePage(); });
-  <% end %>
+    <% if @page_properties[:half_banner] %>
+    $(window).resize(function(){ SetHalfPageBanner(); });
+    $(window).load(function(){ SetHalfPageBanner(); });
+    <% else %>
+    $(window).resize(function(){ SetFullPageBanner(); });
+    $(window).load(function(){ SetFullPageBanner(); });
+    <% end %>
 </script>
 
 </body>

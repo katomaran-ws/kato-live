@@ -1,6 +1,8 @@
-<script src="/lightbox/js/lightbox.js"></script>
-
 <%= stylesheet_link_tag "site/home" %>
+<%= javascript_include_tag "site/home" %>
+
+<script type="text/javascript" src="fresco/js/fresco.js"></script>
+<link rel="stylesheet" href="fresco/css/fresco.css">
 
 <div class="services col-md-12 col-sm-12 col-xs-12 no-padding">
 
@@ -47,9 +49,6 @@
 
 </div>
 
-<script type="text/javascript" src="fresco/js/fresco.js"></script>
-<link rel="stylesheet" href="fresco/css/fresco.css">
-
 <div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a>Our Show-Case</a></h2>
@@ -65,14 +64,13 @@
                   <figure class="effect-sadie">
                     <img src="<%= gallery.title_image.location %>" alt="img02"/>
                     <figcaption>
-                      <h4><%= gallery.name %></h4>
                       <p><%= gallery.title_image.caption %></p>
                       <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= gallery.title_image.location %>"></a>
                     </figcaption>
                   </figure>
                 </div>
                 <div class="content col-md-7 col-sm-7 col-xs-12 img-block no-padding">
-                  <h4><%= gallery.name %></h4>
+                  <h4><%= gallery.name.upcase %></h4>
                   <p><%= gallery.description %></p>
                 </div>
                 <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
@@ -108,52 +106,99 @@
         <h2 class="border white"><a>Pop-in to our Mailing List</a></h2>
         <p>We'll send occassional email with updates and many more interesting stuffs. You can unsubscribe at any time.</p>
 
-        <div class="col-md-12 col-sm-12 col-xs-12 no-padding testt">
-        <form>
-            <p class="text-fiel col-md-8 col-sm-8 col-xs-12 no-padding">
-              <input type="text" class="form-white" placeholder="Email"/>
-            </p>
-            <div class="submit col-md-4 col-sm-4 col-xs-12 no-padding">
-              <%= custom_button_3(value:"Get into the Queue") %>
-            </div>
-        </form>
+        <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+
+          <%= form_tag add_to_newsletter_path, id: "add_to_newsletter" do %>
+              <p class="text-fiel col-md-8 col-sm-8 col-xs-12 no-padding">
+                <%= text_field_tag :email, nil, class: "form-white", placeholder: "Email" %>
+              </p>
+
+              <%= hidden_field_tag :news_id, Newsletter.first.id %>
+
+              <div class="submit col-md-4 col-sm-4 col-xs-12 no-padding">
+                <%= custom_button_3(value:"Get into the Queue") %>
+              </div>
+              <div class="validation">
+                <img src="http://i.imgur.com/HC3a6u3.gif">
+                <p>
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <i class="fa fa-times-circle" aria-hidden="true"></i>
+                  <span> </span>
+                </p>
+              </div>
+          <% end %>
+
         </div>
       </div>
 
     </div>
   </div>
 </div>
+<script>
+
+</script>
 
 <style>
-  .newsletter{
-      /*background-color: #59abe3;*/
-      background-image: url('http://www.oneboardpc.com/wp-content/uploads/2016/03/Background.jpg');
-      background-size: 100% auto ;
-  }
-  .submit button{
-      margin: 0;
-      display: inline;
-      float: left;
-  }
-  .newsletter-block form p{
-      text-align: center;
-      padding-right: 3%;
-      margin: 0.5% 0;
-  }
-  .newsletter-block p input{
-      width: 75%;
-      display: inline;
-      float: right;
-      height: 50px;
-      background-color: transparent;
-  }
-  .newsletter-block{
-      margin: 1% 0 5%;
-      text-align: center;
-  }
-  .newsletter-block .text-field input{
-      width: 75%;
-  }
+    .validation {
+        float: left;
+        font-size: 15px;
+        padding-top: 1%;
+        text-align: center;
+        width: 100%;
+    }
+    .validation p{
+        display: inline;
+    }
+    .validation > img {
+        display: inline-block;
+        max-width: 75px;
+        visibility: hidden;
+    }
+    .validation p i{
+        padding-right: 1%;
+        display: none;
+    }
+    .validation p.true{
+        color: green;
+    }
+    .validation p.false{
+        color: red;
+    }
+    .validation p.true i.fa-check-circle{
+        display: inline;
+    }
+    .validation p.false i.fa-times-circle{
+        display: inline;
+    }
+    .newsletter{
+        /*background-color: #59abe3;*/
+        background-image: url('http://www.oneboardpc.com/wp-content/uploads/2016/03/Background.jpg');
+        background-size: 100% auto ;
+    }
+    .submit button{
+        margin: 0;
+        display: inline;
+        float: left;
+    }
+    .newsletter-block form p{
+        text-align: center;
+        padding-right: 3%;
+        margin: 0.5% 0;
+    }
+    .newsletter-block p input{
+        width: 75%;
+        display: inline;
+        float: right;
+        height: 50px;
+        background-color: transparent;
+    }
+    .newsletter-block{
+        margin: 1% 0 5%;
+        text-align: center;
+    }
+    .newsletter-block .text-field input{
+        width: 75%;
+    }
     .showcase-content{
         position: relative;
         overflow: hidden;
@@ -170,12 +215,15 @@
         bottom: 0;
     }
     .showcase-content .all-images {
-        bottom: -50%;
+        bottom: -60%;
         right: 0;
         position: absolute;
         transition: all 0.4s linear 0s;
     }
     .all-images .effect-sadie p {
         font-size: 10px;
+    }
+    .all-images figure {
+        max-width: 33.33%;
     }
 </style>

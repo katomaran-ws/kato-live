@@ -9,7 +9,6 @@
         <%= form_for ([:admin, @report]), url: admin_report_download_file_path, :method => "post", html: { autocomplete: "off", :id => 'download_form' } do |f| %>
 
             <div class="col-md-6 col-sm-6 col-xs-12 from-date">
-              <!--<input type="text"  placeholder="From Date" class="form-white">-->
               <%= text_field_tag "report[from_date]", nil, {:class => 'form-white' ,:placeholder => 'From Date', id: 'from-date'} %>
               <div id="from-date-field"></div>
             </div>
@@ -20,40 +19,44 @@
             </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12 submit-button">
-              <%= custom_button_1("wayra", "Get Report") %>
+              <%= custom_button_3(value: "Get Report") %>
             </div>
 
         <% end %>
 
       </div><!--ROW-->
     </div><!--CONTAINER-->
-    <script>
-        $('#to-date-field').calendar({
-            trigger: '#to-date',
-            zIndex: 999,
-            onSelected: function (view, date, data) {
-                console.log('event: onSelected')
-            },
-            onClose: function (view, date, data) {
-                console.log('event: onClose');
-                console.log('view:' + view);
-                console.log('date:' + date);
-                console.log('data:' + (data || 'None'));
-            }
-        });
 
-        $('#from-date-field').calendar({
-            trigger: '#from-date',
-            zIndex: 999,
-            onSelected: function (view, date, data) {
-                console.log('event: onSelected')
-            },
-            onClose: function (view, date, data) {
-                console.log('event: onClose');
-                console.log('view:' + view);
-                console.log('date:' + date);
-                console.log('data:' + (data || 'None'));
-            }
+    <link rel="script" src="/offline_assets/calendar.js">
+    <script>
+        $(document).ready(function(){
+            $('#to-date-field').calendar({
+                trigger: '#to-date',
+                zIndex: 999,
+                onSelected: function (view, date, data) {
+                    console.log('event: onSelected')
+                },
+                onClose: function (view, date, data) {
+                    console.log('event: onClose');
+                    console.log('view:' + view);
+                    console.log('date:' + date);
+                    console.log('data:' + (data || 'None'));
+                }
+            });
+
+            $('#from-date-field').calendar({
+                trigger: '#from-date',
+                zIndex: 999,
+                onSelected: function (view, date, data) {
+                    console.log('event: onSelected')
+                },
+                onClose: function (view, date, data) {
+                    console.log('event: onClose');
+                    console.log('view:' + view);
+                    console.log('date:' + date);
+                    console.log('data:' + (data || 'None'));
+                }
+            });
         });
 
     </script>

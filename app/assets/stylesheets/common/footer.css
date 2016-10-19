@@ -1,7 +1,7 @@
 /* ################  FOOTER STYLING  ######################*/
 
 .footer-content{ background-color: #ededed; }
-.footer-top, .footer-bottom { padding-bottom: 3%; margin-top: 3%; }
+.footer-top, .footer-bottom { padding-bottom: 1.5%; margin-top: 2%; }
 .footer-top { border-bottom: 1px solid; }
 
 .footer-content-block div { padding: 0 20px; }
@@ -11,7 +11,7 @@
 .footer-content-block nav { max-width: 100%; padding-left: 5%; }
 .footer-content-block nav a { display: block;}
 .copy-right {
-    padding: 2% 0 4%;
+    padding: 1% 0 3%;
 }
 .footer-top > ul {
     display: block;
