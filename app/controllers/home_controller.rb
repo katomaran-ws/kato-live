@@ -50,7 +50,7 @@ class HomeController < ApplicationController
   end
 
   def events_list
-    @services=Article.published_services
+    @events=Article.published_events
   end
 end
 

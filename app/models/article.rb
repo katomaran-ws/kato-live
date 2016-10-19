@@ -16,6 +16,7 @@ class Article < ActiveRecord::Base
   scope :by_type, -> (type) { where('article_type =?', type) }
   scope :published_blog, -> { where('article_type = ? and status = ?', 'Blog', true) }
   scope :published_services, -> { where('article_type = ? and status = ? and heading_block = ?', 'Article', true, 'Services') }
+  scope :published_events, -> { where('article_type = ? and status = ? and heading_block = ?', 'Article', true, 'Events') }
   scope :by_category, -> (id) { where('category_id = ?', id) }
   scope :by_tag, -> (id) { where('articles_tags.tag_id = (?)', id) }
 

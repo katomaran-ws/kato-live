@@ -9,36 +9,42 @@
     <div class="container no-padding">
       <div class="row no-margin">
 
-        <% block=["left", "right"] %>
-        <% @services.each_with_index do |article, index| %>
-            <div class="service-block-<%= block[index%2] %> col-md-12 col-sm-12 col-xs-12 no-padding">
-              <div class="container no-padding">
-                <div class="row no-margin">
+        <div class="event-block col-md-12 col-sm-12 col-xs-12 no-padding">
+          <div class="container no-padding">
+            <div class="row no-margin">
 
-                  <div class="services-content col-md-12 col-sm-12 col-xs-12">
+              <div class="event-content col-md-12 col-sm-12 col-xs-12">
 
-                    <div class="img-block col-md-4 col-sm-12 col-xs-12 no-padding">
-                      <!--<img src="/images/1.jpg">-->
-                      <i class="fa <%= article.image_url %> fa-lg fa1"></i>
-                    </div>
-
-                    <div class="text-block col-md-8 col-sm-12 col-xs-12 no-padding">
-                      <h4><%= article.title %></h4>
-                      <p><%= article.description %></p>
-                      <div class="know-more-button">
-                        <%= custom_link_3("Know More", article.alias_url, "link-3") %>
-                      </div>
-                    </div>
-
-                  </div>
-
+                <div class="img-block col-md-5 col-sm-12 col-xs-12 no-padding">
+                  <img src="/images/1.jpg">
                 </div>
-              </div>
-            </div>
-        <% end %>
 
+                <div class="text-block col-md-7 col-sm-12 col-xs-12 no-padding">
+                  <h4>AAYUDH'16</h4>
+                  <p>A Bootcamp is a short term training programme. The duration of this event might vary between 2 to 5 days based on the demand of our students and the content of the formulated course. Students can opt to join our Bootcamp by either enrolling themselves with the register button that we have in a random space of our website or by associating with the Hosting management. Camp schedules are continuously updated on our website and regarding data can be gathered by frequently visiting this online location. </p>
+                  <a href="/download/aayudh'16-ps" title="Aayudh-problem-statement.pdf"><span>Download Problem Statement</span></a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </div>
+
+
+<style>
+    .event-content{
+        padding: 3%;
+    }
+    .img-block img{
+        max-width: 90%;
+    }
+    .text-block a{
+        float: right;
+    }
+</style>
