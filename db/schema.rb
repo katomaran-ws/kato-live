@@ -91,9 +91,9 @@ ActiveRecord::Schema.define(version: 20161011080217) do
     t.string   "name"
     t.string   "subject"
     t.string   "from_email"
-    t.boolean  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "status",     default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "newsletters_subscribers", id: false, force: :cascade do |t|
@@ -116,15 +116,15 @@ ActiveRecord::Schema.define(version: 20161011080217) do
     t.string   "password"
     t.string   "username"
     t.string   "phone"
-    t.boolean  "active"
+    t.boolean  "active",              default: true
     t.string   "status"
     t.string   "reset_password_code"
     t.datetime "reset_code_until"
     t.datetime "last_login"
     t.string   "remember_me_key"
     t.string   "remember_me_until"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "tags", force: :cascade do |t|

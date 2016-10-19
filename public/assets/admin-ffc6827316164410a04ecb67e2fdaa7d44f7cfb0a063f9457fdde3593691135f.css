@@ -1,87 +1,92 @@
 /* ################  COMMON STYLING  ######################*/
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 5, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a {
   text-decoration: none;
 }
 
-/* line 6, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 6, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 img {
   border: none;
 }
 
-/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a:hover {
   text-decoration: none;
 }
 
-/* line 8, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a:focus {
   text-decoration: none;
 }
 
-/* line 9, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a {
   cursor: pointer;
 }
 
-/* line 11, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.row {
+  margin: 0;
+}
+
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .keep-left {
   float: left;
 }
 
-/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 12, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .keep-right {
   float: right;
 }
 
-/* line 14, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 14, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .no-padding {
   padding: 0;
 }
 
-/* line 15, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .no-margin {
   margin: 0;
 }
 
-/* line 16, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .text-center {
   text-align: center;
 }
 
-/* line 17, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 17, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .text-left {
   text-align: left;
 }
 
-/* line 18, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 18, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .text-right {
   text-align: right;
 }
 
-/* line 19, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .white, .white:hover {
   color: #fff;
 }
 
-/* line 20, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 20, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .black, .black:hover {
   color: #000;
 }
 
-/* line 22, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 22, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h1 {
   font-size: 60px;
 }
 
-/* line 23, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 23, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2 {
   font-size: 50px;
   margin: 5% 0;
@@ -90,7 +95,7 @@ h2 {
   font-family: Raleway;
 }
 
-/* line 24, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 24, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h3 {
   font-size: 40px;
   margin: 5% 0;
@@ -99,49 +104,53 @@ h3 {
   font-family: Raleway;
 }
 
-/* line 25, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h4 {
   font-size: 30px;
 }
 
-/* line 26, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 26, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h5 {
   font-size: 25px;
 }
 
-/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 27, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h6 {
   font-size: 20px;
 }
 
-/* line 28, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 28, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 p {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Roboto", serif;
+  line-height: 1.8;
+  word-spacing: 0.2em;
+  font-weight: 300;
 }
 
-/* line 29, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 31, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h3 a, h2 a, h3 a:hover, h2 a:hover, h3 a:focus, h2 a:focus {
   color: #000;
 }
 
 /* ################  END  ######################*/
 /* ################  HTML TAG SPECIAL STYLING  ######################*/
-/* line 36, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.white a {
   color: #000;
 }
 
-/* line 37, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 39, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.black a {
   color: #fff;
 }
 
-/* line 38, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 40, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.border {
   position: relative;
 }
 
-/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.border::before {
   content: "";
   left: 30%;
@@ -150,7 +159,7 @@ h2.border::before {
   width: 40%;
 }
 
-/* line 46, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 48, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.border::after {
   content: "";
   left: 30%;
@@ -159,32 +168,33 @@ h2.border::after {
   width: 40%;
 }
 
-/* line 53, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 55, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.white.border::after {
   border-bottom: 1px solid #d3d3d3;
 }
 
-/* line 54, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 56, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.white.border::before {
   border-top: 1px solid #d3d3d3;
 }
 
-/* line 55, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.black.border::after {
   border-bottom: 1px solid #333;
 }
 
-/* line 56, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 58, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h2.black.border::before {
   border-top: 1px solid #333;
 }
 
-/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 59, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h6.underline {
   position: relative;
+  margin: 30px 0 20px;
 }
 
-/* line 58, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 60, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 h6.underline::after {
   border-top: 1px solid lightgray;
   bottom: -5px;
@@ -195,17 +205,17 @@ h6.underline::after {
   width: 20%;
 }
 
-/* line 67, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 69, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a.tip {
   position: relative;
 }
 
-/* line 68, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a.tip span:last-child {
   display: none;
 }
 
-/* line 69, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 71, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a.tip:hover span:last-child {
   background-color: #eee;
   border-radius: 5px;
@@ -220,7 +230,7 @@ a.tip:hover span:last-child {
   text-align: center;
 }
 
-/* line 82, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 84, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 a.tip:hover span:last-child::before {
   background-color: #eee;
   bottom: -5px;
@@ -232,24 +242,24 @@ a.tip:hover span:last-child::before {
   width: 10px;
 }
 
-/* line 93, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 95, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .gray-back {
   background-color: #f5f5f5;
 }
 
-/* line 94, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/core.css */
+/* line 96, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
 .white-back {
   background-color: #fff;
 }
 
 /* ################  END  ######################*/
 /* ################  HEADER STYLING  ######################*/
-/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 #wrapper {
   overflow: hidden;
 }
 
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .banner {
   float: left;
   width: 100%;
@@ -257,40 +267,40 @@ a.tip:hover span:last-child::before {
   height: 100px;
 }
 
-/* line 5, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .header-content {
   padding-top: 2%;
 }
 
-/* line 6, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 6, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .container {
   max-width: 1160px;
   margin: 0 auto;
 }
 
-/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .header-logo {
   padding: 3%;
 }
 
-/* line 8, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .header-logo img {
   max-width: 75%;
 }
 
-/* line 9, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .menu nav {
   margin: 10px 0;
 }
 
-/* line 10, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .footer-logo img {
   max-width: 50%;
 }
 
 /* ################  END  ######################*/
 /* ################  TOP MENU  ######################*/
-/* line 16, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .menu nav a {
   position: relative;
   display: inline-block;
@@ -305,21 +315,21 @@ a.tip:hover span:last-child::before {
   font-size: 1.35em;
 }
 
-/* line 30, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 30, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .menu nav a:hover,
 .menu nav a:focus {
   outline: none;
   color: #38c2d4;
 }
 
-/* line 33, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 33, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a {
   margin: 0 10px !important;
   /* just to override the menu nav margin */
   padding: 14px 10px 10px;
 }
 
-/* line 38, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a::before,
 .cl-effect-9 a::after {
   position: absolute;
@@ -335,7 +345,7 @@ a.tip:hover span:last-child::before {
   transition: opacity 0.3s, height 0.3s;
 }
 
-/* line 53, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 53, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a::after {
   top: 100%;
   opacity: 0;
@@ -347,14 +357,14 @@ a.tip:hover span:last-child::before {
   transform: translateY(-10px);
 }
 
-/* line 64, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 64, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a span:first-child {
   display: block;
   font-size: 14px;
   text-align: center;
 }
 
-/* line 70, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a span:last-child {
   padding-top: 8px;
   color: rgba(0, 0, 0, 0.4);
@@ -371,13 +381,13 @@ a.tip:hover span:last-child::before {
   transform: translateY(-100%);
 }
 
-/* line 86, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 86, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a:hover::before,
 .cl-effect-9 a:focus::before {
   height: 3px;
 }
 
-/* line 89, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 89, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a:hover::before,
 .cl-effect-9 a:hover::after,
 .cl-effect-9 a:focus::before,
@@ -388,7 +398,7 @@ a.tip:hover span:last-child::before {
   transform: translateY(0px);
 }
 
-/* line 98, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/header.css */
+/* line 98, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
 .cl-effect-9 a:hover span:last-child,
 .cl-effect-9 a:focus span:last-child {
   opacity: 1;
@@ -399,28 +409,28 @@ a.tip:hover span:last-child::before {
 
 /* ################  END  ######################*/
 /* ################  FOOTER STYLING  ######################*/
-/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content {
-  background-color: lightgray;
+  background-color: #ededed;
 }
 
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-top, .footer-bottom {
-  padding-bottom: 2%;
+  padding-bottom: 1.5%;
   margin-top: 2%;
 }
 
-/* line 5, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-top {
   border-bottom: 1px solid;
 }
 
-/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block div {
   padding: 0 20px;
 }
 
-/* line 8, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block div h5 {
   border-bottom: 1px solid;
   padding: 10px 0;
@@ -428,7 +438,7 @@ a.tip:hover span:last-child::before {
   text-align: center;
 }
 
-/* line 9, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block div a {
   padding: 5px 0;
   margin: 4px 0;
@@ -436,117 +446,161 @@ a.tip:hover span:last-child::before {
   color: #444;
 }
 
-/* line 10, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block div a:hover {
   color: #38c2d4;
 }
 
-/* line 11, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block nav {
   max-width: 100%;
   padding-left: 5%;
 }
 
-/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/* line 12, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
 .footer-content-block nav a {
   display: block;
 }
 
-/* ################  END  ######################*/
-/* ################  FLOATING SOCIAL ICONS  ######################*/
-/* line 19, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.floater {
-  bottom: 0;
-  padding-bottom: 1% !important;
-  position: fixed;
-  right: 6%;
-  width: 20%;
-  z-index: 1000;
-  transition: all 0.4s linear 0s;
+/* line 13, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.copy-right {
+  padding: 1% 0 3%;
 }
 
-/* line 28, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.floater ul {
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul {
+  display: block;
   list-style: outside none none;
+  text-align: center;
 }
 
-/* line 29, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.floater ul li {
+/* line 21, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li {
   display: inline-block;
-  padding: 0 6%;
+  padding: 0.5% 3%;
 }
 
-/* line 30, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.floater ul li a {
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li a {
   color: #888;
-  padding: 0 10px;
+  display: block;
+  padding: 5px 15px;
 }
 
-/* line 31, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.floater ul li a:hover {
+/* line 30, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li a:hover {
   color: #000;
 }
 
-/* line 33, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
-.override-floater {
-  padding-top: 1.5% !important;
-  position: static;
+/* line 33, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-bottom p {
+  display: inline;
+  padding-right: 2%;
+}
+
+/* line 34, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-bottom {
+  text-align: center;
+}
+
+/* line 36, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.copy-right p {
+  display: inline;
+  padding-right: 1%;
+  font-size: 14px;
+}
+
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 46, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+  margin-right: 1%;
+}
+
+/* line 54, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon a i {
+  padding-top: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* line 59, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(1) {
+  background-color: #3b5998;
+}
+
+/* line 62, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(2) {
+  background-color: #55ACEE;
+}
+
+/* line 65, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(3) {
+  background-color: #DD4B38;
 }
 
 /* ################  END  ######################*/
 /* ################  FOOTER LINKS  ######################*/
-/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
+/*
 .cl-effect-13 a {
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
 }
 
-/* line 48, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
 .cl-effect-13 a::before {
-  position: absolute;
-  right: 10%;
-  color: #444;
-  content: '\2022';
-  text-shadow: 0 0 transparent;
-  font-size: 1.6em;
-  -webkit-transition: text-shadow 0.3s, color 0.3s;
-  -moz-transition: text-shadow 0.3s, color 0.3s;
-  transition: text-shadow 0.3s, color 0.3s;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
-  pointer-events: none;
+    position: absolute;
+    right: 10%;
+    color: #444;
+    content: '\2022';
+    text-shadow: 0 0 transparent;
+    font-size: 1.6em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
-/* line 64, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
 .cl-effect-13 a:hover::before,
-.cl-effect-13 a:focus::before {
-  color: #38c2d4;
-  text-shadow: 10px 0 #38c2d4, -10px 0 #38c2d4;
-}
+.cl-effect-13 a:focus::before { color: #38c2d4; text-shadow: 10px 0 #38c2d4, -10px 0 #38c2d4; }
 
-/* line 67, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/footer.css */
 .cl-effect-13 a:hover,
-.cl-effect-13 a:focus {
-  color: #ba7700;
-}
+.cl-effect-13 a:focus { color: #ba7700; }
 
+*/
 /* ################  END  ######################*/
 /* ################  FORM STYLING  ######################*/
-/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-#article_form {
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+form#article_form,
+form#tag_form,
+form#category_form,
+form#asset_form,
+form#gallery_form {
   padding: 0 3%;
 }
 
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .text-field {
   position: relative;
   margin-bottom: 25px;
 }
 
-/* line 8, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.form-black, .form-white {
+/* line 14, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.form-black,
+.form-white {
   background-color: transparent;
   border: medium none;
   display: block;
@@ -559,19 +613,19 @@ a.tip:hover span:last-child::before {
   width: 100%;
 }
 
-/* line 20, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 27, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .form-black {
   color: gray;
   border-bottom: 1px solid gray;
 }
 
-/* line 24, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 31, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .form-black:focus {
   border-bottom: 1px solid #fff;
   color: #fff;
 }
 
-/* line 28, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 35, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .form-white {
   background: #f6f6f6 none repeat scroll 0 0;
   border: 1px solid #e3e3e3;
@@ -580,14 +634,17 @@ a.tip:hover span:last-child::before {
   padding: 0.5em 1em;
 }
 
-/* line 35, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 42, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .form-white:focus {
   border-bottom: 1px solid #000;
   color: #000;
 }
 
-/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.text-field span, .select-box::after {
+/* line 46, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.text-field span,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
   color: #666;
   font-weight: 300;
   letter-spacing: 1px;
@@ -595,89 +652,98 @@ a.tip:hover span:last-child::before {
   transition: all 0.9s ease 0s;
 }
 
-/* line 46, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .text-field span:first-of-type {
   font-size: 14px;
   left: 30px;
   top: 8px;
 }
 
-/* line 51, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.text-field span:last-of-type, .select-box::after, .auto-complete::after {
+/* line 62, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.text-field span:last-of-type,
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
   font-size: 12px;
   right: 20px;
   bottom: -18px;
   display: none;
 }
 
-/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.text-field.has_focus span:first-of-type, .text-field.has_value span:first-of-type {
+/* line 72, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.text-field.has_focus span:first-of-type,
+.text-field.has_value span:first-of-type {
   display: none;
 }
 
-/* line 58, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.text-field.has_focus span:last-of-type, .text-field.has_value span:last-of-type {
+/* line 77, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.text-field.has_focus span:last-of-type,
+.text-field.has_value span:last-of-type {
   display: block;
 }
 
-/* line 59, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.select-box {
+/* line 82, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.select-box,
+.auto-complete,
+.date-picker {
   position: relative;
   margin-bottom: 25px;
 }
 
-/* line 63, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
-.select-box::after, .auto-complete::after {
+/* line 89, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
+.select-box::after,
+.auto-complete::after,
+.date-picker::after {
   content: attr(data-content);
   display: block;
 }
 
-/* line 67, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 95, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .check-box label {
   padding-top: 10px;
   font-weight: normal;
 }
 
-/* line 71, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 99, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .check-box .switch {
   float: right;
 }
 
-/* line 72, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 103, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .tinymce-content {
   float: left;
   padding: 0 15px;
   width: 100%;
 }
 
-/* line 77, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 108, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .file-select {
   text-align: center;
 }
 
-/* line 78, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 109, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .file-select img {
   max-width: 50px;
 }
 
-/* line 79, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 110, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .file-select input {
   border: 1px solid #e3e3e3;
   padding: 10px;
   width: 100%;
 }
 
-/* line 84, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 115, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 #article_article_content_content_ifr {
   height: 300px !important;
 }
 
-/* line 85, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 116, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .submit-button {
   margin: 3% 0;
 }
 
-/* line 88, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/common/form.css */
+/* line 119, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/form.css */
 .submit-button button {
   float: right;
 }
@@ -686,7 +752,7 @@ a.tip:hover span:last-child::before {
 /* ============================================================
   COMMON
 ============================================================ */
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 *,
 *:before,
 *:after {
@@ -695,13 +761,13 @@ a.tip:hover span:last-child::before {
   box-sizing: border-box;
 }
 
-/* line 11, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 .toggle {
   position: absolute;
   visibility: hidden;
 }
 
-/* line 15, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 .toggle + label {
   display: block;
   position: relative;
@@ -711,7 +777,7 @@ a.tip:hover span:last-child::before {
 /* ============================================================
   SWITCH 1 - ROUND
 ============================================================ */
-/* line 24, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 24, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round + label {
   width: 80px;
   height: 40px;
@@ -719,7 +785,7 @@ input.toggle-round + label {
   border-radius: 40px;
 }
 
-/* line 30, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 30, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round + label:before,
 input.toggle-round + label:after {
   display: block;
@@ -730,7 +796,7 @@ input.toggle-round + label:after {
   content: "";
 }
 
-/* line 39, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 39, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round + label:before {
   right: 1px;
   background-color: #f1f1f1;
@@ -741,7 +807,7 @@ input.toggle-round + label:before {
   transition: background 0.4s;
 }
 
-/* line 48, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 48, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round + label:after {
   width: 40px;
   background-color: #fff;
@@ -755,12 +821,12 @@ input.toggle-round + label:after {
   transition: margin 0.4s;
 }
 
-/* line 60, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 60, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round:checked + label:before {
   background-color: #8ce196;
 }
 
-/* line 63, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 63, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round:checked + label:after {
   margin-left: 40px;
 }
@@ -768,7 +834,7 @@ input.toggle-round:checked + label:after {
 /* ============================================================
   SWITCH 2 - ROUND FLAT
 ============================================================ */
-/* line 70, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat + label {
   width: 80px;
   height: 40px;
@@ -780,7 +846,7 @@ input.toggle-round-flat + label {
   transition: background 0.4s;
 }
 
-/* line 80, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 80, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat + label:before,
 input.toggle-round-flat + label:after {
   display: block;
@@ -788,7 +854,7 @@ input.toggle-round-flat + label:after {
   content: "";
 }
 
-/* line 86, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 86, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat + label:before {
   top: 2px;
   left: 2px;
@@ -802,7 +868,7 @@ input.toggle-round-flat + label:before {
   transition: background 0.4s;
 }
 
-/* line 98, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 98, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat + label:after {
   top: 4px;
   left: 4px;
@@ -816,12 +882,12 @@ input.toggle-round-flat + label:after {
   transition: margin 0.4s, background 0.4s;
 }
 
-/* line 110, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 110, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat:checked + label {
   background-color: #8ce196;
 }
 
-/* line 113, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 113, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-round-flat:checked + label:after {
   margin-left: 37px;
   background-color: #8ce196;
@@ -830,14 +896,14 @@ input.toggle-round-flat:checked + label:after {
 /* ============================================================
   SWITCH 3 - YES NO
 ============================================================ */
-/* line 121, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 121, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no + label {
   padding: 2px;
   width: 80px;
   height: 40px;
 }
 
-/* line 126, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 126, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no + label:before,
 input.toggle-yes-no + label:after {
   display: block;
@@ -858,7 +924,7 @@ input.toggle-yes-no + label:after {
   backface-visibility: hidden;
 }
 
-/* line 145, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 145, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no + label:before {
   background-color: #dddddd;
   content: attr(data-off);
@@ -868,7 +934,7 @@ input.toggle-yes-no + label:before {
   transition: transform 0.5s;
 }
 
-/* line 154, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 154, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no + label:after {
   background-color: #8ce196;
   content: attr(data-on);
@@ -883,7 +949,7 @@ input.toggle-yes-no + label:after {
   transform: rotateY(180deg);
 }
 
-/* line 167, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 167, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no:checked + label:before {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -892,7 +958,7 @@ input.toggle-yes-no:checked + label:before {
   transform: rotateY(180deg);
 }
 
-/* line 174, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/checkbox_style.css */
+/* line 174, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/checkbox_style.css */
 input.toggle-yes-no:checked + label:after {
   -webkit-transform: rotateY(0);
   -moz-transform: rotateY(0);
@@ -902,7 +968,7 @@ input.toggle-yes-no:checked + label:after {
 }
 
 /* Default custom select styles */
-/* line 2, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 2, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 div.cs-select {
   display: inline-block;
   vertical-align: middle;
@@ -920,18 +986,18 @@ div.cs-select {
   user-select: none;
 }
 
-/* line 19, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 div.cs-select:focus {
   outline: none;
   /* For better accessibility add a style for this in your skin */
 }
 
-/* line 23, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 23, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select select {
   display: none;
 }
 
-/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 27, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select span {
   display: block;
   position: relative;
@@ -943,12 +1009,12 @@ div.cs-select:focus {
 }
 
 /* Placeholder and selected option */
-/* line 38, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select > span {
   padding-right: 3em;
 }
 
-/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 42, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select > span::after,
 .cs-select .cs-selected span::after {
   position: absolute;
@@ -959,31 +1025,31 @@ div.cs-select:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 52, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 52, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select > span::after {
   content: '\25BE';
   right: 1em;
 }
 
-/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select .cs-selected span::after {
   content: '\2713';
   margin-left: 1em;
 }
 
-/* line 62, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 62, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select.cs-active > span::after {
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* line 67, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 67, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 div.cs-active {
   z-index: 200;
 }
 
 /* Options */
-/* line 72, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 72, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select .cs-options {
   position: absolute;
   overflow: hidden;
@@ -992,12 +1058,12 @@ div.cs-active {
   visibility: hidden;
 }
 
-/* line 80, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 80, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select.cs-active .cs-options {
   visibility: visible;
 }
 
-/* line 84, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 84, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select ul {
   list-style: none;
   margin: 0;
@@ -1005,29 +1071,29 @@ div.cs-active {
   width: 100%;
 }
 
-/* line 91, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 91, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select ul span {
   padding: 1em;
 }
 
-/* line 95, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 95, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select ul li.cs-focus span {
   background-color: #ddd;
 }
 
 /* Optgroup and optgroup label */
-/* line 100, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 100, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select li.cs-optgroup ul {
   padding-left: 1em;
 }
 
-/* line 104, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 104, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select li.cs-optgroup > span {
   cursor: default;
 }
 
 /* CSS FOR ELASTIC EFFECT */
-/* line 111, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 111, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 div.cs-skin-elastic {
   background: transparent;
   font-size: inherit;
@@ -1037,19 +1103,19 @@ div.cs-skin-elastic {
 }
 
 @media screen and (max-width: 30em) {
-  /* line 120, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+  /* line 120, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
   div.cs-skin-elastic {
     font-size: 1em;
   }
 }
-/* line 123, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 123, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic > span {
   background-color: #fff;
   z-index: 100;
   text-align: center;
 }
 
-/* line 129, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 129, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic > span::after {
   /*font-family: 'icomoon';*/
   /*content: '\e005';*/
@@ -1057,7 +1123,7 @@ div.cs-skin-elastic {
   backface-visibility: hidden;
 }
 
-/* line 136, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 136, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic .cs-options {
   overflow: visible;
   background: transparent;
@@ -1067,12 +1133,12 @@ div.cs-skin-elastic {
   pointer-events: none;
 }
 
-/* line 145, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 145, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic.cs-active .cs-options {
   pointer-events: auto;
 }
 
-/* line 149, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 149, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic .cs-options > ul::before {
   content: '';
   position: absolute;
@@ -1089,7 +1155,7 @@ div.cs-skin-elastic {
   transition: transform 0.3s;
 }
 
-/* line 165, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 165, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic.cs-active .cs-options > ul::before {
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
@@ -1099,7 +1165,7 @@ div.cs-skin-elastic {
   animation: expand 0.6s ease-out;
 }
 
-/* line 174, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 174, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic .cs-options ul li {
   opacity: 0;
   -webkit-transform: translate3d(0, -25px, 0);
@@ -1108,7 +1174,7 @@ div.cs-skin-elastic {
   transition: opacity 0.15s, transform 0.15s;
 }
 
-/* line 182, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 182, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic.cs-active .cs-options ul li {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1120,7 +1186,7 @@ div.cs-skin-elastic {
   text-align: center;
 }
 
-/* line 193, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 193, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic .cs-options span {
   background-repeat: no-repeat;
   background-position: 1.5em 50%;
@@ -1129,7 +1195,7 @@ div.cs-skin-elastic {
   padding-left: 0;
 }
 
-/* line 201, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 201, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-skin-elastic .cs-options .cs-selected span::after {
   content: '';
 }
@@ -1218,38 +1284,38 @@ div.cs-skin-elastic {
 }
 /* END */
 /* CUSTOM CSS FOR KATO FRESH*/
-/* line 243, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 243, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 div.cs-skin-elastic {
   line-height: 1;
 }
 
-/* line 244, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 244, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 span.cs-placeholder {
   border-width: 2px 2px 1px 1px;
   border-style: solid;
   border-color: #38c2d4 #38c2d4 #000000 #000000;
 }
 
-/* line 245, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 245, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-options ul li:hover {
   background-color: #ddd;
   color: #0066cc;
 }
 
-/* line 246, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 246, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-options ul li {
   background-color: #eee;
   text-transform: capitalize;
 }
 
-/* line 247, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 247, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-active > span {
   background-color: #aaa !important;
   color: #fff !important;
   transition: background-color 0.5s linear !important;
 }
 
-/* line 248, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/cs-select.css */
+/* line 248, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/cs-select.css */
 .cs-select > span {
   background-color: #eee;
   color: #000;
@@ -1257,13 +1323,13 @@ span.cs-placeholder {
 }
 
 /*END*/
-/* line 1, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 1, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar {
   width: 280px;
   height: 330px;
 }
 
-/* line 5, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-modal {
   display: none;
   position: absolute;
@@ -1272,7 +1338,7 @@ span.cs-placeholder {
   box-shadow: 1px 2px 3px #ddd;
 }
 
-/* line 12, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 12, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-inner {
   position: relative;
   z-index: 1;
@@ -1286,12 +1352,12 @@ span.cs-placeholder {
   -ms-transform-style: preserve-3d;
 }
 
-/* line 24, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 24, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-views {
   transform-style: preserve-3d;
 }
 
-/* line 27, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 27, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .view {
   backface-visibility: hidden;
   position: absolute;
@@ -1302,7 +1368,7 @@ span.cs-placeholder {
   transition: .6s;
 }
 
-/* line 36, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 36, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-d .view-month,
 .calendar-m .view-date {
   transform: rotateY(180deg);
@@ -1310,7 +1376,7 @@ span.cs-placeholder {
   z-index: 1;
 }
 
-/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 42, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-d .view-date,
 .calendar-m .view-month {
   transform: rotateY(0deg);
@@ -1318,7 +1384,7 @@ span.cs-placeholder {
   z-index: 2;
 }
 
-/* line 48, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 48, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-ct,
 .calendar-hd,
 .calendar-views .week,
@@ -1326,12 +1392,12 @@ span.cs-placeholder {
   overflow: hidden;
 }
 
-/* line 54, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 54, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-views {
   width: 100%;
 }
 
-/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .view,
 .calendar-display,
 .calendar-arrow .prev,
@@ -1339,48 +1405,48 @@ span.cs-placeholder {
   float: left;
 }
 
-/* line 63, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 63, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-arrow,
 .calendar-arrow .next {
   float: right;
 }
 
-/* line 67, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 67, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-hd {
   padding: 10px 0;
   height: 45px;
   line-height: 30px;
 }
 
-/* line 72, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 72, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-display {
   font-size: 28px;
   text-indent: 10px;
 }
 
-/* line 76, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 76, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .view-month .calendar-hd {
   padding: 10px;
 }
 
-/* line 79, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 79, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-arrow,
 .calendar-display {
   color: #ddd;
 }
 
-/* line 83, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 83, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar li[disabled] {
   color: #bbb;
 }
 
-/* line 86, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 86, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar li.old[disabled],
 .calendar li.new[disabled] {
   color: #eee;
 }
 
-/* line 90, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 90, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-display .m,
 .calendar-views .week,
 .calendar-views .days .old,
@@ -1390,30 +1456,30 @@ span.cs-placeholder {
   color: #888;
 }
 
-/* line 99, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 99, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-arrow span,
 .calendar-views .days li[data-calendar-day],
 .calendar-views .view-month li[data-calendar-month] {
   cursor: pointer;
 }
 
-/* line 104, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 104, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar li[disabled] {
   cursor: not-allowed;
 }
 
-/* line 108, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 108, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-arrow {
   width: 50px;
   margin-right: 10px;
 }
 
-/* line 112, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 112, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-arrow span {
   font: 500 26px sans-serif;
 }
 
-/* line 116, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 116, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar ol li {
   position: relative;
   float: left;
@@ -1421,7 +1487,7 @@ span.cs-placeholder {
   border-radius: 50%;
 }
 
-/* line 122, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 122, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .week li,
 .calendar .days li {
   width: 40px;
@@ -1429,32 +1495,32 @@ span.cs-placeholder {
   line-height: 40px;
 }
 
-/* line 128, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 128, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .month-items li {
   width: 70px;
   height: 70px;
   line-height: 70px;
 }
 
-/* line 133, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 133, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .days li[data-calendar-day]:hover,
 .calendar .view-month li[data-calendar-month]:hover {
   background: #eee;
 }
 
-/* line 137, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 137, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .calendar-views .now {
   color: #fff;
   background: #66be8c !important;
 }
 
-/* line 141, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 141, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .calendar-views .selected {
   color: #66be8c;
   background: #CDE9D9 !important;
 }
 
-/* line 145, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 145, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .calendar-views .dot {
   position: absolute;
   left: 50%;
@@ -1466,18 +1532,18 @@ span.cs-placeholder {
   border-radius: 50%;
 }
 
-/* line 155, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 155, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-views .now .dot {
   background: #fff;
 }
 
-/* line 159, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 159, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar .date-items {
   width: 300%;
   margin-left: -100%;
 }
 
-/* line 164, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 164, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-label {
   display: none;
   position: absolute;
@@ -1493,7 +1559,7 @@ span.cs-placeholder {
   filter: alpha(opacity=70);
 }
 
-/* line 178, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 178, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .calendar-label i {
   display: none;
   position: absolute;
@@ -1507,38 +1573,38 @@ span.cs-placeholder {
 }
 
 /* ################  CUSTOM CSS FOR DIV POSITIONING  ######################*/
-/* line 192, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 192, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 #download_form {
   font: 500 14px 'roboto';
 }
 
-/* line 195, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 195, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 ul, ol, li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 200, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 200, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 #demo {
   width: 300px;
   margin: 150px auto;
 }
 
-/* line 204, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 204, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 #download_form input[type="text"] {
   border: 1px solid #ccc;
   outline: medium none;
   text-align: center;
 }
 
-/* line 209, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 209, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 #to-date-field, #from-date-field, #display-date-field {
   left: 15px !important;
   top: 34px !important;
 }
 
-/* line 213, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/calendar.css */
+/* line 213, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/calendar.css */
 .days > li {
   border-bottom: 1px solid #66be8c;
   border-top: 1px solid #66be8c;
@@ -1546,14 +1612,14 @@ ul, ol, li {
 }
 
 /* ################  BUTTON-1  ######################*/
-/* line 1, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/core.css */
+/* line 1, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/core.css */
 .link-1, .link-3 {
   display: block;
   position: relative;
   font-size: 14px;
 }
 
-/* line 7, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/core.css */
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/core.css */
 .button-1 {
   min-width: 150px;
   max-width: 250px;
@@ -1565,13 +1631,19 @@ ul, ol, li {
   position: relative;
   z-index: 1;
   font-size: 14px;
-  border: 1px solid;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* line 22, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/core.css */
+button.small {
+  max-width: 200px !important;
+  min-width: 100px !important;
+  height: 50px !important;
+}
+
 /*  Antiman  */
-/* line 3, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman {
   background: none;
   color: #fff;
@@ -1583,17 +1655,17 @@ ul, ol, li {
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 
-/* line 13, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 13, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman:hover {
   color: #7986cb;
 }
 
-/* line 16, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman > span {
   padding-left: 1em;
 }
 
-/* line 19, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman::before, .button-antiman::after {
   content: '';
   z-index: -1;
@@ -1611,7 +1683,7 @@ ul, ol, li {
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 
-/* line 35, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 35, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman::before {
   border: 1.5px solid #7986cb;
   opacity: 0;
@@ -1619,19 +1691,19 @@ ul, ol, li {
   transform: scale3d(1.2, 1.2, 1);
 }
 
-/* line 41, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman::after {
   background: #7986cb;
 }
 
-/* line 44, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 44, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman:hover::before {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 49, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/antiman.css */
+/* line 49, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
 .button-antiman:hover::after {
   opacity: 0;
   -webkit-transform: scale3d(0.8, 0.8, 1);
@@ -1640,7 +1712,7 @@ ul, ol, li {
 
 /* ################  END  ######################*/
 /*  Rayen  */
-/* line 4, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen {
   border: 1.5px solid;
   font-weight: 300;
@@ -1651,7 +1723,7 @@ ul, ol, li {
   font-family: raleway;
 }
 
-/* line 13, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 13, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen::before {
   content: attr(data-text);
   position: absolute;
@@ -1665,12 +1737,12 @@ ul, ol, li {
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 25, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen > span {
   display: block;
 }
 
-/* line 28, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 28, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen::before,
 .button-rayen > span {
   padding: 0.8em 1.5em;
@@ -1680,20 +1752,20 @@ ul, ol, li {
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 
-/* line 36, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 36, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen:hover::before {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 40, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/rayen.css */
+/* line 40, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/rayen.css */
 .button-rayen:hover > span {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
 
 /* ################  END  ######################*/
-/* line 1, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_1.css */
+/* line 1, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/link_1.css */
 .link-1 {
   border: 1px solid #2071ee;
   line-height: 1;
@@ -1709,14 +1781,14 @@ ul, ol, li {
   color: #2071ee;
 }
 
-/* line 15, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/button/link_1.css */
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/link_1.css */
 .link-1:hover {
   background-color: #2071ee;
   color: #fff;
 }
 
 /* Example tokeninput style #1: Token vertical list*/
-/* line 2, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 2, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 ul.token-input-list {
   overflow: hidden;
   height: 42px;
@@ -1732,17 +1804,17 @@ ul.token-input-list {
   clear: left;
 }
 
-/* line 17, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 17, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 ul.token-input-list li {
   list-style-type: none;
 }
 
-/* line 21, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 21, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 ul.token-input-list li.token-input-input-token {
   display: inline;
 }
 
-/* line 25, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 ul.token-input-list li input {
   border: 0;
   width: 45px;
@@ -1754,7 +1826,7 @@ ul.token-input-list li input {
   top: 1px;
 }
 
-/* line 37, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 37, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 li.token-input-token {
   overflow: hidden;
   height: auto !important;
@@ -1769,14 +1841,14 @@ li.token-input-token {
   border-radius: 3px;
 }
 
-/* line 51, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 51, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 li.token-input-token p {
   float: left;
   padding: 0;
   margin: 0;
 }
 
-/* line 57, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 li.token-input-token span {
   float: right;
   color: #000;
@@ -1785,18 +1857,18 @@ li.token-input-token span {
   padding: 0 4px 0 10px;
 }
 
-/* line 65, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 65, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 li.token-input-selected-token {
   background-color: #08844e;
   color: #fff;
 }
 
-/* line 70, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 li.token-input-selected-token span {
   color: #bbb;
 }
 
-/* line 74, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 74, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown {
   position: absolute;
   width: 400px;
@@ -1811,7 +1883,7 @@ div.token-input-dropdown {
   z-index: 1;
 }
 
-/* line 88, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 88, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown p {
   margin: 0;
   padding: 5px;
@@ -1819,73 +1891,74 @@ div.token-input-dropdown p {
   color: #777;
 }
 
-/* line 95, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 95, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 100, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 100, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul li {
   background-color: #fff;
   padding: 3px;
   list-style-type: none;
 }
 
-/* line 106, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 106, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul li.token-input-dropdown-item {
   background-color: #fafafa;
 }
 
-/* line 110, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 110, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul li.token-input-dropdown-item2 {
   background-color: #fff;
 }
 
-/* line 114, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 114, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul li em {
   font-weight: bold;
   font-style: normal;
 }
 
-/* line 119, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/token-input.css */
+/* line 119, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/token-input.css */
 div.token-input-dropdown ul li.token-input-selected-dropdown-item {
   background-color: #d0efa0;
 }
 
 /* ################  ARTICLE LISTING PAGE  ######################*/
-/* line 14, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 14, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .article-list-block {
   margin: 1.5% 0;
 }
 
-/* line 15, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .article-content {
-  min-height: 125px;
+  height: 125px;
   padding: 10px;
   border-radius: 6px;
   color: #fff;
 }
 
-/* line 21, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 21, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .article-content-true {
   background: #66cc99 none repeat scroll 0 0;
   border: 1px solid #00B16A;
 }
 
-/* line 25, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .article-content-false {
   background: #F1A9A0 none repeat scroll 0 0;
   border: 1px solid #CF000F;
 }
 
-/* line 29, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
-.article-content h3 {
+/* line 29, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
+.article-content h4 {
   margin: 0 0 20px;
   min-height: 63px;
+  text-align: center;
 }
 
-/* line 33, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 34, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .article-content p {
   margin: 0;
   text-align: right;
@@ -1893,41 +1966,55 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
 
 /* ################  END  ######################*/
 /* ################  ASSET LISTING  ######################*/
-/* line 42, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 43, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .download-block {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* line 43, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 44, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .download-block a {
   display: inline-block;
 }
 
-/* line 44, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 45, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .download-block p {
   font-size: 15px;
+  margin: 10px 0;
 }
 
 /* ################  END  ######################*/
 /* ################  COMMON ADMIN STYLING ######################*/
-/* line 50, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 51, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .new-button {
   text-align: right;
 }
 
-/* line 51, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 52, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .new-button .link-1 {
   display: inline-block;
 }
 
 /* ################  END  ######################*/
-/* line 55, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 56, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
+.preview_img, .preview_icon, .preview_gallery {
+  height: 117px;
+  background-position: center center;
+  object-fit: cover;
+  width: 99px;
+}
+
+/* line 62, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
+.preview_img {
+  border: 1px solid #ccc;
+}
+
+/* line 65, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .preview-image {
   text-align: center;
 }
 
-/* line 56, e:/Documents/Web Apps/katofresh/rails/test/app/assets/stylesheets/admin.scss */
+/* line 66, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/admin.scss */
 .preview-image img {
   visibility: hidden;
   text-align: center;
