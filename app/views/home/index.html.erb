@@ -113,7 +113,7 @@
                 <%= text_field_tag :email, nil, class: "form-white", placeholder: "Email" %>
               </p>
 
-              <%= hidden_field_tag :news_id, Newsletter.first.id %>
+              <%= hidden_field_tag :news_id, @newsletter.try(:id) %>
 
               <div class="submit col-md-4 col-sm-4 col-xs-12 no-padding">
                 <%= custom_button_3(value:"Get into the Queue") %>

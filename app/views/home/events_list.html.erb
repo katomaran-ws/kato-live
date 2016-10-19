@@ -1,0 +1,44 @@
+<%#= stylesheet_link_tag 'site/service' %>
+
+<% page_title "Events" %>
+
+<div class="events col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a>Our Events</a></h2>
+  <div class="event-block col-md-12 col-sm-12 col-xs-12 no-padding white-back">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <% block=["left", "right"] %>
+        <% @services.each_with_index do |article, index| %>
+            <div class="service-block-<%= block[index%2] %> col-md-12 col-sm-12 col-xs-12 no-padding">
+              <div class="container no-padding">
+                <div class="row no-margin">
+
+                  <div class="services-content col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="img-block col-md-4 col-sm-12 col-xs-12 no-padding">
+                      <!--<img src="/images/1.jpg">-->
+                      <i class="fa <%= article.image_url %> fa-lg fa1"></i>
+                    </div>
+
+                    <div class="text-block col-md-8 col-sm-12 col-xs-12 no-padding">
+                      <h4><%= article.title %></h4>
+                      <p><%= article.description %></p>
+                      <div class="know-more-button">
+                        <%= custom_link_3("Know More", article.alias_url, "link-3") %>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<%#= stylesheet_link_tag 'site/service' %>
+
+<% page_title "Our Downloads" %>
+
+<div class="downloads col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a>Our Downloads</a></h2>
+  <div class="download-block col-md-12 col-sm-12 col-xs-12 no-padding white-back">
+    <div class="container no-padding">
+      <div class="row no-margin">
+
+        <% @assets.each do |asset| %>
+            <div class="download-content col-md-3 col-sm-4 col-xs-6 no-padding">
+              <a href="<%= "/download/#{asset.alias_name}" %>">
+                <img src="/images/core/<%= get_file_img(asset.get_file_type) %>" class="preview_icon"/>
+                <p><%= asset.title %></p>
+              </a>
+            </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+    .download-content .preview_icon {
+        max-width: 75%;
+    }
+    .download-content{
+        text-align: center;
+        padding: 3%;
+    }
+    .download-content p{
+        padding: 5%;
+    }
+</style>

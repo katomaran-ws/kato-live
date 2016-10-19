@@ -42,6 +42,8 @@ Rails.application.routes.draw do
   get '/history' => 'home#history', :as => 'history'
   get '/contact-us' => 'home#contact_us', :as => 'contact_us'
   get '/downloads' => 'home#downloads', :as => 'downloads'
+  get '/events' => 'home#events_list', :as => 'events_list'
+  get '/events/aayudh' => 'home#event_show', :as => 'event_show'
 
   get '/quote' => 'home#quote', :as => 'quote_form'
   post 'submit_quote' => 'home#submit_quote', :as => 'submit_quote'

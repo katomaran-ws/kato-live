@@ -2,15 +2,11 @@ class HomeController < ApplicationController
 
   include ArticlesHelper
 
-  def downloads
-    @assets=Asset.active
-  end
-
   def get_file
     asset=Asset.find_by_alias_name(params[:alias_name])
     if asset.present?
       if asset.access_code <= params[:access_code].to_i
-        send_file "#{Rails.root}/#{asset.location}"
+        send_file "#{Rails.root}/private/#{asset.location}"
       else
         redirect_to get_access_code_url, :alias_name=>params[:alias_name]
       end
@@ -22,6 +18,7 @@ class HomeController < ApplicationController
   def index
     @services=Article.published_services.by_sequence
     @gallery=Gallery.all
+    @newsletter=Newsletter.first
   end
 
   def services
@@ -48,6 +45,13 @@ class HomeController < ApplicationController
 
   end
 
+  def downloads
+    @assets=Asset.all_documents.active.by_sequence
+  end
+
+  def events_list
+    @services=Article.published_services
+  end
 end
 
 
