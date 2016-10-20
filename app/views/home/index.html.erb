@@ -69,6 +69,7 @@
 
 </div>
 
+<!--
 <div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding">
 
   <h2 class="white border"><a>Our Show-Case</a></h2>
@@ -78,38 +79,38 @@
 
         <div class="grid">
 
-          <% @gallery.each do |gallery| %>
+          <%# @gallery.each do |gallery| %>
               <div class="showcase-content col-md-12 col-sm-12 col-xs-12" id="first">
                 <div class="figure col-md-5 col-sm-5 col-xs-12 img-block no-padding">
                   <figure class="effect-sadie">
-                    <img src="<%= gallery.title_image.location %>" alt="img02"/>
+                    <img src="<%#= gallery.title_image.location %>" alt="img02"/>
                     <figcaption>
-                      <p><%= gallery.title_image.caption %></p>
-                      <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= gallery.title_image.location %>"></a>
+                      <p><%#= gallery.title_image.caption %></p>
+                      <a data-fresco-group="<%#= gallery.name %>" data-fresco-caption="<%#= gallery.caption %>" class="fresco" href="<%#= gallery.title_image.location %>"></a>
                     </figcaption>
                   </figure>
                 </div>
                 <div class="content col-md-7 col-sm-7 col-xs-12 img-block no-padding">
-                  <h4><%= gallery.name.upcase %></h4>
-                  <p><%= gallery.description %></p>
+                  <h4><%#= gallery.name.upcase %></h4>
+                  <p><%#= gallery.description %></p>
                 </div>
                 <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
 
-                  <% gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
+                  <%# gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
                       <div class="figure img-block no-padding">
                         <figure class="effect-sadie">
-                          <img src="<%= image.location %>" alt="img02"/>
+                          <img src="<%#= image.location %>" alt="img02"/>
                           <figcaption>
-                            <p><%= image.caption %></p>
-                            <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= image.location %>"></a>
+                            <p><%#= image.caption %></p>
+                            <a data-fresco-group="<%#= gallery.name %>" data-fresco-caption="<%#= gallery.caption %>" class="fresco" href="<%#= image.location %>"></a>
                           </figcaption>
                         </figure>
                       </div>
-                  <% end %>
+                  <%# end %>
 
                 </div>
               </div>
-          <% end %>
+          <%# end %>
 
         </div>
       </div>
@@ -117,6 +118,7 @@
     </div>
   </div>
 </div>
+-->
 
 <div class="newsletter col-md-12 col-sm-12 col-xs-12 no-padding">
   <div class="container no-padding">
