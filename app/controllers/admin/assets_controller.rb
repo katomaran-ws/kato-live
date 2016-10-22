@@ -42,7 +42,7 @@ class Admin::AssetsController < AdminController
       end
       @asset=Asset.new(asset_params)
       status=save_asset(path) if params[:asset][:location].present?
-      status=true if params[:asset][:cloudinary_url].present?
+      status=@asset.save if params[:asset][:cloudinary_url].present?
     else
       gallery_params=params.require(:gallery).permit(:name, :caption, :description, :status)
       gallery=Gallery.new(gallery_params)
