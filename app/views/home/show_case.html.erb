@@ -20,9 +20,9 @@
             <% gallery.images.by_sequence.each do |img| %>
 
                 <div class="item">
-                  <a data-fresco-group="unique_name">
+                  <a data-fresco-group="unique_name" class="fresco" href="<%= img.location_path %>">
                     <span><%= img.caption.blank? ? img.title : img.caption %></span>
-                    <img src="<%= img.location %>" alt="" />
+                    <img src="<%= img.location_path %>" alt="<%= img.title %>" />
                   </a>
                 </div>
 

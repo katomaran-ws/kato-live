@@ -1,4 +1,5 @@
 //= require jquery
+//= require bootstrap
 
 // Set Home Page banner height and width
 function SetFullPageBanner() {

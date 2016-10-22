@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
   def index
     @services=Article.published_services.by_sequence
-    @gallery=Gallery.all
+    @gallery=Gallery.by_active
     @newsletter=Newsletter.first
   end
 

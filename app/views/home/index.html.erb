@@ -69,8 +69,8 @@
 
 </div>
 
-<!--
-<div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding">
+
+<div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding" style="display: <%= @gallery.blank? ? "none" : "auto" %>">
 
   <h2 class="white border"><a>Our Show-Case</a></h2>
   <div class="showcase-block col-md-12 col-sm-12 col-xs-12 no-padding">
@@ -79,38 +79,38 @@
 
         <div class="grid">
 
-          <%# @gallery.each do |gallery| %>
+          <% @gallery.each do |gallery| %>
               <div class="showcase-content col-md-12 col-sm-12 col-xs-12" id="first">
                 <div class="figure col-md-5 col-sm-5 col-xs-12 img-block no-padding">
                   <figure class="effect-sadie">
-                    <img src="<%#= gallery.title_image.location %>" alt="img02"/>
+                    <%= image_tag(gallery.title_image.location_path, alt:gallery.title_image.title) %>
                     <figcaption>
-                      <p><%#= gallery.title_image.caption %></p>
-                      <a data-fresco-group="<%#= gallery.name %>" data-fresco-caption="<%#= gallery.caption %>" class="fresco" href="<%#= gallery.title_image.location %>"></a>
+                      <p><%= gallery.title_image.caption %></p>
+                      <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= gallery.title_image.location_path %>"></a>
                     </figcaption>
                   </figure>
                 </div>
                 <div class="content col-md-7 col-sm-7 col-xs-12 img-block no-padding">
-                  <h4><%#= gallery.name.upcase %></h4>
-                  <p><%#= gallery.description %></p>
+                  <h4><%= gallery.name.upcase %></h4>
+                  <p><%= gallery.description %></p>
                 </div>
                 <div class="all-images col-md-7 col-sm-7 col-xs-12 img-block no-padding">
 
-                  <%# gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
+                  <% gallery.images_without_title_image.by_sequence.limit(3).each do |image| %>
                       <div class="figure img-block no-padding">
                         <figure class="effect-sadie">
-                          <img src="<%#= image.location %>" alt="img02"/>
+                          <%= image_tag(image.location_path, alt:image.title) %>
                           <figcaption>
-                            <p><%#= image.caption %></p>
-                            <a data-fresco-group="<%#= gallery.name %>" data-fresco-caption="<%#= gallery.caption %>" class="fresco" href="<%#= image.location %>"></a>
+                            <p><%= image.caption %></p>
+                            <a data-fresco-group="<%= gallery.name %>" data-fresco-caption="<%= gallery.caption %>" class="fresco" href="<%= image.location_path %>"></a>
                           </figcaption>
                         </figure>
                       </div>
-                  <%# end %>
+                  <% end %>
 
                 </div>
               </div>
-          <%# end %>
+          <% end %>
 
         </div>
       </div>
@@ -118,9 +118,8 @@
     </div>
   </div>
 </div>
--->
 
-<div class="newsletter col-md-12 col-sm-12 col-xs-12 no-padding">
+<div class="newsletter col-md-12 col-sm-12 col-xs-12 no-padding" id="newsletters">
   <div class="container no-padding">
     <div class="row">
 
@@ -156,9 +155,45 @@
     </div>
   </div>
 </div>
+
+
 <script>
 
+$(function(){
+    function show_popup(){
+        $(".pop_up_button").trigger( "click")
+    }
+    window.setTimeout( show_popup, 10000 );
+});
 </script>
+
+<div class="popup">
+  <button type="button" class="btn btn-info btn-lg pop_up_button" data-toggle="modal" data-target="#myModal" style="display: none;">Show PopUp</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Interested in Aayudh'16..!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Aayudh is the annual Robotic competition conducted by Katomaran Robotics. <a href="/events">Click Here</a> to know more about our events...</p>
+          <p><a href="/#newsletters" onclick="$('.popup .modal-footer button').trigger('click')">Sign-up</a> for our newsletter to get info at your inbox.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
 
 <style>
     .validation {
@@ -237,7 +272,7 @@
         bottom: 0;
     }
     .showcase-content .all-images {
-        bottom: -60%;
+        bottom: -90%;
         right: 0;
         position: absolute;
         transition: all 0.4s linear 0s;
