@@ -1,0 +1,652 @@
+/* ################  COMMON STYLING  ######################*/
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a {
+  text-decoration: none;
+}
+
+/* line 6, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+img {
+  border: none;
+}
+
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a:focus {
+  text-decoration: none;
+}
+
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a {
+  cursor: pointer;
+}
+
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.row {
+  margin: 0;
+}
+
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.keep-left {
+  float: left;
+}
+
+/* line 12, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.keep-right {
+  float: right;
+}
+
+/* line 14, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.no-padding {
+  padding: 0;
+}
+
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.no-margin {
+  margin: 0;
+}
+
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.text-center {
+  text-align: center;
+}
+
+/* line 17, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.text-left {
+  text-align: left;
+}
+
+/* line 18, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.text-right {
+  text-align: right;
+}
+
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.white, .white:hover {
+  color: #fff;
+}
+
+/* line 20, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.black, .black:hover {
+  color: #000;
+}
+
+/* line 22, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h1 {
+  font-size: 60px;
+}
+
+/* line 23, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2 {
+  font-size: 50px;
+  margin: 5% 0;
+  text-align: center;
+  font-weight: 500;
+  font-family: Raleway;
+}
+
+/* line 24, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h3 {
+  font-size: 40px;
+  margin: 5% 0;
+  text-align: center;
+  font-weight: 500;
+  font-family: Raleway;
+}
+
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h4 {
+  font-size: 30px;
+}
+
+/* line 26, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h5 {
+  font-size: 25px;
+}
+
+/* line 27, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h6 {
+  font-size: 20px;
+}
+
+/* line 28, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+p, li {
+  font-size: 16px;
+  font-family: "Roboto", serif;
+  line-height: 1.8;
+  word-spacing: 0.2em;
+  font-weight: 300;
+}
+
+/* line 31, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h3 a, h2 a, h3 a:hover, h2 a:hover, h3 a:focus, h2 a:focus {
+  color: #000;
+}
+
+/* ################  END  ######################*/
+/* ################  HTML TAG SPECIAL STYLING  ######################*/
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.white a {
+  color: #000;
+}
+
+/* line 39, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.black a {
+  color: #fff;
+}
+
+/* line 40, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.border {
+  position: relative;
+}
+
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.border::before {
+  content: "";
+  left: 30%;
+  position: absolute;
+  top: -10px;
+  width: 40%;
+}
+
+/* line 48, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.border::after {
+  content: "";
+  left: 30%;
+  position: absolute;
+  bottom: -10px;
+  width: 40%;
+}
+
+/* line 55, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.white.border::after {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* line 56, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.white.border::before {
+  border-top: 1px solid #d3d3d3;
+}
+
+/* line 57, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.black.border::after {
+  border-bottom: 1px solid #333;
+}
+
+/* line 58, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h2.black.border::before {
+  border-top: 1px solid #333;
+}
+
+/* line 59, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h6.underline {
+  position: relative;
+  margin: 30px 0 20px;
+}
+
+/* line 60, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+h6.underline::after {
+  border-top: 1px solid lightgray;
+  bottom: -5px;
+  content: "";
+  font-weight: 300;
+  left: 0;
+  position: absolute;
+  width: 20%;
+}
+
+/* line 69, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a.tip {
+  position: relative;
+}
+
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a.tip span:last-child {
+  display: none;
+}
+
+/* line 71, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a.tip:hover span:last-child {
+  background-color: #eee;
+  border-radius: 5px;
+  display: inline-block;
+  left: -90px;
+  min-width: 200px;
+  padding: 5px 20px;
+  position: absolute;
+  top: -45px;
+  z-index: 100;
+  color: #555;
+  text-align: center;
+}
+
+/* line 84, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+a.tip:hover span:last-child::before {
+  background-color: #eee;
+  bottom: -5px;
+  content: "";
+  height: 10px;
+  left: 50%;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+/* line 95, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.gray-back {
+  background-color: #f5f5f5;
+}
+
+/* line 96, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/core.css */
+.white-back {
+  background-color: #fff;
+}
+
+/* ################  END  ######################*/
+/* ################  HEADER STYLING  ######################*/
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+#wrapper {
+  overflow: hidden;
+}
+
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.banner {
+  float: left;
+  width: 100%;
+  background: transparent url("/images/core/front_cover.jpg") no-repeat fixed 0 0/cover;
+  height: 100px;
+}
+
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.header-content {
+  padding-top: 2%;
+}
+
+/* line 6, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.header-logo {
+  padding: 3%;
+}
+
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.header-logo img {
+  max-width: 75%;
+}
+
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.menu nav {
+  margin: 10px 0;
+}
+
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.footer-logo img {
+  max-width: 50%;
+}
+
+/* ################  END  ######################*/
+/* ################  TOP MENU  ######################*/
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.menu nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.35em;
+}
+
+/* line 30, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.menu nav a:hover,
+.menu nav a:focus {
+  outline: none;
+  color: #38c2d4;
+}
+
+/* line 33, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a {
+  margin: 0 10px !important;
+  /* just to override the menu nav margin */
+  padding: 14px 10px 10px;
+}
+
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a::before,
+.cl-effect-9 a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  content: '';
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s, height 0.3s;
+  -moz-transition: opacity 0.3s, height 0.3s;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+/* line 53, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a::after {
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+/* line 64, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a span:first-child {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 70, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a span:last-child {
+  padding-top: 8px;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: none;
+  font-style: italic;
+  font-size: 12px;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* line 86, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:focus::before {
+  height: 3px;
+}
+
+/* line 89, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:hover::after,
+.cl-effect-9 a:focus::before,
+.cl-effect-9 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* line 98, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/header.css */
+.cl-effect-9 a:hover span:last-child,
+.cl-effect-9 a:focus span:last-child {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/* ################  END  ######################*/
+/* ################  FOOTER STYLING  ######################*/
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content {
+  background-color: #ededed;
+}
+
+/* line 4, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top, .footer-bottom {
+  padding-bottom: 1.5%;
+  margin-top: 2%;
+}
+
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top {
+  border-bottom: 1px solid;
+}
+
+/* line 7, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block div {
+  padding: 0 20px;
+}
+
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block div h5 {
+  border-bottom: 1px solid;
+  padding: 10px 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* line 9, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block div a {
+  padding: 5px 0;
+  margin: 4px 0;
+  width: 100%;
+  color: #444;
+}
+
+/* line 10, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block div a:hover {
+  color: #38c2d4;
+}
+
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block nav {
+  max-width: 100%;
+  padding-left: 5%;
+}
+
+/* line 12, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-content-block nav a {
+  display: block;
+}
+
+/* line 13, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.copy-right {
+  padding: 1% 0 3%;
+}
+
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul {
+  display: block;
+  list-style: outside none none;
+  text-align: center;
+}
+
+/* line 21, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li {
+  display: inline-block;
+  padding: 0.5% 3%;
+}
+
+/* line 25, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li a {
+  color: #888;
+  display: block;
+  padding: 5px 15px;
+}
+
+/* line 30, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-top > ul li a:hover {
+  color: #000;
+}
+
+/* line 33, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-bottom p {
+  display: inline;
+  padding-right: 2%;
+}
+
+/* line 34, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.footer-bottom {
+  text-align: center;
+}
+
+/* line 36, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.copy-right p {
+  display: inline;
+  padding-right: 1%;
+  font-size: 14px;
+}
+
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 46, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+  margin-right: 1%;
+}
+
+/* line 54, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon a i {
+  padding-top: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* line 59, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(1) {
+  background-color: #3b5998;
+}
+
+/* line 62, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(2) {
+  background-color: #55ACEE;
+}
+
+/* line 65, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/common/footer.css */
+.social-icon > a:nth-child(3) {
+  background-color: #DD4B38;
+}
+
+/* ################  END  ######################*/
+/* ################  FOOTER LINKS  ######################*/
+/*
+.cl-effect-13 a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+    position: absolute;
+    right: 10%;
+    color: #444;
+    content: '\2022';
+    text-shadow: 0 0 transparent;
+    font-size: 1.6em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before { color: #38c2d4; text-shadow: 10px 0 #38c2d4, -10px 0 #38c2d4; }
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus { color: #ba7700; }
+
+*/
+/* ################  END  ######################*/
+/*  Antiman  */
+/* line 3, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman {
+  background: none;
+  color: #fff;
+  border: none;
+  height: 60px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 13, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman:hover {
+  color: #7986cb;
+}
+
+/* line 16, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman > span {
+  padding-left: 1em;
+}
+
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman::before, .button-antiman::after {
+  content: '';
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 35, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman::before {
+  border: 1.5px solid #7986cb;
+  opacity: 0;
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman::after {
+  background: #7986cb;
+}
+
+/* line 44, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman:hover::before {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+/* line 49, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/button/antiman.css */
+.button-antiman:hover::after {
+  opacity: 0;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  transform: scale3d(0.8, 0.8, 1);
+}
+
+/* ################  END  ######################*/

@@ -1,0 +1,66 @@
+/* line 1, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.address-block ul {
+  padding-left: 3%;
+  list-style: none;
+}
+
+/* line 5, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.address-block li {
+  padding-top: 0.5%;
+}
+
+/* line 8, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.address-block li i {
+  padding-right: 3%;
+}
+
+/* line 11, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media {
+  list-style: none;
+  text-align: center;
+}
+
+/* line 15, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li {
+  padding-top: 5px;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 19, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li:hover {
+  padding-top: 0;
+}
+
+/* line 22, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li a {
+  display: block;
+  box-sizing: border-box;
+  padding: 3%;
+  margin: 0.2%;
+  color: #fff;
+}
+
+/* line 29, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li a i {
+  font-size: 20px;
+}
+
+/* line 32, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li:nth-child(1) a {
+  background-color: #3b5998;
+}
+
+/* line 35, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li:nth-child(2) a {
+  background-color: #55acee;
+}
+
+/* line 38, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.social-media li:nth-child(3) a {
+  background-color: #dd4b38;
+}
+
+/* line 41, /Users/lokesh/Desktop/application/kato-redesign/live/app/assets/stylesheets/site/contact.scss */
+.map-block {
+  padding: 2% 0;
+}
