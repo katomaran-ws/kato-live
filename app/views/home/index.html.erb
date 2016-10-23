@@ -62,13 +62,16 @@
         <div class="query-content">
           <h4>Need More Info...?</h4>
           <p>Try to get in touch with our engineers. We will clarify your queries.</p>
+          <a href="/contact-us">
+            <span></span>
+            <span></span>
+          </a>
         </div>
       </div>
     </div>
   </div>
 
 </div>
-
 
 <div class="showcase col-md-12 col-sm-12 col-xs-12 no-padding" style="display: <%= @gallery.blank? ? "none" : "auto" %>">
 
@@ -159,12 +162,7 @@
 
 <script>
 
-$(function(){
-    function show_popup(){
-        $(".pop_up_button").trigger( "click")
-    }
-    window.setTimeout( show_popup, 10000 );
-});
+
 </script>
 
 <div class="popup">

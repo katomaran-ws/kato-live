@@ -5,3 +5,28 @@
 'button/core',
 'button/link_3';
 
+
+// Know More block link
+.servies-query a {
+  float: right;
+  height: 100%;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  width: 15%;
+}
+.servies-query span:last-child::before {
+  top: 65%;
+  transform: rotate(-45deg);
+}
+.servies-query span:first-child::before {
+  top: 35%;
+  transform: rotate(45deg);
+}
+.servies-query  span::before {
+  border-bottom: 1.5px solid gray;
+  content: "";
+  position: absolute;
+  left: 30%;
+  width: 40%;
+}

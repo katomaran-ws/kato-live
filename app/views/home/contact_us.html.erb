@@ -1,11 +1,67 @@
+<%= stylesheet_link_tag 'site/contact' %>
 
-<div class="container-block col-md-12 col-sm-12 col-xs-12 no-padding">
-  <div class="summary-block col-md-12 col-sm-12 col-xs-12 no-padding">
+<% page_title "Contact Us" %>
+
+<div class="contact col-md-12 col-sm-12 col-xs-12 no-padding">
+
+  <h2 class="white border"><a>Get in Touch</a></h2>
+  <div class="contact-block-right col-md-12 col-sm-12 col-xs-12 no-padding white-back" id="boot-camp">
     <div class="container no-padding">
       <div class="row no-margin">
 
-        <div class="content col-md-12 col-sm-12 col-xs-12 no-padding">
-          <h3 class="title"><a>Under Construction</a></h3>
+        <div class="contact-content col-md-12 col-sm-12 col-xs-12">
+          <p>Our Engineers at Katomaran Robotics tend to inspire people not by showing things, but by doing things. Pop in to say a hello to our engineers or get in touch to get clarified about your queries or concerns.</p>
+
+          <div class="workshop-interest-block col-md-12 col-sm-12 col-xs-12 no-padding">
+            <h6 class="underline"> Interested in organizing a workshop with us</h6>
+            <p>Please fill out the quote form from <a href="/quote">here. </a> Our Engineers will reach you.</p>
+            <p>We offer a customized workshop plan based on your curriculum. Give it a try, we promise that you will not be disappointed</p>
+          </div>
+
+          <div class="address-block col-md-12 col-sm-12 col-xs-12 no-padding">
+            <h6 class="underline">Here are the places to find us </h6>
+
+            <ul>
+              <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                +91 - 8754 933700
+              </li>
+              <li>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                robotics@katomaran.com
+              </li>
+              <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                15, Harsha Gardens, Machampalayam, Sundarapuram, Coimbatore, Tamilnadu, India - 641024
+              </li>
+            </ul>
+          </div>
+
+          <div class="social-media-block col-md-12 col-sm-12 col-xs-12 no-padding">
+            <h6 class="underline">Our Social Presences </h6>
+            <p>Pop in say a hello.</p>
+            <ul class="social-media col-md-12 col-sm-12 col-xs-12 no-padding">
+              <li class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <a href="<%= get_social_link(:facebook) %>">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <a href="<%= get_social_link(:twitter) %>">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                <a href="<%= get_social_link(:google) %>">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="map-block col-md-12 col-sm-12 col-xs-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1270406560952!2d76.96551031480236!3d10.953774992201298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU3JzEzLjYiTiA3NsKwNTgnMDMuNyJF!5e0!3m2!1sen!2sin!4v1477203173445" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>

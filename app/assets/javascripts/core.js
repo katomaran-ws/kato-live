@@ -10,3 +10,13 @@ function SetFullPageBanner() {
 function SetHalfPageBanner() {
     $('.banner').css(({height:$(window).height()/2}));
 }
+
+// Show Pop up once page loaded.
+$(function(){
+    function show_popup(){
+        $(".pop_up_button").trigger( "click")
+    }
+    $(document).ready(function() {
+        window.setTimeout(show_popup, 10000);
+    });
+});
